@@ -54,5 +54,10 @@ namespace ChocAnonGUI
         {
 
         }
+
+        private void billmemberForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -89,7 +89,7 @@
             // 
             // billquickviewPanel1
             // 
-            this.billquickviewPanel1.Location = new System.Drawing.Point(4, 2);
+            this.billquickviewPanel1.Location = new System.Drawing.Point(2, 2);
             this.billquickviewPanel1.Name = "billquickviewPanel1";
             this.billquickviewPanel1.Size = new System.Drawing.Size(372, 340);
             this.billquickviewPanel1.TabIndex = 5;
@@ -97,7 +97,7 @@
             // 
             // billmemberPanel2X
             // 
-            this.billmemberPanel2X.Location = new System.Drawing.Point(2, 2);
+            this.billmemberPanel2X.Location = new System.Drawing.Point(2, 3);
             this.billmemberPanel2X.Name = "billmemberPanel2X";
             this.billmemberPanel2X.Size = new System.Drawing.Size(378, 340);
             this.billmemberPanel2X.TabIndex = 4;
@@ -106,7 +106,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(383, 339);
+            this.ClientSize = new System.Drawing.Size(391, 342);
             this.Controls.Add(this.billquickviewPanel1);
             this.Controls.Add(this.billmemberPanel2X);
             this.Controls.Add(this.panel1);
@@ -116,6 +116,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "billmemberForm";
             this.Text = "Bill a Member";
+            this.Load += new System.EventHandler(this.billmemberForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

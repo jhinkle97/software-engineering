@@ -16,5 +16,10 @@ namespace ChocAnonGUI
         {
             InitializeComponent();
         }
+
+        private void mainLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
