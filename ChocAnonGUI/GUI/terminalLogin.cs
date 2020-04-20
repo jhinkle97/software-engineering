@@ -24,12 +24,20 @@ namespace ChocAnonGUI
 
             if (getCode == "1234")
             {
-                MainDashboard launchDash = new MainDashboard();
+                MainDashboard launchDash = new MainDashboard(getCode);
                 this.Hide();
                 outputLabel.Text = "Login Successful, Logging in....";
                 launchDash.ShowDialog();
                 this.Close();
-            } else
+            } else if (getCode == "12345678")
+            {
+                MainDashboard launchDash = new MainDashboard(getCode);
+                this.Hide();
+                outputLabel.Text = "Login Successful, Logging in....";
+                launchDash.ShowDialog();
+                this.Close();
+            }else
+
             {
                 inputTextbox.Clear();
                 inputTextbox.ForeColor = Color.Gray;
@@ -50,6 +58,11 @@ namespace ChocAnonGUI
                 inputTextbox.Text = "";
                 inputTextbox.ForeColor = Color.Black;
             }
+        }
+
+        private void terminalLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

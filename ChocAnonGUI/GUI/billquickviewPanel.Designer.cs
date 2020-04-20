@@ -51,11 +51,11 @@
             // 
             this.quickTitleLabel.AutoSize = true;
             this.quickTitleLabel.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quickTitleLabel.Location = new System.Drawing.Point(81, 10);
+            this.quickTitleLabel.Location = new System.Drawing.Point(99, 11);
             this.quickTitleLabel.Name = "quickTitleLabel";
-            this.quickTitleLabel.Size = new System.Drawing.Size(200, 23);
+            this.quickTitleLabel.Size = new System.Drawing.Size(188, 23);
             this.quickTitleLabel.TabIndex = 0;
-            this.quickTitleLabel.Text = "Member Quickview";
+            this.quickTitleLabel.Text = "Member Summary";
             // 
             // firstLabel
             // 
@@ -196,7 +196,7 @@
             this.membernumTextbox.Size = new System.Drawing.Size(84, 20);
             this.membernumTextbox.TabIndex = 17;
             // 
-            // billquickviewForm
+            // billquickviewPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -217,7 +217,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.firstLabel);
             this.Controls.Add(this.quickTitleLabel);
-            this.Name = "billquickviewForm";
+            this.Name = "billquickviewPanel";
             this.Size = new System.Drawing.Size(372, 340);
             this.ResumeLayout(false);
             this.PerformLayout();

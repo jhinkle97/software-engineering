@@ -12,13 +12,22 @@ namespace ChocAnonGUI
 {
     public partial class MainDashboard : Form
     {
-        public string loginCode;
-        public MainDashboard()
+        
+        public MainDashboard(string providerCode)
         {
             InitializeComponent();
             hidePanels();
-            defaultControl1.Show();
-            
+            if (providerCode == "12345678")
+            {
+                hidePanels();
+                opControl1.Show();
+                usertitleLabel.Text = "The Current Operator is: " + providerCode;
+            }
+            else
+            {
+                defaultControl1.Show();
+                usertitleLabel.Text = "The Current Provider is: " + providerCode;
+            }
         }
 
         private void billControl1_Load(object sender, EventArgs e)
@@ -33,7 +42,6 @@ namespace ChocAnonGUI
             defaultControl1.Hide();
             billControl1.Hide();
             reportControl1.Hide();
-
         }
 
         private void billButton_Click(object sender, EventArgs e)
@@ -49,10 +57,9 @@ namespace ChocAnonGUI
 
         }
 
-        private void operatorButton_Click(object sender, EventArgs e)
+        private void MainDashboard_Load(object sender, EventArgs e)
         {
-            hidePanels();
-            opControl1.Show();
+
         }
     }
 }

@@ -46,9 +46,9 @@
             // billButton
             // 
             this.billButton.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.billButton.Location = new System.Drawing.Point(20, 155);
+            this.billButton.Location = new System.Drawing.Point(24, 114);
             this.billButton.Name = "billButton";
-            this.billButton.Size = new System.Drawing.Size(272, 107);
+            this.billButton.Size = new System.Drawing.Size(272, 148);
             this.billButton.TabIndex = 1;
             this.billButton.Text = "Bill Member";
             this.billButton.UseVisualStyleBackColor = true;
@@ -57,11 +57,11 @@
             // quickviewButton
             // 
             this.quickviewButton.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quickviewButton.Location = new System.Drawing.Point(326, 155);
+            this.quickviewButton.Location = new System.Drawing.Point(326, 114);
             this.quickviewButton.Name = "quickviewButton";
-            this.quickviewButton.Size = new System.Drawing.Size(272, 107);
+            this.quickviewButton.Size = new System.Drawing.Size(272, 148);
             this.quickviewButton.TabIndex = 2;
-            this.quickviewButton.Text = "Quickview Member";
+            this.quickviewButton.Text = "Member Summary";
             this.quickviewButton.UseVisualStyleBackColor = true;
             this.quickviewButton.Click += new System.EventHandler(this.quickviewButton_Click);
             // 
@@ -73,7 +73,7 @@
             this.Controls.Add(this.billButton);
             this.Controls.Add(this.label1);
             this.Name = "BillControl";
-            this.Size = new System.Drawing.Size(620, 412);
+            this.Size = new System.Drawing.Size(620, 323);
             this.ResumeLayout(false);
             this.PerformLayout();
 
