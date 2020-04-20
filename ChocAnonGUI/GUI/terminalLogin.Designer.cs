@@ -109,6 +109,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "terminalLogin";
             this.Text = "Dashboard Login";
+            this.Load += new System.EventHandler(this.terminalLogin_Load);
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
             this.lowerPanel.ResumeLayout(false);

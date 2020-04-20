@@ -40,11 +40,9 @@
             this.addressTextbox = new System.Windows.Forms.TextBox();
             this.cityTextbox = new System.Windows.Forms.TextBox();
             this.zipTextbox = new System.Windows.Forms.TextBox();
-            this.membernumberTextbox = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.submitButton = new System.Windows.Forms.Button();
-            this.repeatMemLabel = new System.Windows.Forms.Label();
-            this.doublecheckTextbox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -151,27 +149,10 @@
             this.zipTextbox.Size = new System.Drawing.Size(164, 20);
             this.zipTextbox.TabIndex = 11;
             // 
-            // membernumberTextbox
-            // 
-            this.membernumberTextbox.Location = new System.Drawing.Point(174, 194);
-            this.membernumberTextbox.Name = "membernumberTextbox";
-            this.membernumberTextbox.Size = new System.Drawing.Size(89, 20);
-            this.membernumberTextbox.TabIndex = 12;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(10, 193);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(147, 21);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Member Number:";
-            // 
             // submitButton
             // 
             this.submitButton.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.submitButton.Location = new System.Drawing.Point(16, 279);
+            this.submitButton.Location = new System.Drawing.Point(17, 232);
             this.submitButton.Name = "submitButton";
             this.submitButton.Size = new System.Drawing.Size(247, 60);
             this.submitButton.TabIndex = 14;
@@ -179,33 +160,32 @@
             this.submitButton.UseVisualStyleBackColor = true;
             this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
             // 
-            // repeatMemLabel
+            // label7
             // 
-            this.repeatMemLabel.AutoSize = true;
-            this.repeatMemLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.repeatMemLabel.Location = new System.Drawing.Point(10, 234);
-            this.repeatMemLabel.Name = "repeatMemLabel";
-            this.repeatMemLabel.Size = new System.Drawing.Size(162, 21);
-            this.repeatMemLabel.TabIndex = 15;
-            this.repeatMemLabel.Text = "Re-Enter Member #";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(13, 193);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(87, 21);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "User Type:";
             // 
-            // doublecheckTextbox
+            // comboBox1
             // 
-            this.doublecheckTextbox.Location = new System.Drawing.Point(174, 234);
-            this.doublecheckTextbox.Name = "doublecheckTextbox";
-            this.doublecheckTextbox.Size = new System.Drawing.Size(89, 20);
-            this.doublecheckTextbox.TabIndex = 16;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(100, 194);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(162, 21);
+            this.comboBox1.TabIndex = 16;
             // 
             // addmemberForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(281, 351);
-            this.Controls.Add(this.doublecheckTextbox);
-            this.Controls.Add(this.repeatMemLabel);
-            this.Controls.Add(this.submitButton);
+            this.ClientSize = new System.Drawing.Size(281, 305);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.membernumberTextbox);
+            this.Controls.Add(this.submitButton);
             this.Controls.Add(this.zipTextbox);
             this.Controls.Add(this.cityTextbox);
             this.Controls.Add(this.addressTextbox);
@@ -220,7 +200,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "addmemberForm";
-            this.Text = "Add a Member";
+            this.Text = "Add a User";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,10 +220,8 @@
         private System.Windows.Forms.TextBox addressTextbox;
         private System.Windows.Forms.TextBox cityTextbox;
         private System.Windows.Forms.TextBox zipTextbox;
-        private System.Windows.Forms.TextBox membernumberTextbox;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button submitButton;
-        private System.Windows.Forms.Label repeatMemLabel;
-        private System.Windows.Forms.TextBox doublecheckTextbox;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

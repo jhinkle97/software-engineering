@@ -30,7 +30,6 @@
         {
             this.verticalPanel = new System.Windows.Forms.Panel();
             this.verticalLine = new System.Windows.Forms.Panel();
-            this.operatorButton = new System.Windows.Forms.Button();
             this.reportButton = new System.Windows.Forms.Button();
             this.billButton = new System.Windows.Forms.Button();
             this.horizontalPanel = new System.Windows.Forms.Panel();
@@ -50,12 +49,11 @@
             // 
             this.verticalPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.verticalPanel.Controls.Add(this.verticalLine);
-            this.verticalPanel.Controls.Add(this.operatorButton);
             this.verticalPanel.Controls.Add(this.reportButton);
             this.verticalPanel.Controls.Add(this.billButton);
             this.verticalPanel.Location = new System.Drawing.Point(2, -1);
             this.verticalPanel.Name = "verticalPanel";
-            this.verticalPanel.Size = new System.Drawing.Size(225, 517);
+            this.verticalPanel.Size = new System.Drawing.Size(225, 429);
             this.verticalPanel.TabIndex = 0;
             // 
             // verticalLine
@@ -66,23 +64,12 @@
             this.verticalLine.Size = new System.Drawing.Size(13, 426);
             this.verticalLine.TabIndex = 3;
             // 
-            // operatorButton
-            // 
-            this.operatorButton.Font = new System.Drawing.Font("Ravie", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.operatorButton.Location = new System.Drawing.Point(10, 390);
-            this.operatorButton.Name = "operatorButton";
-            this.operatorButton.Size = new System.Drawing.Size(184, 103);
-            this.operatorButton.TabIndex = 2;
-            this.operatorButton.Text = "Operator Settings";
-            this.operatorButton.UseVisualStyleBackColor = true;
-            this.operatorButton.Click += new System.EventHandler(this.operatorButton_Click);
-            // 
             // reportButton
             // 
             this.reportButton.Font = new System.Drawing.Font("Ravie", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reportButton.Location = new System.Drawing.Point(10, 257);
+            this.reportButton.Location = new System.Drawing.Point(16, 284);
             this.reportButton.Name = "reportButton";
-            this.reportButton.Size = new System.Drawing.Size(184, 103);
+            this.reportButton.Size = new System.Drawing.Size(184, 123);
             this.reportButton.TabIndex = 2;
             this.reportButton.Text = "Report Generator";
             this.reportButton.UseVisualStyleBackColor = true;
@@ -91,9 +78,9 @@
             // billButton
             // 
             this.billButton.Font = new System.Drawing.Font("Ravie", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.billButton.Location = new System.Drawing.Point(10, 124);
+            this.billButton.Location = new System.Drawing.Point(16, 130);
             this.billButton.Name = "billButton";
-            this.billButton.Size = new System.Drawing.Size(184, 103);
+            this.billButton.Size = new System.Drawing.Size(184, 123);
             this.billButton.TabIndex = 0;
             this.billButton.Text = "Bill Member";
             this.billButton.UseVisualStyleBackColor = true;
@@ -151,30 +138,30 @@
             // 
             // reportControl1
             // 
-            this.reportControl1.Location = new System.Drawing.Point(233, 105);
+            this.reportControl1.Location = new System.Drawing.Point(233, 101);
             this.reportControl1.Name = "reportControl1";
-            this.reportControl1.Size = new System.Drawing.Size(634, 411);
+            this.reportControl1.Size = new System.Drawing.Size(634, 330);
             this.reportControl1.TabIndex = 5;
             // 
             // opControl1
             // 
-            this.opControl1.Location = new System.Drawing.Point(233, 102);
+            this.opControl1.Location = new System.Drawing.Point(2, 89);
             this.opControl1.Name = "opControl1";
-            this.opControl1.Size = new System.Drawing.Size(634, 414);
+            this.opControl1.Size = new System.Drawing.Size(865, 340);
             this.opControl1.TabIndex = 4;
             // 
             // defaultControl1
             // 
-            this.defaultControl1.Location = new System.Drawing.Point(233, 104);
+            this.defaultControl1.Location = new System.Drawing.Point(233, 101);
             this.defaultControl1.Name = "defaultControl1";
-            this.defaultControl1.Size = new System.Drawing.Size(620, 412);
+            this.defaultControl1.Size = new System.Drawing.Size(634, 329);
             this.defaultControl1.TabIndex = 3;
             // 
             // billControl1
             // 
             this.billControl1.Location = new System.Drawing.Point(233, 105);
             this.billControl1.Name = "billControl1";
-            this.billControl1.Size = new System.Drawing.Size(619, 411);
+            this.billControl1.Size = new System.Drawing.Size(619, 323);
             this.billControl1.TabIndex = 2;
             this.billControl1.Load += new System.EventHandler(this.billControl1_Load);
             // 
@@ -182,9 +169,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(864, 518);
-            this.Controls.Add(this.reportControl1);
+            this.ClientSize = new System.Drawing.Size(865, 425);
             this.Controls.Add(this.opControl1);
+            this.Controls.Add(this.reportControl1);
             this.Controls.Add(this.defaultControl1);
             this.Controls.Add(this.billControl1);
             this.Controls.Add(this.horizontalPanel);
@@ -193,6 +180,7 @@
             this.Name = "MainDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChocAnon Dashboard";
+            this.Load += new System.EventHandler(this.MainDashboard_Load);
             this.verticalPanel.ResumeLayout(false);
             this.horizontalPanel.ResumeLayout(false);
             this.horizontalPanel.PerformLayout();
@@ -207,7 +195,6 @@
         private System.Windows.Forms.Label dashLabel2;
         private System.Windows.Forms.Label dashTitle1;
         private System.Windows.Forms.Panel verticalLine;
-        private System.Windows.Forms.Button operatorButton;
         private System.Windows.Forms.Button reportButton;
         private System.Windows.Forms.Button billButton;
         private System.Windows.Forms.Panel verticalLine2;

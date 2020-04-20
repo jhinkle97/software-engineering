@@ -43,9 +43,9 @@
             // providerButton
             // 
             this.providerButton.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.providerButton.Location = new System.Drawing.Point(13, 17);
+            this.providerButton.Location = new System.Drawing.Point(13, 12);
             this.providerButton.Name = "providerButton";
-            this.providerButton.Size = new System.Drawing.Size(127, 67);
+            this.providerButton.Size = new System.Drawing.Size(127, 50);
             this.providerButton.TabIndex = 0;
             this.providerButton.Text = "Provider Report";
             this.providerButton.UseVisualStyleBackColor = true;
@@ -54,9 +54,9 @@
             // memberButton
             // 
             this.memberButton.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.memberButton.Location = new System.Drawing.Point(13, 94);
+            this.memberButton.Location = new System.Drawing.Point(13, 78);
             this.memberButton.Name = "memberButton";
-            this.memberButton.Size = new System.Drawing.Size(127, 66);
+            this.memberButton.Size = new System.Drawing.Size(127, 50);
             this.memberButton.TabIndex = 1;
             this.memberButton.Text = "Member Report";
             this.memberButton.UseVisualStyleBackColor = true;
@@ -65,9 +65,9 @@
             // changeButton
             // 
             this.changeButton.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.changeButton.Location = new System.Drawing.Point(13, 170);
+            this.changeButton.Location = new System.Drawing.Point(13, 142);
             this.changeButton.Name = "changeButton";
-            this.changeButton.Size = new System.Drawing.Size(127, 66);
+            this.changeButton.Size = new System.Drawing.Size(127, 50);
             this.changeButton.TabIndex = 2;
             this.changeButton.Text = "Changes Report";
             this.changeButton.UseVisualStyleBackColor = true;
@@ -76,9 +76,9 @@
             // serviceButton
             // 
             this.serviceButton.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.serviceButton.Location = new System.Drawing.Point(13, 249);
+            this.serviceButton.Location = new System.Drawing.Point(13, 204);
             this.serviceButton.Name = "serviceButton";
-            this.serviceButton.Size = new System.Drawing.Size(127, 66);
+            this.serviceButton.Size = new System.Drawing.Size(127, 50);
             this.serviceButton.TabIndex = 3;
             this.serviceButton.Text = "Service Report";
             this.serviceButton.UseVisualStyleBackColor = true;
@@ -87,9 +87,9 @@
             // managerButton
             // 
             this.managerButton.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.managerButton.Location = new System.Drawing.Point(13, 325);
+            this.managerButton.Location = new System.Drawing.Point(13, 266);
             this.managerButton.Name = "managerButton";
-            this.managerButton.Size = new System.Drawing.Size(127, 66);
+            this.managerButton.Size = new System.Drawing.Size(127, 50);
             this.managerButton.TabIndex = 4;
             this.managerButton.Text = "Manager Report";
             this.managerButton.UseVisualStyleBackColor = true;
@@ -98,17 +98,17 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(157, 17);
+            this.dataGridView1.Location = new System.Drawing.Point(157, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(442, 298);
+            this.dataGridView1.Size = new System.Drawing.Size(460, 249);
             this.dataGridView1.TabIndex = 5;
             // 
             // sendButton
             // 
             this.sendButton.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sendButton.Location = new System.Drawing.Point(157, 325);
+            this.sendButton.Location = new System.Drawing.Point(157, 267);
             this.sendButton.Name = "sendButton";
-            this.sendButton.Size = new System.Drawing.Size(442, 66);
+            this.sendButton.Size = new System.Drawing.Size(460, 49);
             this.sendButton.TabIndex = 6;
             this.sendButton.Text = "Send Report Via Email To ***Whoever***";
             this.sendButton.UseVisualStyleBackColor = true;
@@ -126,7 +126,7 @@
             this.Controls.Add(this.memberButton);
             this.Controls.Add(this.providerButton);
             this.Name = "ReportControl";
-            this.Size = new System.Drawing.Size(620, 412);
+            this.Size = new System.Drawing.Size(620, 323);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
