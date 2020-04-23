@@ -53,6 +53,7 @@
     <Compile Include="Backend\DataAccess\ServiceRepository.cs" />
     <Compile Include="Backend\DataAccess\UserRepository.cs" />
     <Compile Include="Backend\dataTest.cs" />
+    <Compile Include="GUI\Dashboard Controls\SettingsForm.cs">
     <Compile Include="Backend\Models\ServiceDirectoryModel.cs" />
     <Compile Include="Backend\Models\ServiceModel.cs" />
     <Compile Include="Backend\Models\UserModel.cs" />
@@ -60,11 +61,22 @@
     <Compile Include="Backend\Reports\ProviderSummary.cs" />
     <Compile Include="Backend\Utilities\Formatter.cs" />
     <Compile Include="Backend\Utilities\NumberGenerator.cs" />
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Dashboard Controls\SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Operator\AddUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\Operator\AddUserForm.Designer.cs">
       <DependentUpon>AddUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Operator\InvalidControlPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Operator\InvalidControlPanel.Designer.cs">
+      <DependentUpon>InvalidControlPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Provider\Billing\BillingPanel.cs">
       <SubType>UserControl</SubType>
@@ -72,23 +84,11 @@
     <Compile Include="GUI\Provider\Billing\BillingPanel.Designer.cs">
       <DependentUpon>BillingPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Provider\Billing\BillingForm.cs">
+    <Compile Include="GUI\Dashboard Controls\PasswordConfirmation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Provider\Billing\BillingForm.Designer.cs">
-      <DependentUpon>BillingForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Provider\Billing\ServiceEntryPanel.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\Provider\Billing\ServiceEntryPanel.Designer.cs">
-      <DependentUpon>ServiceEntryPanel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Provider\Billing\MemberSummaryPanel.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\Provider\Billing\MemberSummaryPanel.Designer.cs">
-      <DependentUpon>MemberSummaryPanel.cs</DependentUpon>
+    <Compile Include="GUI\Dashboard Controls\PasswordConfirmation.Designer.cs">
+      <DependentUpon>PasswordConfirmation.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Provider\Billing\ConfirmServiceForm.cs">
       <SubType>Form</SubType>
@@ -108,17 +108,17 @@
     <Compile Include="GUI\Provider\Billing\ServiceLookupForm.Designer.cs">
       <DependentUpon>ServiceLookupForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\MainDashboardForm.cs">
+    <Compile Include="GUI\Dashboard Controls\MainDashboardForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\MainDashboardForm.Designer.cs">
+    <Compile Include="GUI\Dashboard Controls\MainDashboardForm.Designer.cs">
       <DependentUpon>MainDashboardForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Operator\OperatorDashboardPanel.cs">
+    <Compile Include="GUI\Operator\OperatorDashBoardPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\Operator\OperatorDashboardPanel.Designer.cs">
-      <DependentUpon>OperatorDashboardPanel.cs</DependentUpon>
+    <Compile Include="GUI\Operator\OperatorDashBoardPanel.Designer.cs">
+      <DependentUpon>OperatorDashBoardPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Provider\Reports\ReportsPanel.cs">
       <SubType>UserControl</SubType>
@@ -126,28 +126,28 @@
     <Compile Include="GUI\Provider\Reports\ReportsPanel.Designer.cs">
       <DependentUpon>ReportsPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\LoginForm.cs">
+    <Compile Include="GUI\Dashboard Controls\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\LoginForm.Designer.cs">
+    <Compile Include="GUI\Dashboard Controls\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\Dashboard Controls\SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Operator\AddUserForm.resx">
       <DependentUpon>AddUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Operator\InvalidControlPanel.resx">
+      <DependentUpon>InvalidControlPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Provider\Billing\BillingPanel.resx">
       <DependentUpon>BillingPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Provider\Billing\BillingForm.resx">
-      <DependentUpon>BillingForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Provider\Billing\ServiceEntryPanel.resx">
-      <DependentUpon>ServiceEntryPanel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Provider\Billing\MemberSummaryPanel.resx">
-      <DependentUpon>MemberSummaryPanel.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Dashboard Controls\PasswordConfirmation.resx">
+      <DependentUpon>PasswordConfirmation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Provider\Billing\ConfirmServiceForm.resx">
       <DependentUpon>ConfirmServiceForm.cs</DependentUpon>
@@ -158,16 +158,16 @@
     <EmbeddedResource Include="GUI\Provider\Billing\ServiceLookupForm.resx">
       <DependentUpon>ServiceLookupForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\MainDashboardForm.resx">
+    <EmbeddedResource Include="GUI\Dashboard Controls\MainDashboardForm.resx">
       <DependentUpon>MainDashboardForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Operator\OperatorDashboardPanel.resx">
-      <DependentUpon>OperatorDashboardPanel.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Operator\OperatorDashBoardPanel.resx">
+      <DependentUpon>OperatorDashBoardPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Provider\Reports\ReportsPanel.resx">
       <DependentUpon>ReportsPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\LoginForm.resx">
+    <EmbeddedResource Include="GUI\Dashboard Controls\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -191,6 +191,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CurrentRevisionDate.txt">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Pictures and Resources\Chocolate Bar.jpg" />
+    <Content Include="Pictures and Resources\Monaco_Settings_16x.png" />
+    <Content Include="Pictures and Resources\Sad Smile.jpg" />
+    <Content Include="Pictures and Resources\SettingsOutline_16x.png" />
+    <Content Include="Pictures and Resources\Settings_12x_16x.png" />
+    <Content Include="Pictures and Resources\Settings_16x.png" />
+    <Content Include="Pictures and Resources\Settings_Inverse_16x.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
