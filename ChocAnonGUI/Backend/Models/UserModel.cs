@@ -8,8 +8,8 @@ namespace ChocAnonGUI.Backend.Models
 {
     public class UserModel
     {
-        public int Role { get; set; }
-        public int Status { get; set; }
+        public string Role { get; set; }
+        public string Status { get; set; }
         public string Name { get; set; }
         public string UserNumber { get; set; }
         public string StreetAddress { get; set; }
