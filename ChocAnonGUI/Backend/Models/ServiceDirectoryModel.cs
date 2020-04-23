@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace ChocAnonGUI.Backend.Models
 {
-    class User
+    class ServiceDirectoryModel
     {
+        public string Name { get; set; }
+        public string Code { get; set; }
+        public string Fee { get; set; }
     }
 }

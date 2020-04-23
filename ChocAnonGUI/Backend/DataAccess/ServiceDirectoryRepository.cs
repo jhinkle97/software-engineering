@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace ChocAnonGUI.Backend.DataAccess
 {
-    class User
+    class ServiceDirectoryRepository
     {
+
     }
 }

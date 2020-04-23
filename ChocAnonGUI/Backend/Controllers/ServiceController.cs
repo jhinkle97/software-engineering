@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ChocAnonGUI.Backend.Controllers
 {
-    class User
+    class ServiceController
     {
     }
 }
