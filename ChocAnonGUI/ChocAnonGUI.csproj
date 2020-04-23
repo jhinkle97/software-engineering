@@ -53,7 +53,6 @@
     <Compile Include="Backend\DataAccess\ServiceRepository.cs" />
     <Compile Include="Backend\DataAccess\UserRepository.cs" />
     <Compile Include="Backend\dataTest.cs" />
-    <Compile Include="GUI\Dashboard Controls\SettingsForm.cs">
     <Compile Include="Backend\Models\ServiceDirectoryModel.cs" />
     <Compile Include="Backend\Models\ServiceModel.cs" />
     <Compile Include="Backend\Models\UserModel.cs" />
@@ -61,6 +60,7 @@
     <Compile Include="Backend\Reports\ProviderSummary.cs" />
     <Compile Include="Backend\Utilities\Formatter.cs" />
     <Compile Include="Backend\Utilities\NumberGenerator.cs" />
+    <Compile Include="GUI\Dashboard Controls\SettingsForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\Dashboard Controls\SettingsForm.Designer.cs">
