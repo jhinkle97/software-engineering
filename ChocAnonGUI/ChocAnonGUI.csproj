@@ -49,115 +49,115 @@
     <Compile Include="Backend\DataAccess\User.cs" />
     <Compile Include="Backend\dataTest.cs" />
     <Compile Include="Backend\Models\User.cs" />
-    <Compile Include="GUI\addmemberForm.cs">
+    <Compile Include="GUI\Dashboard Controls\SettingsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\addmemberForm.Designer.cs">
-      <DependentUpon>addmemberForm.cs</DependentUpon>
+    <Compile Include="GUI\Dashboard Controls\SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\billControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\billControl.Designer.cs">
-      <DependentUpon>billControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\billmemberForm.cs">
+    <Compile Include="GUI\Operator\AddUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\billmemberForm.Designer.cs">
-      <DependentUpon>billmemberForm.cs</DependentUpon>
+    <Compile Include="GUI\Operator\AddUserForm.Designer.cs">
+      <DependentUpon>AddUserForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\billmemberPanel.cs">
+    <Compile Include="GUI\Operator\InvalidControlPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\billmemberPanel.Designer.cs">
-      <DependentUpon>billmemberPanel.cs</DependentUpon>
+    <Compile Include="GUI\Operator\InvalidControlPanel.Designer.cs">
+      <DependentUpon>InvalidControlPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\billquickviewPanel.cs">
+    <Compile Include="GUI\Provider\Billing\BillingPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\billquickviewPanel.Designer.cs">
-      <DependentUpon>billquickviewPanel.cs</DependentUpon>
+    <Compile Include="GUI\Provider\Billing\BillingPanel.Designer.cs">
+      <DependentUpon>BillingPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\ConfirmServiceForm.cs">
+    <Compile Include="GUI\Dashboard Controls\PasswordConfirmation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\ConfirmServiceForm.Designer.cs">
+    <Compile Include="GUI\Dashboard Controls\PasswordConfirmation.Designer.cs">
+      <DependentUpon>PasswordConfirmation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Provider\Billing\ConfirmServiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Provider\Billing\ConfirmServiceForm.Designer.cs">
       <DependentUpon>ConfirmServiceForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\DefaultControl.cs">
+    <Compile Include="GUI\Provider\WelcomePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\DefaultControl.Designer.cs">
-      <DependentUpon>DefaultControl.cs</DependentUpon>
+    <Compile Include="GUI\Provider\WelcomePanel.Designer.cs">
+      <DependentUpon>WelcomePanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\lookupProviderForm.cs">
+    <Compile Include="GUI\Provider\Billing\ServiceLookupForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\lookupProviderForm.Designer.cs">
-      <DependentUpon>lookupProviderForm.cs</DependentUpon>
+    <Compile Include="GUI\Provider\Billing\ServiceLookupForm.Designer.cs">
+      <DependentUpon>ServiceLookupForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\MainDashboard.cs">
+    <Compile Include="GUI\Dashboard Controls\MainDashboardForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\MainDashboard.Designer.cs">
-      <DependentUpon>MainDashboard.cs</DependentUpon>
+    <Compile Include="GUI\Dashboard Controls\MainDashboardForm.Designer.cs">
+      <DependentUpon>MainDashboardForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\opControl.cs">
+    <Compile Include="GUI\Operator\OperatorDashBoardPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\opControl.Designer.cs">
-      <DependentUpon>opControl.cs</DependentUpon>
+    <Compile Include="GUI\Operator\OperatorDashBoardPanel.Designer.cs">
+      <DependentUpon>OperatorDashBoardPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\reportControl.cs">
+    <Compile Include="GUI\Provider\Reports\ReportsPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\reportControl.Designer.cs">
-      <DependentUpon>reportControl.cs</DependentUpon>
+    <Compile Include="GUI\Provider\Reports\ReportsPanel.Designer.cs">
+      <DependentUpon>ReportsPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\terminalLogin.cs">
+    <Compile Include="GUI\Dashboard Controls\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\terminalLogin.Designer.cs">
-      <DependentUpon>terminalLogin.cs</DependentUpon>
+    <Compile Include="GUI\Dashboard Controls\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="GUI\addmemberForm.resx">
-      <DependentUpon>addmemberForm.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Dashboard Controls\SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\BillControl.resx">
-      <DependentUpon>billControl.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Operator\AddUserForm.resx">
+      <DependentUpon>AddUserForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\billmemberForm.resx">
-      <DependentUpon>billmemberForm.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Operator\InvalidControlPanel.resx">
+      <DependentUpon>InvalidControlPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\billmemberPanel.resx">
-      <DependentUpon>billmemberPanel.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Provider\Billing\BillingPanel.resx">
+      <DependentUpon>BillingPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\billquickviewPanel.resx">
-      <DependentUpon>billquickviewPanel.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Dashboard Controls\PasswordConfirmation.resx">
+      <DependentUpon>PasswordConfirmation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ConfirmServiceForm.resx">
+    <EmbeddedResource Include="GUI\Provider\Billing\ConfirmServiceForm.resx">
       <DependentUpon>ConfirmServiceForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\DefaultControl.resx">
-      <DependentUpon>DefaultControl.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Provider\WelcomePanel.resx">
+      <DependentUpon>WelcomePanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\lookupProviderForm.resx">
-      <DependentUpon>lookupProviderForm.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Provider\Billing\ServiceLookupForm.resx">
+      <DependentUpon>ServiceLookupForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\MainDashboard.resx">
-      <DependentUpon>MainDashboard.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Dashboard Controls\MainDashboardForm.resx">
+      <DependentUpon>MainDashboardForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\OpControl.resx">
-      <DependentUpon>opControl.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Operator\OperatorDashBoardPanel.resx">
+      <DependentUpon>OperatorDashBoardPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\reportControl.resx">
-      <DependentUpon>reportControl.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Provider\Reports\ReportsPanel.resx">
+      <DependentUpon>ReportsPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\terminalLogin.resx">
-      <DependentUpon>terminalLogin.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Dashboard Controls\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -181,5 +181,18 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="CurrentRevisionDate.txt">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Pictures and Resources\Chocolate Bar.jpg" />
+    <Content Include="Pictures and Resources\Monaco_Settings_16x.png" />
+    <Content Include="Pictures and Resources\Sad Smile.jpg" />
+    <Content Include="Pictures and Resources\SettingsOutline_16x.png" />
+    <Content Include="Pictures and Resources\Settings_12x_16x.png" />
+    <Content Include="Pictures and Resources\Settings_16x.png" />
+    <Content Include="Pictures and Resources\Settings_Inverse_16x.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
