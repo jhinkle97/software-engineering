@@ -186,7 +186,12 @@
       <SubType>Form</SubType>
     </Content>
     <Content Include="Pictures and Resources\Chocolate Bar.jpg" />
+    <Content Include="Pictures and Resources\Monaco_Settings_16x.png" />
     <Content Include="Pictures and Resources\Sad Smile.jpg" />
+    <Content Include="Pictures and Resources\SettingsOutline_16x.png" />
+    <Content Include="Pictures and Resources\Settings_12x_16x.png" />
+    <Content Include="Pictures and Resources\Settings_16x.png" />
+    <Content Include="Pictures and Resources\Settings_Inverse_16x.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
