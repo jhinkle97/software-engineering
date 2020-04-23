@@ -181,6 +181,13 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="CurrentRevisionDate.txt">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Pictures and Resources\Chocolate Bar.jpg" />
+    <Content Include="Pictures and Resources\Sad Smile.jpg" />
+  </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
