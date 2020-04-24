@@ -49,7 +49,7 @@ namespace ChocAnonGUI.Backend.DataAccess
             }
             while (LookUpUser(user.UserNumber));
 
-            string query = $"INSERT INTO [user] VALUES({user.Role}, {user.Status}, '{user.Name}', '{user.UserNumber}', " +
+            string query = $"INSERT INTO [user] VALUES('{user.Role}', '{user.Status}', '{user.Name}', '{user.UserNumber}', " +
                                                     $"'{user.StreetAddress}', '{user.City}', '{user.State}', '{user.Zip}')";
 
             try
