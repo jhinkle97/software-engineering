@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ChocAnonGUI.Backend.Controllers;
+using ChocAnonGUI.Backend.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,16 +28,31 @@ namespace ChocAnonGUI
 
         private void submitButton_Click(object sender, EventArgs e)
         {
+            UserController userController = new UserController();
+            UserModel userModel = new UserModel
+            {
+                Name = nameTextbox.Text,
+                City = cityTextbox.Text,
+                StreetAddress = addressTextbox.Text,
+                Zip = zipTextbox.Text,
+                Role = roleCombobox.Text,
+                State = stateComboBox.Text,
+                Status = statusComboBox.Text
+            };
+
+            userModel = userController.AddUser(userModel);
+            
+
             this.Close();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (typeCombobox.Text == "Member Status")
+            if (roleCombobox.Text == "Member")
             {
                 submitButton.Text = "Add New Member";
             }
-            else if (typeCombobox.Text == "Provider Status") {
+            else if (roleCombobox.Text == "Provider Status") {
                 submitButton.Text = "Add New Provider";
             }
             
@@ -44,8 +61,8 @@ namespace ChocAnonGUI
         public void populateComboBoxes()
         {
             //Populate User Type Combobox
-            typeCombobox.Items.Add("Provider Status");
-            typeCombobox.Items.Add("Member Status");
+            roleCombobox.Items.Add("Provider Status");
+            roleCombobox.Items.Add("Member Status");
             //Populate State Combobox
             string[] states = { "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA",
             "MI", "MN", "MS","MO","MT","MT","NE","NV","NH","NJ","NM","NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "TN", "TX", "UT", "VT", "VA",
