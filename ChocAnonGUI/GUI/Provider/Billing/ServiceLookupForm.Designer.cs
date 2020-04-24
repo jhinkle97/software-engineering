@@ -1,6 +1,16 @@
-﻿namespace ChocAnonGUI
+﻿using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ChocAnonGUI
+
 {
-    partial class lookupProviderForm
+    partial class ServiceLookupForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,8 +40,8 @@
         {
             this.listView1 = new System.Windows.Forms.ListView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.titleLabel = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
+            this.titleLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,16 +64,6 @@
             this.panel1.Size = new System.Drawing.Size(440, 39);
             this.panel1.TabIndex = 3;
             // 
-            // titleLabel
-            // 
-            this.titleLabel.AutoSize = true;
-            this.titleLabel.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleLabel.Location = new System.Drawing.Point(17, 10);
-            this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(190, 19);
-            this.titleLabel.TabIndex = 0;
-            this.titleLabel.Text = "Services Available For:";
-            // 
             // nameLabel
             // 
             this.nameLabel.AutoSize = true;
@@ -74,6 +74,16 @@
             this.nameLabel.TabIndex = 1;
             this.nameLabel.Text = "MEMBER NAME";
             // 
+            // titleLabel
+            // 
+            this.titleLabel.AutoSize = true;
+            this.titleLabel.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleLabel.Location = new System.Drawing.Point(17, 10);
+            this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Size = new System.Drawing.Size(190, 19);
+            this.titleLabel.TabIndex = 0;
+            this.titleLabel.Text = "Services Available For:";
+            // 
             // lookupProviderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -83,8 +93,8 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.listView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "lookupProviderForm";
-            this.Text = "Service Code Lookup";
+            this.Name = "ServiceLookupForm";
+            this.Text = "ServiceLookupForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

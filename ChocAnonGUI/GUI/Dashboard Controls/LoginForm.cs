@@ -11,9 +11,9 @@ using System.Threading;
 
 namespace ChocAnonGUI
 {
-    public partial class terminalLogin : Form
+    public partial class LoginForm : Form
     {
-        public terminalLogin()
+        public LoginForm()
         {
             InitializeComponent();
         }

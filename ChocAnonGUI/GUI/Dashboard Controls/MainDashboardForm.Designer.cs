@@ -46,10 +46,10 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.BillingControlPanel = new ChocAnonGUI.BillControl();
+            this.BillingControlPanel = new ChocAnonGUI.BillingPanel();
             this.InvalidControlPanel = new ChocAnonGUI.GUI.Operator.InvalidControlPanel();
-            this.ReportControlPanel = new ChocAnonGUI.ReportControl();
-            this.OperatorControlPanel = new ChocAnonGUI.OpControl();
+            this.ReportControlPanel = new ChocAnonGUI.ReportsPanel();
+            this.OperatorControlPanel = new ChocAnonGUI.OperatorDashboardPanel();
             this.WelcomeControlPanel = new ChocAnonGUI.WelcomePanel();
             this.verticalPanel.SuspendLayout();
             this.horizontalPanel.SuspendLayout();
@@ -299,9 +299,9 @@
         private System.Windows.Forms.PictureBox settingPicture;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private WelcomePanel WelcomeControlPanel;
-        private OpControl OperatorControlPanel;
-        private ReportControl ReportControlPanel;
+        private OperatorDashboardPanel OperatorControlPanel;
+        private ReportsPanel ReportControlPanel;
         private GUI.Operator.InvalidControlPanel InvalidControlPanel;
-        private BillControl BillingControlPanel;
+        private BillingPanel BillingControlPanel;
     }
 }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ChocAnonGUI
 {
-    partial class AboutUsForm
+    partial class SettingsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -149,7 +149,7 @@ namespace ChocAnonGUI
             this.justinLabel.TabIndex = 9;
             this.justinLabel.Text = "Justin Hinkle - Backend Data Control and SQL Database";
             // 
-            // AboutUsForm
+            // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -164,7 +164,7 @@ namespace ChocAnonGUI
             this.Controls.Add(this.versionLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.titleLabel);
-            this.Name = "AboutUsForm";
+            this.Name = "SettingsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChocAnon Settings";
             this.ResumeLayout(false);

@@ -84,11 +84,11 @@
     <Compile Include="GUI\Provider\Billing\BillingPanel.Designer.cs">
       <DependentUpon>BillingPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Dashboard Controls\PasswordConfirmation.cs">
+    <Compile Include="GUI\Dashboard Controls\PasswordConfirmationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Dashboard Controls\PasswordConfirmation.Designer.cs">
-      <DependentUpon>PasswordConfirmation.cs</DependentUpon>
+    <Compile Include="GUI\Dashboard Controls\PasswordConfirmationForm.Designer.cs">
+      <DependentUpon>PasswordConfirmationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Provider\Billing\ConfirmServiceForm.cs">
       <SubType>Form</SubType>
@@ -114,11 +114,11 @@
     <Compile Include="GUI\Dashboard Controls\MainDashboardForm.Designer.cs">
       <DependentUpon>MainDashboardForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Operator\OperatorDashBoardPanel.cs">
+    <Compile Include="GUI\Operator\OperatorDashboardPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\Operator\OperatorDashBoardPanel.Designer.cs">
-      <DependentUpon>OperatorDashBoardPanel.cs</DependentUpon>
+    <Compile Include="GUI\Operator\OperatorDashboardPanel.Designer.cs">
+      <DependentUpon>OperatorDashboardPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Provider\Reports\ReportsPanel.cs">
       <SubType>UserControl</SubType>
@@ -146,8 +146,8 @@
     <EmbeddedResource Include="GUI\Provider\Billing\BillingPanel.resx">
       <DependentUpon>BillingPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Dashboard Controls\PasswordConfirmation.resx">
-      <DependentUpon>PasswordConfirmation.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Dashboard Controls\PasswordConfirmationForm.resx">
+      <DependentUpon>PasswordConfirmationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Provider\Billing\ConfirmServiceForm.resx">
       <DependentUpon>ConfirmServiceForm.cs</DependentUpon>
@@ -161,8 +161,8 @@
     <EmbeddedResource Include="GUI\Dashboard Controls\MainDashboardForm.resx">
       <DependentUpon>MainDashboardForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Operator\OperatorDashBoardPanel.resx">
-      <DependentUpon>OperatorDashBoardPanel.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Operator\OperatorDashboardPanel.resx">
+      <DependentUpon>OperatorDashboardPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Provider\Reports\ReportsPanel.resx">
       <DependentUpon>ReportsPanel.cs</DependentUpon>

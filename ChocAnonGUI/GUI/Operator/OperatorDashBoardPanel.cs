@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ChocAnonGUI
 {
-    public partial class OpControl : UserControl
+    public partial class OperatorDashboardPanel : UserControl
     {
-        public OpControl()
+        public OperatorDashboardPanel()
         {
             InitializeComponent();
         }
@@ -24,7 +24,7 @@ namespace ChocAnonGUI
 
         private void addMemberButton_Click(object sender, EventArgs e)
         {
-            addmemberForm launchAddMem = new addmemberForm();
+            AddUserForm launchAddMem = new AddUserForm();
             launchAddMem.ShowDialog();
         }
 

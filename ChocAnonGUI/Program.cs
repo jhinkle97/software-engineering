@@ -16,7 +16,7 @@ namespace ChocAnonGUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new terminalLogin());
+            Application.Run(new LoginForm());
         }
     }
 }

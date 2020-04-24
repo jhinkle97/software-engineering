@@ -2,9 +2,9 @@
 
 namespace ChocAnonGUI
 {
-    public partial class AboutUsForm : Form
+    public partial class SettingsForm : Form
     {
-        public AboutUsForm()
+        public SettingsForm()
         {
             InitializeComponent();
         }

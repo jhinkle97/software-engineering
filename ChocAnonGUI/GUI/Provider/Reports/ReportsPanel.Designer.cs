@@ -1,6 +1,6 @@
 ﻿namespace ChocAnonGUI
 {
-    partial class ReportControl
+    partial class ReportsPanel
     {
         /// <summary> 
         /// Required designer variable.
@@ -114,7 +114,7 @@
             this.titleLabel.TabIndex = 9;
             this.titleLabel.Text = "Report QuickView Panel";
             // 
-            // ReportControl
+            // ReportsPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -126,7 +126,7 @@
             this.Controls.Add(this.managerButton);
             this.Controls.Add(this.memberButton);
             this.Controls.Add(this.providerButton);
-            this.Name = "ReportControl";
+            this.Name = "ReportsPanel";
             this.Size = new System.Drawing.Size(639, 306);
             this.ResumeLayout(false);
             this.PerformLayout();

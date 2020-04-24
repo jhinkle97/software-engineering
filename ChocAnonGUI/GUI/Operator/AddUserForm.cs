@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace ChocAnonGUI
 {
-    public partial class addmemberForm : Form
+    public partial class AddUserForm : Form
     {
-        public addmemberForm()
+        public AddUserForm()
         {
             InitializeComponent();
             populateComboBoxes();
