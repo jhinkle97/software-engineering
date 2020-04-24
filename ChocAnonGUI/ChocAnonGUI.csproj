@@ -72,6 +72,12 @@
     <Compile Include="GUI\Operator\AddUserForm.Designer.cs">
       <DependentUpon>AddUserForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Operator\EntryConfirmationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Operator\EntryConfirmationForm.Designer.cs">
+      <DependentUpon>EntryConfirmationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Operator\InvalidControlPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -139,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Operator\AddUserForm.resx">
       <DependentUpon>AddUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Operator\EntryConfirmationForm.resx">
+      <DependentUpon>EntryConfirmationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Operator\InvalidControlPanel.resx">
       <DependentUpon>InvalidControlPanel.cs</DependentUpon>
