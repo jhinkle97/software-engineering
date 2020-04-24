@@ -1,6 +1,6 @@
 ﻿namespace ChocAnonGUI
 {
-    partial class terminalLogin
+    partial class LoginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -100,14 +100,14 @@
             this.enterButton.UseVisualStyleBackColor = true;
             this.enterButton.Click += new System.EventHandler(this.enterButton_Click);
             // 
-            // terminalLogin
+            // LoginForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(440, 172);
             this.Controls.Add(this.lowerPanel);
             this.Controls.Add(this.topPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "terminalLogin";
+            this.Name = "LoginForm";
             this.Text = "Dashboard Login";
             this.Load += new System.EventHandler(this.terminalLogin_Load);
             this.topPanel.ResumeLayout(false);

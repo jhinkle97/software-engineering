@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ChocAnonGUI
 {
-    public partial class ReportControl : UserControl
+    public partial class ReportsPanel : UserControl
     {
-        public ReportControl()
+        public ReportsPanel()
         {
             InitializeComponent();
         }

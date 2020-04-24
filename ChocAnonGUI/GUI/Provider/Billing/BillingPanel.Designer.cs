@@ -1,6 +1,6 @@
 ﻿namespace ChocAnonGUI
 {
-    partial class BillControl
+    partial class BillingPanel
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BillControl));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BillingPanel));
             this.label1 = new System.Windows.Forms.Label();
             this.billButton = new System.Windows.Forms.Button();
             this.nameLabel = new System.Windows.Forms.Label();
@@ -394,7 +394,7 @@
             this.dateTimePicker1.TabIndex = 40;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
-            // BillControl
+            // BillingPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -429,7 +429,7 @@
             this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.billButton);
             this.Controls.Add(this.label1);
-            this.Name = "BillControl";
+            this.Name = "BillingPanel";
             this.Size = new System.Drawing.Size(639, 310);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -471,7 +471,6 @@
         private System.Windows.Forms.Label dateLabel;
         private System.Windows.Forms.Label servicecodeLabel;
         private System.Windows.Forms.Label commentsLabel;
-        
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip8;

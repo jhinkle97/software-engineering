@@ -1,6 +1,6 @@
 ﻿namespace ChocAnonGUI
 {
-    partial class OpControl
+    partial class OperatorDashboardPanel
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OpControl));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OperatorDashboardPanel));
             this.addUserButton = new System.Windows.Forms.Button();
             this.addServiceButton = new System.Windows.Forms.Button();
             this.editUserButton = new System.Windows.Forms.Button();
@@ -221,7 +221,7 @@
             this.pictureBox11.TabIndex = 16;
             this.pictureBox11.TabStop = false;
             // 
-            // OpControl
+            // OperatorDashboardPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -241,7 +241,7 @@
             this.Controls.Add(this.editUserButton);
             this.Controls.Add(this.addServiceButton);
             this.Controls.Add(this.addUserButton);
-            this.Name = "OpControl";
+            this.Name = "OperatorDashboardPanel";
             this.Size = new System.Drawing.Size(855, 306);
             ((System.ComponentModel.ISupportInitialize)(this.candyBarPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

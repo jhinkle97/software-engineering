@@ -1,5 +1,6 @@
 ﻿using ChocAnonGUI.Backend.Controllers;
 using ChocAnonGUI.Backend.Models;
+using ChocAnonGUI.GUI.Operator;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,9 +13,9 @@ using System.Windows.Forms;
 
 namespace ChocAnonGUI
 {
-    public partial class addmemberForm : Form
+    public partial class AddUserForm : Form
     {
-        public addmemberForm()
+        public AddUserForm()
         {
             InitializeComponent();
             populateComboBoxes();
@@ -29,19 +30,21 @@ namespace ChocAnonGUI
         private void submitButton_Click(object sender, EventArgs e)
         {
             UserController userController = new UserController();
-            UserModel userModel = new UserModel
+            UserModel      userModel      = new UserModel
             {
-                Name = nameTextbox.Text,
-                City = cityTextbox.Text,
+                Name          = nameTextbox.Text,
+                City          = cityTextbox.Text,
                 StreetAddress = addressTextbox.Text,
-                Zip = zipTextbox.Text,
-                Role = roleCombobox.Text,
-                State = stateComboBox.Text,
-                Status = statusComboBox.Text
+                Zip           = zipTextbox.Text,
+                Role          = roleCombobox.Text,
+                State         = stateComboBox.Text,
+                Status        = statusComboBox.Text,
             };
-
             userModel = userController.AddUser(userModel);
-            
+            //if entry is entered valid pull up information Form
+            EntryConfirmationForm launchConfirmation = new EntryConfirmationForm(userModel);
+            launchConfirmation.ShowDialog();
+            //else erase the whole add user form and change button text to "Invalid entry"
 
             this.Close();
         }

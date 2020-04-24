@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ChocAnonGUI
 {
-    public partial class lookupProviderForm : Form
+    public partial class ServiceLookupForm : Form
     {
-        public lookupProviderForm()
+        public ServiceLookupForm()
         {
             InitializeComponent();
         }

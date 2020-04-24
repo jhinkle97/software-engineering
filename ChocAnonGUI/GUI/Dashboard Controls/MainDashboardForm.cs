@@ -33,7 +33,7 @@ namespace ChocAnonGUI
 
         private void settingPicture_Click(object sender, EventArgs e)
         {
-            AboutUsForm LaunchAboutUs = new AboutUsForm();
+            SettingsForm LaunchAboutUs = new SettingsForm();
             LaunchAboutUs.ShowDialog();
 
         }
