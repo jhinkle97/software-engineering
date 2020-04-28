@@ -35,11 +35,11 @@ namespace ChocAnonGUI
             else
             {
                 UserController userController = new UserController();
-                UserModel userModel = userController.GetUser(userNumber);
+                UserModel user = userController.GetUser(userNumber);
 
-                if(userModel.UserNumber != null)
+                if(user.Role == "Provider")
                 {
-                    MainDashboard launchDash = new MainDashboard(userModel.UserNumber);
+                    MainDashboard launchDash = new MainDashboard(user.UserNumber);
                     this.Hide();
                     outputLabel.Text = "Login Successful, Logging in....";
                     launchDash.ShowDialog();
@@ -50,8 +50,14 @@ namespace ChocAnonGUI
                     inputTextbox.Clear();
                     inputTextbox.ForeColor = Color.Gray;
                     inputTextbox.Text = "Enter provider number";
-
-                    outputLabel.Text = "Invalid Login, Try Again or Exit";
+                    if(user.Role == "Member")
+                    {
+                        outputLabel.Text = "Invalid Login. User found with incorrect role. Try Again or Exit";
+                    }
+                    else
+                    {
+                        outputLabel.Text = "Invalid Login. User not found. Try Again or Exit";
+                    }
                 }
             }
             
@@ -67,6 +73,11 @@ namespace ChocAnonGUI
         }
 
         private void terminalLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void outputLabel_Click(object sender, EventArgs e)
         {
 
         }
