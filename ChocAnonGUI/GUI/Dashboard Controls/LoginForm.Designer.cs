@@ -45,7 +45,7 @@
             this.titleLabel.ForeColor = System.Drawing.Color.White;
             this.titleLabel.Location = new System.Drawing.Point(72, 15);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(305, 26);
+            this.titleLabel.Size = new System.Drawing.Size(390, 32);
             this.titleLabel.TabIndex = 1;
             this.titleLabel.Text = "Welcome To ChocAnon";
             // 
@@ -75,7 +75,7 @@
             this.inputTextbox.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.inputTextbox.Location = new System.Drawing.Point(79, 23);
             this.inputTextbox.Name = "inputTextbox";
-            this.inputTextbox.Size = new System.Drawing.Size(288, 20);
+            this.inputTextbox.Size = new System.Drawing.Size(288, 22);
             this.inputTextbox.TabIndex = 3;
             this.inputTextbox.Text = "Enter provider number";
             this.inputTextbox.Enter += new System.EventHandler(this.inputTextbox_Enter);
@@ -83,11 +83,11 @@
             // outputLabel
             // 
             this.outputLabel.AutoSize = true;
-            this.outputLabel.Location = new System.Drawing.Point(138, 92);
+            this.outputLabel.Location = new System.Drawing.Point(76, 89);
             this.outputLabel.Name = "outputLabel";
-            this.outputLabel.Size = new System.Drawing.Size(200, 13);
+            this.outputLabel.Size = new System.Drawing.Size(0, 17);
             this.outputLabel.TabIndex = 2;
-            this.outputLabel.Text = "This is where a you logged in or not goes";
+            this.outputLabel.Click += new System.EventHandler(this.outputLabel_Click);
             // 
             // enterButton
             // 
