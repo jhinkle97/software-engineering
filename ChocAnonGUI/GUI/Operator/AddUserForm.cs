@@ -55,7 +55,7 @@ namespace ChocAnonGUI
             {
                 submitButton.Text = "Add New Member";
             }
-            else if (roleCombobox.Text == "Provider Status") {
+            else if (roleCombobox.Text == "Provider") {
                 submitButton.Text = "Add New Provider";
             }
             
@@ -64,8 +64,8 @@ namespace ChocAnonGUI
         public void populateComboBoxes()
         {
             //Populate User Type Combobox
-            roleCombobox.Items.Add("Provider Status");
-            roleCombobox.Items.Add("Member Status");
+            roleCombobox.Items.Add("Provider");
+            roleCombobox.Items.Add("Member");
             //Populate State Combobox
             string[] states = { "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA",
             "MI", "MN", "MS","MO","MT","MT","NE","NV","NH","NJ","NM","NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "TN", "TX", "UT", "VT", "VA",

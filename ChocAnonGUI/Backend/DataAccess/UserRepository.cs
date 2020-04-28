@@ -2,6 +2,7 @@
 using ChocAnonGUI.Backend.Utilities;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -14,7 +15,7 @@ namespace ChocAnonGUI.Backend.DataAccess
         private SqlConnection connection = new SqlConnection(@"Data Source=.; Initial Catalog=chocAnon; Integrated Security=SSPI");
 
 
-        public bool LookUpUser(string userNumber)
+        public UserModel GetUser(string userNumber)
         {
             try
             {
@@ -23,21 +24,35 @@ namespace ChocAnonGUI.Backend.DataAccess
                 connection.Open();
                 SqlCommand cmd = new SqlCommand(query, connection);
                 SqlDataReader reader = cmd.ExecuteReader();
+
                 if (reader.Read())
                 {
+                    IDataRecord record = reader;
+
+                    UserModel user = new UserModel
+                    {
+                        Role = (string)record[1],
+                        Status = (string)record[2],
+                        Name = (string)record[3],
+                        UserNumber = (string)record[4],
+                        StreetAddress = (string)record[5],
+                        City = (string)record[6],
+                        State = (string)record[7],
+                        Zip = (string)record[8]
+                    };
                     connection.Close();
-                    return true;
+                    return user;
                 }
                 else
                 {
                     connection.Close();
-                    return false;
+                    return new UserModel();
                 }
             }
-            catch (Exception e)
+            catch (SqlException)
             {
-                Console.WriteLine(e);
-                throw new Exception(); 
+                connection.Close();
+                return new UserModel();
             }
         }
         public UserModel AddUser(UserModel user)
@@ -47,7 +62,7 @@ namespace ChocAnonGUI.Backend.DataAccess
                 user.UserNumber = NumberGenerator.Generate(9);
 
             }
-            while (LookUpUser(user.UserNumber));
+            while (GetUser(user.UserNumber).UserNumber != null);
 
             string query = $"INSERT INTO [user] VALUES('{user.Role}', '{user.Status}', '{user.Name}', '{user.UserNumber}', " +
                                                     $"'{user.StreetAddress}', '{user.City}', '{user.State}', '{user.Zip}')";

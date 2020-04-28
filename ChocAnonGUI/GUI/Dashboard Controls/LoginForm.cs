@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using ChocAnonGUI.Backend.Models;
+using ChocAnonGUI.Backend.Controllers;
 
 namespace ChocAnonGUI
 {
@@ -20,34 +22,38 @@ namespace ChocAnonGUI
 
         private void enterButton_Click(object sender, EventArgs e)
         {
-            string getCode = inputTextbox.Text;
+            string userNumber = inputTextbox.Text;
 
-            if (getCode == "1234")
+            if (userNumber == "admin")
             {
-                MainDashboard launchDash = new MainDashboard(getCode);
+                MainDashboard launchDash = new MainDashboard(userNumber);
                 this.Hide();
                 outputLabel.Text = "Login Successful, Logging in....";
                 launchDash.ShowDialog();
                 this.Close();
-            } else if (getCode == "12345678")
-            {
-                MainDashboard launchDash = new MainDashboard(getCode);
-                this.Hide();
-                outputLabel.Text = "Login Successful, Logging in....";
-                launchDash.ShowDialog();
-                this.Close();
-            }else
-
-            {
-                inputTextbox.Clear();
-                inputTextbox.ForeColor = Color.Gray;
-                inputTextbox.Text = "Enter provider number";
-
-                outputLabel.Text = "Invalid Login, Try Again or Exit";
             }
+            else
+            {
+                UserController userController = new UserController();
+                UserModel userModel = userController.GetUser(userNumber);
 
+                if(userModel.UserNumber != null)
+                {
+                    MainDashboard launchDash = new MainDashboard(userModel.UserNumber);
+                    this.Hide();
+                    outputLabel.Text = "Login Successful, Logging in....";
+                    launchDash.ShowDialog();
+                    this.Close();
+                }
+                else
+                {
+                    inputTextbox.Clear();
+                    inputTextbox.ForeColor = Color.Gray;
+                    inputTextbox.Text = "Enter provider number";
 
-
+                    outputLabel.Text = "Invalid Login, Try Again or Exit";
+                }
+            }
             
         }
 

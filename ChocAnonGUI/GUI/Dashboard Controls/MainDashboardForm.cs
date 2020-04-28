@@ -17,7 +17,7 @@ namespace ChocAnonGUI
         {
             InitializeComponent();
             hidePanels();
-            if (providerCode == "12345678")
+            if (providerCode == "admin")
             {
                 hidePanels();
                 usertitleLabel.Text = "Operator: " + providerCode;
