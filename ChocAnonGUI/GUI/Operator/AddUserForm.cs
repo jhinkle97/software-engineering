@@ -63,14 +63,20 @@ namespace ChocAnonGUI
 
         public void populateComboBoxes()
         {
-            //Populate User Type Combobox
-            roleCombobox.Items.Add("Provider");
-            roleCombobox.Items.Add("Member");
-            //Populate State Combobox
+            //Populate State Combobox, Status Combobox, and Role Combobox
             string[] states = { "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA",
             "MI", "MN", "MS","MO","MT","MT","NE","NV","NH","NJ","NM","NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "TN", "TX", "UT", "VT", "VA",
             "WA", "WV", "WI", "WY"};
+            string[] status = { "Active", "Suspended" };
+            string[] roles = { "Member", "Provider" };
+            //Fill the Comboboxes.
             stateComboBox.Items.AddRange(states);
+            statusComboBox.Items.AddRange(status);
+            roleCombobox.Items.AddRange(roles);
+            //Set to dropdown only
+            this.stateComboBox.DropDownStyle  = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.statusComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.roleCombobox.DropDownStyle   = System.Windows.Forms.ComboBoxStyle.DropDownList;
 
         }
     }

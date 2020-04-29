@@ -21,5 +21,11 @@ namespace ChocAnonGUI.Backend.Controllers
             UserRepository userRepository = new UserRepository();
             return userRepository.GetUser(userNumber);
         }
+
+        //public UserModel EditUser(UserModel user)
+        //{
+        //   UserRepository userRepository = new UserRepository();
+        //    return userRepository.EditUser(user);
+       // }
     }
 }

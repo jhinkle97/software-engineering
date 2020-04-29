@@ -49,7 +49,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(11, 9);
+            this.label1.Location = new System.Drawing.Point(6, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 21);
             this.label1.TabIndex = 0;
@@ -59,7 +59,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 45);
+            this.label2.Location = new System.Drawing.Point(8, 45);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 21);
             this.label2.TabIndex = 1;
@@ -69,7 +69,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(13, 83);
+            this.label3.Location = new System.Drawing.Point(9, 83);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(127, 21);
             this.label3.TabIndex = 2;
@@ -116,38 +116,44 @@
             // 
             // nameTextbox
             // 
-            this.nameTextbox.Location = new System.Drawing.Point(78, 12);
+            this.nameTextbox.Location = new System.Drawing.Point(73, 12);
+            this.nameTextbox.MaxLength = 25;
             this.nameTextbox.Name = "nameTextbox";
-            this.nameTextbox.Size = new System.Drawing.Size(184, 20);
+            this.nameTextbox.Size = new System.Drawing.Size(198, 20);
             this.nameTextbox.TabIndex = 7;
             // 
             // addressTextbox
             // 
-            this.addressTextbox.Location = new System.Drawing.Point(144, 85);
+            this.addressTextbox.Location = new System.Drawing.Point(134, 86);
+            this.addressTextbox.MaxLength = 25;
             this.addressTextbox.Name = "addressTextbox";
-            this.addressTextbox.Size = new System.Drawing.Size(118, 20);
+            this.addressTextbox.Size = new System.Drawing.Size(137, 20);
             this.addressTextbox.TabIndex = 9;
             // 
             // cityTextbox
             // 
             this.cityTextbox.Location = new System.Drawing.Point(185, 122);
+            this.cityTextbox.MaxLength = 14;
             this.cityTextbox.Name = "cityTextbox";
-            this.cityTextbox.Size = new System.Drawing.Size(77, 20);
+            this.cityTextbox.Size = new System.Drawing.Size(86, 20);
             this.cityTextbox.TabIndex = 10;
+            this.cityTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // zipTextbox
             // 
             this.zipTextbox.Location = new System.Drawing.Point(99, 158);
+            this.zipTextbox.MaxLength = 5;
             this.zipTextbox.Name = "zipTextbox";
-            this.zipTextbox.Size = new System.Drawing.Size(164, 20);
+            this.zipTextbox.Size = new System.Drawing.Size(172, 20);
             this.zipTextbox.TabIndex = 11;
+            this.zipTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // submitButton
             // 
             this.submitButton.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.submitButton.Location = new System.Drawing.Point(17, 232);
             this.submitButton.Name = "submitButton";
-            this.submitButton.Size = new System.Drawing.Size(247, 60);
+            this.submitButton.Size = new System.Drawing.Size(254, 60);
             this.submitButton.TabIndex = 14;
             this.submitButton.Text = "Add New User";
             this.submitButton.UseVisualStyleBackColor = true;
@@ -168,23 +174,24 @@
             this.roleCombobox.FormattingEnabled = true;
             this.roleCombobox.Location = new System.Drawing.Point(100, 196);
             this.roleCombobox.Name = "roleCombobox";
-            this.roleCombobox.Size = new System.Drawing.Size(162, 21);
+            this.roleCombobox.Size = new System.Drawing.Size(171, 21);
             this.roleCombobox.TabIndex = 16;
             this.roleCombobox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // statusComboBox
             // 
             this.statusComboBox.FormattingEnabled = true;
-            this.statusComboBox.Location = new System.Drawing.Point(83, 44);
+            this.statusComboBox.Location = new System.Drawing.Point(73, 45);
+            this.statusComboBox.MaxDropDownItems = 3;
             this.statusComboBox.Name = "statusComboBox";
-            this.statusComboBox.Size = new System.Drawing.Size(179, 21);
+            this.statusComboBox.Size = new System.Drawing.Size(198, 21);
             this.statusComboBox.TabIndex = 17;
             // 
             // AddUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(275, 305);
+            this.ClientSize = new System.Drawing.Size(287, 303);
             this.Controls.Add(this.statusComboBox);
             this.Controls.Add(this.roleCombobox);
             this.Controls.Add(this.label7);
@@ -225,5 +232,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox roleCombobox;
         private System.Windows.Forms.ComboBox statusComboBox;
+        
     }
 }

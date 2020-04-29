@@ -82,5 +82,10 @@ namespace ChocAnonGUI.Backend.DataAccess
             }
             return user;
         }
+
+        //public UserModel EditUser(UserModel user)
+        //{
+
+        //}
     }
 }
