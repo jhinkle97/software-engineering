@@ -90,6 +90,7 @@
             this.editUserButton.TabIndex = 3;
             this.editUserButton.Text = "Edit User";
             this.editUserButton.UseVisualStyleBackColor = true;
+            this.editUserButton.Click += new System.EventHandler(this.editUserButton_Click);
             // 
             // editServiceButton
             // 

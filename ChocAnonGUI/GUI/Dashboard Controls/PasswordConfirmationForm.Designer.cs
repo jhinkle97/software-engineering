@@ -52,6 +52,7 @@
             // memcodeTextbox
             // 
             this.memcodeTextbox.Location = new System.Drawing.Point(14, 56);
+            this.memcodeTextbox.MaxLength = 9;
             this.memcodeTextbox.Name = "memcodeTextbox";
             this.memcodeTextbox.Size = new System.Drawing.Size(366, 20);
             this.memcodeTextbox.TabIndex = 1;

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ChocAnonGUI.GUI.Operator;
+
 
 namespace ChocAnonGUI
 {
@@ -30,7 +32,13 @@ namespace ChocAnonGUI
 
         private void addServiceButton_Click(object sender, EventArgs e)
         {
+            
+        }
 
+        private void editUserButton_Click(object sender, EventArgs e)
+        {
+            EditUserForm launchEditMem = new EditUserForm();
+            launchEditMem.ShowDialog();
         }
     }
 }
