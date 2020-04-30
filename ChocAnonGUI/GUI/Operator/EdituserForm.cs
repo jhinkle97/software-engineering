@@ -78,9 +78,7 @@ namespace ChocAnonGUI.GUI.Operator
             user.StreetAddress = addressTextbox.Text;
             user.Zip = zipTextbox.Text;
 
-            user = userController.EditUser(user);
-            //UserModel editedUser = userController.EditUser();
-            
+            user = userController.EditUser(user);            
         }
     }
 }
