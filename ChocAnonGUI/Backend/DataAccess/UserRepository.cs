@@ -19,7 +19,7 @@ namespace ChocAnonGUI.Backend.DataAccess
         {
             try
             {
-                string query = $"SELECT * FROM [user] WHERE userNumber = {userNumber}";
+                string query = $"SELECT * FROM [user] WHERE [userNumber] = '{userNumber}'";
 
                 connection.Open();
                 SqlCommand cmd = new SqlCommand(query, connection);
@@ -83,9 +83,26 @@ namespace ChocAnonGUI.Backend.DataAccess
             return user;
         }
 
-        //public UserModel EditUser(UserModel user)
-        //{
+        public UserModel EditUser(UserModel user)
+        {
+            try
+            {
+                string query = $"UPDATE [user] SET [role] = '{user.Role}', [status] = '{user.Status}', [name] = '{user.Name}', " +
+                               $"[userNumber] = '{user.UserNumber}', [streetAddress] = '{user.StreetAddress}', " +
+                               $"[city] = '{user.City}', [state] = '{user.State}', [zip] = '{user.Zip}' " +
+                               $"WHERE [userNumber] = '{user.UserNumber}'";
 
-        //}
+                connection.Open();
+                SqlCommand cmd = new SqlCommand(query, connection);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                return user;
+            }
+            catch (SqlException)
+            {
+                connection.Close();
+                return new UserModel();
+            }
+        }
     }
 }
