@@ -15,6 +15,7 @@ namespace ChocAnonGUI.GUI.Operator
 {
     public partial class EditUserForm : Form
     {
+        private UserModel user;
         public EditUserForm()
         {
             InitializeComponent();
@@ -49,7 +50,7 @@ namespace ChocAnonGUI.GUI.Operator
             //Need to add something if the searched ID is invalid
             //Fields will be locked until a User Number is entered 
             UserController userController = new UserController();
-            UserModel user = userController.GetUser(userNumber);
+            user = userController.GetUser(userNumber);
 
             
 
@@ -67,7 +68,17 @@ namespace ChocAnonGUI.GUI.Operator
 
         private void editButton_Click(object sender, EventArgs e)
         {
-            
+            UserController userController = new UserController();
+
+            user.Name = nameTextbox.Text;
+            user.Status = statusComboBox.Text;
+            user.City = cityTextbox.Text;
+            user.State = stateComboBox.Text;
+            user.Role = roleCombobox.Text;
+            user.StreetAddress = addressTextbox.Text;
+            user.Zip = zipTextbox.Text;
+
+            user = userController.EditUser(user);            
         }
     }
 }
