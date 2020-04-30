@@ -101,6 +101,7 @@
             this.editServiceButton.TabIndex = 4;
             this.editServiceButton.Text = "Edit Service";
             this.editServiceButton.UseVisualStyleBackColor = true;
+            this.editServiceButton.Click += new System.EventHandler(this.editServiceButton_Click);
             // 
             // candyBarPicture
             // 

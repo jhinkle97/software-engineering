@@ -66,11 +66,23 @@
     <Compile Include="GUI\Dashboard Controls\SettingsForm.Designer.cs">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Operator\AddServiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Operator\AddServiceForm.Designer.cs">
+      <DependentUpon>AddServiceForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Operator\AddUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\Operator\AddUserForm.Designer.cs">
       <DependentUpon>AddUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Operator\EditServiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Operator\EditServiceForm.Designer.cs">
+      <DependentUpon>EditServiceForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Operator\EditUserForm.cs">
       <SubType>Form</SubType>
@@ -78,17 +90,23 @@
     <Compile Include="GUI\Operator\EditUserForm.Designer.cs">
       <DependentUpon>EditUserForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Operator\EntryConfirmationForm.cs">
+    <Compile Include="GUI\Operator\UserEntryConfirmationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Operator\EntryConfirmationForm.Designer.cs">
-      <DependentUpon>EntryConfirmationForm.cs</DependentUpon>
+    <Compile Include="GUI\Operator\UserEntryConfirmationForm.Designer.cs">
+      <DependentUpon>UserEntryConfirmationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Operator\InvalidControlPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="GUI\Operator\InvalidControlPanel.Designer.cs">
       <DependentUpon>InvalidControlPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Operator\ServiceEntryConfirmationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Operator\ServiceEntryConfirmationForm.Designer.cs">
+      <DependentUpon>ServiceEntryConfirmationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Provider\Billing\BillingPanel.cs">
       <SubType>UserControl</SubType>
@@ -149,14 +167,23 @@
     <EmbeddedResource Include="GUI\Dashboard Controls\SettingsForm.resx">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Operator\AddServiceForm.resx">
+      <DependentUpon>AddServiceForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Operator\AddUserForm.resx">
       <DependentUpon>AddUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Operator\EditServiceForm.resx">
+      <DependentUpon>EditServiceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Operator\EditUserForm.resx">
       <DependentUpon>EditUserForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Operator\EntryConfirmationForm.resx">
-      <DependentUpon>EntryConfirmationForm.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Operator\ServiceEntryConfirmationForm.resx">
+      <DependentUpon>ServiceEntryConfirmationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Operator\UserEntryConfirmationForm.resx">
+      <DependentUpon>UserEntryConfirmationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Operator\InvalidControlPanel.resx">
       <DependentUpon>InvalidControlPanel.cs</DependentUpon>

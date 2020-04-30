@@ -32,13 +32,20 @@ namespace ChocAnonGUI
 
         private void addServiceButton_Click(object sender, EventArgs e)
         {
-            
+            AddServiceForm launchAddService = new AddServiceForm();
+            launchAddService.ShowDialog();
         }
 
         private void editUserButton_Click(object sender, EventArgs e)
         {
             EditUserForm launchEditMem = new EditUserForm();
             launchEditMem.ShowDialog();
+        }
+
+        private void editServiceButton_Click(object sender, EventArgs e)
+        {
+            EditServiceForm launchEditService = new EditServiceForm();
+            launchEditService.ShowDialog();
         }
     }
 }
