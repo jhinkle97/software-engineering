@@ -1,6 +1,6 @@
 ﻿namespace ChocAnonGUI.GUI.Operator
 {
-    partial class EntryConfirmationForm
+    partial class UserEntryConfirmationForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EntryConfirmationForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserEntryConfirmationForm));
             this.successLabel = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -230,7 +230,7 @@
             this.nameLabel.TabIndex = 40;
             this.nameLabel.Text = "User  Name:";
             // 
-            // EntryConfirmationForm
+            // UserEntryConfirmationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -254,8 +254,10 @@
             this.Controls.Add(this.numberLabel);
             this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.successLabel);
-            this.Name = "EntryConfirmationForm";
-            this.Text = "EntryConfirmationForm";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "UserEntryConfirmationForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "User Confirmation";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

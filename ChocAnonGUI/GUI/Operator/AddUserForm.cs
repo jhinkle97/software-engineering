@@ -42,7 +42,7 @@ namespace ChocAnonGUI
             };
             userModel = userController.AddUser(userModel);
             //if entry is entered valid pull up information Form
-            EntryConfirmationForm launchConfirmation = new EntryConfirmationForm(userModel);
+            UserEntryConfirmationForm launchConfirmation = new UserEntryConfirmationForm(userModel);
             launchConfirmation.ShowDialog();
             //else erase the whole add user form and change button text to "Invalid entry"
 

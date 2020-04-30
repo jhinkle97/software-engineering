@@ -46,6 +46,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.usernumberTextBox = new System.Windows.Forms.TextBox();
             this.searchButton = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusComboBox
@@ -78,7 +79,7 @@
             // editButton
             // 
             this.editButton.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editButton.Location = new System.Drawing.Point(23, 285);
+            this.editButton.Location = new System.Drawing.Point(23, 283);
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(254, 60);
             this.editButton.TabIndex = 29;
@@ -191,21 +192,23 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel1.Location = new System.Drawing.Point(0, 41);
+            this.panel1.Controls.Add(this.searchButton);
+            this.panel1.Controls.Add(this.usernumberTextBox);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(292, 18);
+            this.panel1.Size = new System.Drawing.Size(292, 51);
             this.panel1.TabIndex = 33;
             // 
             // usernumberTextBox
             // 
-            this.usernumberTextBox.Location = new System.Drawing.Point(19, 13);
+            this.usernumberTextBox.Location = new System.Drawing.Point(13, 15);
             this.usernumberTextBox.Name = "usernumberTextBox";
             this.usernumberTextBox.Size = new System.Drawing.Size(153, 20);
             this.usernumberTextBox.TabIndex = 34;
             // 
             // searchButton
             // 
-            this.searchButton.Location = new System.Drawing.Point(188, 11);
+            this.searchButton.Location = new System.Drawing.Point(186, 13);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(88, 23);
             this.searchButton.TabIndex = 35;
@@ -218,8 +221,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(292, 351);
-            this.Controls.Add(this.searchButton);
-            this.Controls.Add(this.usernumberTextBox);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.statusComboBox);
             this.Controls.Add(this.roleCombobox);
@@ -236,8 +237,12 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "EditUserForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Edit User Menu";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

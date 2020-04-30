@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace ChocAnonGUI.GUI.Operator
 {
-    public partial class EntryConfirmationForm : Form
+    public partial class UserEntryConfirmationForm : Form
     {
-        public EntryConfirmationForm(UserModel temp)
+        public UserEntryConfirmationForm(UserModel temp)
         {
             InitializeComponent();
             Console.WriteLine(temp);
