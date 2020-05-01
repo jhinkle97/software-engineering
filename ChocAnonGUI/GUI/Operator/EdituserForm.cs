@@ -78,11 +78,20 @@ namespace ChocAnonGUI.GUI.Operator
             user.StreetAddress = addressTextbox.Text;
             user.Zip = zipTextbox.Text;
 
-            user = userController.EditUser(user);
 
-            UserEntryConfirmationForm launchConfirmation = new UserEntryConfirmationForm(user);
-            launchConfirmation.ShowDialog();
-            this.Close();
+            if (nameTextbox.Text == "" || cityTextbox.Text == "" || addressTextbox.Text == "" || zipTextbox.Text == "" || roleCombobox.Text == "" || stateComboBox.Text == "" || statusComboBox.Text == "")
+            {
+                MissingEntryForm launchMissingEntry = new MissingEntryForm();
+                launchMissingEntry.ShowDialog();
+            }
+            else
+            {
+                user = userController.EditUser(user);
+
+                UserEntryConfirmationForm launchConfirmation = new UserEntryConfirmationForm(user);
+                launchConfirmation.ShowDialog();
+                this.Close();
+            }
         }
     }
 }
