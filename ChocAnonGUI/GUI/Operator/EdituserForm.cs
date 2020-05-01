@@ -52,8 +52,6 @@ namespace ChocAnonGUI.GUI.Operator
             UserController userController = new UserController();
             user = userController.GetUser(userNumber);
 
-            
-
             nameTextbox.Text = user.Name;
             statusComboBox.Text = user.Status;
             cityTextbox.Text = user.City;
@@ -61,9 +59,6 @@ namespace ChocAnonGUI.GUI.Operator
             roleCombobox.Text = user.Role;
             addressTextbox.Text = user.StreetAddress;
             zipTextbox.Text = user.Zip;
-
-
-
         }
 
         private void editButton_Click(object sender, EventArgs e)

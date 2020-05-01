@@ -12,8 +12,7 @@ namespace ChocAnonGUI.Backend.DataAccess
 {
     class UserRepository
     {
-        private SqlConnection connection = new SqlConnection(@"Data Source=.; Initial Catalog=chocAnon; Integrated Security=SSPI");
-
+        private readonly SqlConnection connection = new SqlConnection(@"Data Source=.; Initial Catalog=chocAnon; Integrated Security=SSPI");
 
         public UserModel GetUser(string userNumber)
         {
@@ -57,13 +56,6 @@ namespace ChocAnonGUI.Backend.DataAccess
         }
         public UserModel AddUser(UserModel user)
         {
-            do
-            {
-                user.UserNumber = NumberGenerator.Generate(9);
-
-            }
-            while (GetUser(user.UserNumber).UserNumber != null);
-
             string query = $"INSERT INTO [user] VALUES('{user.Role}', '{user.Status}', '{user.Name}', '{user.UserNumber}', " +
                                                     $"'{user.StreetAddress}', '{user.City}', '{user.State}', '{user.Zip}')";
 

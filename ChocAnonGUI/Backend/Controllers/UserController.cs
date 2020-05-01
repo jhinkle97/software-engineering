@@ -1,5 +1,6 @@
 ﻿using ChocAnonGUI.Backend.DataAccess;
 using ChocAnonGUI.Backend.Models;
+using ChocAnonGUI.Backend.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,12 @@ namespace ChocAnonGUI.Backend.Controllers
         public UserModel AddUser(UserModel user)
         {
             UserRepository userRepository = new UserRepository();
+            do
+            {
+                user.UserNumber = NumberGenerator.Generate(9);
+            }
+            while (userRepository.GetUser(user.UserNumber).UserNumber != null);
+
             return userRepository.AddUser(user);
         }
 
