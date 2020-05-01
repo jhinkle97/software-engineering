@@ -40,13 +40,21 @@ namespace ChocAnonGUI
                 State         = stateComboBox.Text,
                 Status        = statusComboBox.Text,
             };
-            userModel = userController.AddUser(userModel);
-            //if entry is entered valid pull up information Form
-            UserEntryConfirmationForm launchConfirmation = new UserEntryConfirmationForm(userModel);
-            launchConfirmation.ShowDialog();
-            //else erase the whole add user form and change button text to "Invalid entry"
+            if (nameTextbox.Text == "" || cityTextbox.Text == "" || addressTextbox.Text == "" || zipTextbox.Text == "" || roleCombobox.Text == "" || stateComboBox.Text == "" || statusComboBox.Text == "")
+            {
+                MissingEntryForm launchMissingEntry = new MissingEntryForm();
+                launchMissingEntry.ShowDialog();
+            }
+            else
+            {
+                userModel = userController.AddUser(userModel);
+                //if entry is entered valid pull up information Form
+                UserEntryConfirmationForm launchConfirmation = new UserEntryConfirmationForm(userModel);
+                launchConfirmation.ShowDialog();
+                //else erase the whole add user form and change button text to "Invalid entry"
 
-            this.Close();
+                this.Close();
+            }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
