@@ -18,21 +18,9 @@ namespace ChocAnonGUI
         public ServiceLookupForm()
         {
             InitializeComponent();
-            runLoop();
+           
         }
 
-        private void runLoop()
-        {
-            for (int i = 821640; i < 821659; i++)
-            {
-                ServiceDirectoryController pullService = new ServiceDirectoryController();
-                service = pullService.GetService(i.ToString());
-                Console.WriteLine(i);
-                if (service.Name != "")
-                {
-                    servicesListview.Items.Add("Service: " + service.Name + "| Cost: " + service.Fee + "| CODE: " + service.Code);
-                }
-            }
-        }
+       
     }
 }

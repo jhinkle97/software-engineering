@@ -48,28 +48,8 @@ namespace ChocAnonGUI
                     confirmationLabel.Text = "Invalid Login. NOT FOUND";
                 }
                 //set memberCode to null
-                memberCode = "NULL";
+                memberCode = "";
             }
-
-
-
-
-
-            
-
-            
-            
-            //INSERT CODE TO
-            //GO TO DATABASE AND VERIFY THE MEMBER
-            //CODE WHICH IS THEN PASSED BACK AS
-            //A STRING VALUE
-
-            //IF IT IS VALIDATED PASS MEMBER NUMBER BACK TO DASHBOARD
-            //ELSE DISPLAY AN ERROR MESSAGE ON THE POPUP FORM
-            
-            //IF THEY EXIT THE PASSWORD CONFIRMATION WITHOUT ENTERING A 
-            //VALID MEMBERCODE, A ERROR PANE SHOWS UP ON THE DASHBOARD
-
         }
         private void memcodeTextbox_Enter(object sender, EventArgs e)
         {

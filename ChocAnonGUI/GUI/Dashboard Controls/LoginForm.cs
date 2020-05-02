@@ -15,6 +15,7 @@ namespace ChocAnonGUI
 {
     public partial class LoginForm : Form
     {
+        public UserModel user;
         public LoginForm()
         {
             InitializeComponent();
@@ -35,7 +36,7 @@ namespace ChocAnonGUI
             else
             {
                 UserController userController = new UserController();
-                UserModel user = userController.GetUser(userNumber);
+                user = userController.GetUser(userNumber);
 
                 if(user.Role == "Provider")
                 {
