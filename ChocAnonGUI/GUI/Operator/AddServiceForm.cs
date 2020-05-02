@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ChocAnonGUI.Backend.Controllers;
+using ChocAnonGUI.Backend.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,6 +20,30 @@ namespace ChocAnonGUI.GUI.Operator
             
         }
 
-      
+        private void submitButton_Click(object sender, EventArgs e)
+        {
+            ServiceDirectoryController serviceDirectoryController = new ServiceDirectoryController();
+            ServiceDirectoryModel service = new ServiceDirectoryModel
+            {
+                Fee = feeTextbox.Text,
+                Name = nameTextbox.Text
+            };
+            if (nameTextbox.Text == "" || feeTextbox.Text == "")
+            {
+                MissingEntryForm launchMissingEntry = new MissingEntryForm();
+                launchMissingEntry.ShowDialog();
+            }
+            else
+            {
+                service = serviceDirectoryController.AddService(service);
+                //if entry is entered valid pull up information Form
+                ServiceEntryConfirmationForm launchConfirmation = new ServiceEntryConfirmationForm(service);
+                launchConfirmation.ShowDialog();
+                //else erase the whole add user form and change button text to "Invalid entry"
+
+                this.Close();
+            }
+        }
+
     }
 }

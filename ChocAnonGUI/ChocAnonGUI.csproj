@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Backend\Controllers\ServiceController.cs" />
+    <Compile Include="Backend\Controllers\ServiceDirectoryController.cs" />
     <Compile Include="Backend\Controllers\UserController.cs" />
     <Compile Include="Backend\DataAccess\ServiceDirectoryRepository.cs" />
     <Compile Include="Backend\DataAccess\ServiceRepository.cs" />

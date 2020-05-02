@@ -32,9 +32,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.servicenameLabel = new System.Windows.Forms.Label();
             this.servicefeeLabel = new System.Windows.Forms.Label();
-            this.servicenameTextbox = new System.Windows.Forms.TextBox();
+            this.nameTextbox = new System.Windows.Forms.TextBox();
             this.addserviceButton = new System.Windows.Forms.Button();
-            this.costTextbox = new System.Windows.Forms.TextBox();
+            this.feeTextbox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,9 +42,10 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(2, 0);
+            this.panel1.Location = new System.Drawing.Point(3, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(252, 46);
+            this.panel1.Size = new System.Drawing.Size(336, 57);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -52,9 +53,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Ravie", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(29, 10);
+            this.label1.Location = new System.Drawing.Point(39, 12);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(199, 22);
+            this.label1.Size = new System.Drawing.Size(246, 27);
             this.label1.TabIndex = 0;
             this.label1.Text = "Add Service Menu";
             // 
@@ -62,9 +64,10 @@
             // 
             this.servicenameLabel.AutoSize = true;
             this.servicenameLabel.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.servicenameLabel.Location = new System.Drawing.Point(6, 60);
+            this.servicenameLabel.Location = new System.Drawing.Point(8, 74);
+            this.servicenameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.servicenameLabel.Name = "servicenameLabel";
-            this.servicenameLabel.Size = new System.Drawing.Size(95, 16);
+            this.servicenameLabel.Size = new System.Drawing.Size(127, 20);
             this.servicenameLabel.TabIndex = 1;
             this.servicenameLabel.Text = "Service Name: ";
             // 
@@ -72,49 +75,55 @@
             // 
             this.servicefeeLabel.AutoSize = true;
             this.servicefeeLabel.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.servicefeeLabel.Location = new System.Drawing.Point(8, 92);
+            this.servicefeeLabel.Location = new System.Drawing.Point(11, 113);
+            this.servicefeeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.servicefeeLabel.Name = "servicefeeLabel";
-            this.servicefeeLabel.Size = new System.Drawing.Size(79, 16);
+            this.servicefeeLabel.Size = new System.Drawing.Size(106, 20);
             this.servicefeeLabel.TabIndex = 2;
             this.servicefeeLabel.Text = "Service Fee:";
             // 
-            // servicenameTextbox
+            // nameTextbox
             // 
-            this.servicenameTextbox.Location = new System.Drawing.Point(98, 60);
-            this.servicenameTextbox.MaxLength = 20;
-            this.servicenameTextbox.Name = "servicenameTextbox";
-            this.servicenameTextbox.Size = new System.Drawing.Size(146, 20);
-            this.servicenameTextbox.TabIndex = 3;
+            this.nameTextbox.Location = new System.Drawing.Point(131, 74);
+            this.nameTextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nameTextbox.MaxLength = 20;
+            this.nameTextbox.Name = "nameTextbox";
+            this.nameTextbox.Size = new System.Drawing.Size(193, 22);
+            this.nameTextbox.TabIndex = 3;
             // 
             // addserviceButton
             // 
             this.addserviceButton.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addserviceButton.Location = new System.Drawing.Point(9, 125);
+            this.addserviceButton.Location = new System.Drawing.Point(12, 154);
+            this.addserviceButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.addserviceButton.Name = "addserviceButton";
-            this.addserviceButton.Size = new System.Drawing.Size(235, 48);
+            this.addserviceButton.Size = new System.Drawing.Size(313, 59);
             this.addserviceButton.TabIndex = 5;
             this.addserviceButton.Text = "Add New Service";
             this.addserviceButton.UseVisualStyleBackColor = true;
+            this.addserviceButton.Click += new System.EventHandler(this.submitButton_Click);
             // 
-            // costTextbox
+            // feeTextbox
             // 
-            this.costTextbox.Location = new System.Drawing.Point(98, 91);
-            this.costTextbox.Name = "costTextbox";
-            this.costTextbox.Size = new System.Drawing.Size(146, 20);
-            this.costTextbox.TabIndex = 6;
+            this.feeTextbox.Location = new System.Drawing.Point(131, 112);
+            this.feeTextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.feeTextbox.Name = "feeTextbox";
+            this.feeTextbox.Size = new System.Drawing.Size(193, 22);
+            this.feeTextbox.TabIndex = 6;
             // 
             // AddServiceForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(256, 185);
-            this.Controls.Add(this.costTextbox);
+            this.ClientSize = new System.Drawing.Size(341, 228);
+            this.Controls.Add(this.feeTextbox);
             this.Controls.Add(this.addserviceButton);
-            this.Controls.Add(this.servicenameTextbox);
+            this.Controls.Add(this.nameTextbox);
             this.Controls.Add(this.servicefeeLabel);
             this.Controls.Add(this.servicenameLabel);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AddServiceForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Add Service";
@@ -131,8 +140,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label servicenameLabel;
         private System.Windows.Forms.Label servicefeeLabel;
-        private System.Windows.Forms.TextBox servicenameTextbox;
+        private System.Windows.Forms.TextBox nameTextbox;
         private System.Windows.Forms.Button addserviceButton;
-        private System.Windows.Forms.TextBox costTextbox;
+        private System.Windows.Forms.TextBox feeTextbox;
     }
 }

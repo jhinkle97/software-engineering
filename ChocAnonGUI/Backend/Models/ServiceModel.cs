@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ChocAnonGUI.Backend.Models
 {
-    class ServiceModel
+    public class ServiceModel
     {
         public DateTime EntryDate { get; set; }
         public DateTime ServiceDate { get; set; }

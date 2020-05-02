@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ChocAnonGUI.Backend.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,12 @@ namespace ChocAnonGUI.GUI.Operator
 {
     public partial class ServiceEntryConfirmationForm : Form
     {
-        public ServiceEntryConfirmationForm()
+        public ServiceEntryConfirmationForm(ServiceDirectoryModel service)
         {
             InitializeComponent();
+            servicecodeTextbox.Text = service.Code;
+            servicecostTextbox.Text = service.Fee;
+            servicenameTextbox.Text = service.Name;
         }
     }
 }
