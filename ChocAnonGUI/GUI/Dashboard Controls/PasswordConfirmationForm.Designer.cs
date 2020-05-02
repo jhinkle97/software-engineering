@@ -56,6 +56,8 @@
             this.memcodeTextbox.Name = "memcodeTextbox";
             this.memcodeTextbox.Size = new System.Drawing.Size(366, 20);
             this.memcodeTextbox.TabIndex = 1;
+            this.memcodeTextbox.Text = "Enter member number";
+            this.memcodeTextbox.Enter += new System.EventHandler(this.memcodeTextbox_Enter);
             // 
             // confirmButton
             // 

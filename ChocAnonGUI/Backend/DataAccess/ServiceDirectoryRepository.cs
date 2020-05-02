@@ -30,7 +30,7 @@ namespace ChocAnonGUI.Backend.DataAccess
                     ServiceDirectoryModel service = new ServiceDirectoryModel
                     {
                         Code = (string)record[1],
-                        Fee = (string)record[2],
+                        Fee  = (string)record[2],
                         Name = (string)record[3],
                     };
                     connection.Close();

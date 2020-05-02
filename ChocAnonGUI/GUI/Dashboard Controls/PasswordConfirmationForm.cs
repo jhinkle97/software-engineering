@@ -1,4 +1,6 @@
 ﻿using System;
+using ChocAnonGUI.Backend.Models;
+using ChocAnonGUI.Backend.Controllers;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,13 +18,46 @@ namespace ChocAnonGUI
         public PasswordConfirmForm()
         {
             InitializeComponent();
-           
-            
+
         }
 
         private void confirmButton_Click(object sender, EventArgs e)
         {
-            memberCode = memcodeTextbox.Text;
+            // Get the entered code from text box
+            string userNumber = memcodeTextbox.Text;
+            // Build a User object based on the code
+            UserController userController = new UserController();
+            UserModel user = userController.GetUser(userNumber);
+            //Logic to see if valid
+            if (user.Role == "Member")
+            {
+                memberCode = userNumber;
+                this.Close();
+            }
+            else
+            {
+                memcodeTextbox.Clear();
+                memcodeTextbox.ForeColor = Color.Gray;
+                memcodeTextbox.Text = "Enter member number";
+                if (user.Role == "Provider")
+                {
+                    confirmationLabel.Text = "Invalid Login. Wrong Role";
+                }
+                else
+                {
+                    confirmationLabel.Text = "Invalid Login. NOT FOUND";
+                }
+                //set memberCode to null
+                memberCode = "NULL";
+            }
+
+
+
+
+
+            
+
+            
             
             //INSERT CODE TO
             //GO TO DATABASE AND VERIFY THE MEMBER
@@ -36,6 +71,14 @@ namespace ChocAnonGUI
             //VALID MEMBERCODE, A ERROR PANE SHOWS UP ON THE DASHBOARD
 
         }
-
-      }
+        private void memcodeTextbox_Enter(object sender, EventArgs e)
+        {
+            if (memcodeTextbox.Text == "Enter member number")
+            {
+                memcodeTextbox.Text = "";
+                memcodeTextbox.ForeColor = Color.Black;
+            }
+        }
+        
+     }
     }
