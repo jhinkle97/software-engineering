@@ -7,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ChocAnonGUI.Backend.Controllers;
+using ChocAnonGUI.Backend.Models;
 
 namespace ChocAnonGUI
 {
     public partial class ServiceLookupForm : Form
     {
+        private ServiceDirectoryModel service;
         public ServiceLookupForm()
         {
             InitializeComponent();
+           
         }
+
+       
     }
 }

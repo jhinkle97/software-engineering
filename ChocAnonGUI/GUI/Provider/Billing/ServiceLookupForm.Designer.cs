@@ -38,21 +38,21 @@ namespace ChocAnonGUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.servicesListview = new System.Windows.Forms.ListView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.nameLabel = new System.Windows.Forms.Label();
             this.titleLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // listView1
+            // servicesListview
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(12, 66);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(440, 356);
-            this.listView1.TabIndex = 2;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.servicesListview.HideSelection = false;
+            this.servicesListview.Location = new System.Drawing.Point(12, 66);
+            this.servicesListview.Name = "servicesListview";
+            this.servicesListview.Size = new System.Drawing.Size(440, 356);
+            this.servicesListview.TabIndex = 2;
+            this.servicesListview.UseCompatibleStateImageBehavior = false;
             // 
             // panel1
             // 
@@ -84,14 +84,14 @@ namespace ChocAnonGUI
             this.titleLabel.TabIndex = 0;
             this.titleLabel.Text = "Services Available For:";
             // 
-            // lookupProviderForm
+            // ServiceLookupForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MidnightBlue;
             this.ClientSize = new System.Drawing.Size(465, 432);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.servicesListview);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ServiceLookupForm";
             this.Text = "ServiceLookupForm";
@@ -102,7 +102,7 @@ namespace ChocAnonGUI
         }
 
         #endregion
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView servicesListview;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.Label titleLabel;

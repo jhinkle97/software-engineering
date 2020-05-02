@@ -25,9 +25,11 @@ namespace ChocAnonGUI.GUI.Operator
             ServiceDirectoryController serviceDirectoryController = new ServiceDirectoryController();
             ServiceDirectoryModel service = new ServiceDirectoryModel
             {
-                Fee = feeTextbox.Text,
+                Fee  = feeTextbox.Text,
                 Name = nameTextbox.Text
             };
+
+            //Check if empty entry, if there is show error, if not continue with entry
             if (nameTextbox.Text == "" || feeTextbox.Text == "")
             {
                 MissingEntryForm launchMissingEntry = new MissingEntryForm();

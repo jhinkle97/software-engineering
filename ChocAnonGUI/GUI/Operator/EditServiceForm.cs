@@ -34,7 +34,7 @@ namespace ChocAnonGUI.GUI.Operator
             service = serviceDirectoryController.GetService(serviceCode);
 
             servicenameTextbox.Text = service.Name;
-            servicefeeTextbox.Text = service.Fee;
+            servicefeeTextbox.Text  = service.Fee;
         }
 
         private void serviceeditButton_Click(object sender, EventArgs e)
@@ -42,7 +42,7 @@ namespace ChocAnonGUI.GUI.Operator
             ServiceDirectoryController serviceDirectoryController = new ServiceDirectoryController();
 
             service.Name = servicenameTextbox.Text;
-            service.Fee = servicefeeTextbox.Text;
+            service.Fee  = servicefeeTextbox.Text;
 
             if (servicenameTextbox.Text == "" || servicefeeTextbox.Text == "")
             {
