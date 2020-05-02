@@ -16,6 +16,7 @@ namespace ChocAnonGUI.GUI.Operator
         public ServiceEntryConfirmationForm(ServiceDirectoryModel service)
         {
             InitializeComponent();
+            
             servicecodeTextbox.Text = service.Code;
             servicecostTextbox.Text = service.Fee.ToString();
             servicenameTextbox.Text = service.Name;

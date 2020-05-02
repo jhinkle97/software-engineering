@@ -16,14 +16,14 @@ namespace ChocAnonGUI.GUI.Operator
         public UserEntryConfirmationForm(UserModel temp)
         {
             InitializeComponent();
-            Console.WriteLine(temp);
+            //Fill in the fields of UserEntry
             usercodeTextBox.Text = temp.UserNumber;
-            nameTextBox.Text = temp.Name;
-            cityTextBox.Text = temp.City;
-            stateTextBox.Text = temp.State;
-            statusTextBox.Text = temp.Status;
-            zipTextBox.Text = temp.Zip;
-            addressTextBox.Text = temp.StreetAddress;
+            nameTextBox.Text     = temp.Name;
+            cityTextBox.Text     = temp.City;
+            stateTextBox.Text    = temp.State;
+            statusTextBox.Text   = temp.Status;
+            zipTextBox.Text      = temp.Zip;
+            addressTextBox.Text  = temp.StreetAddress;
 
         }
 

@@ -40,17 +40,17 @@
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.cityLabel = new System.Windows.Forms.Label();
-            this.memstatusTextbox = new System.Windows.Forms.TextBox();
+            this.memstateTextbox = new System.Windows.Forms.TextBox();
             this.contextMenuStrip3 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.cityTextbox = new System.Windows.Forms.TextBox();
+            this.memcityTextbox = new System.Windows.Forms.TextBox();
             this.contextMenuStrip4 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.stateLabel = new System.Windows.Forms.Label();
-            this.stateTextBox = new System.Windows.Forms.TextBox();
+            this.memzipTextbox = new System.Windows.Forms.TextBox();
             this.contextMenuStrip5 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.memaddressLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.memaddressTextbox = new System.Windows.Forms.TextBox();
+            this.memstatusTextbox = new System.Windows.Forms.TextBox();
             this.contextMenuStrip6 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -60,14 +60,15 @@
             this.servicecodeLabel = new System.Windows.Forms.Label();
             this.commentsLabel = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lookupButton = new System.Windows.Forms.Button();
             this.contextMenuStrip8 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.commentsBox = new System.Windows.Forms.RichTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.contextMenuStrip7 = new System.Windows.Forms.ContextMenuStrip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -93,6 +94,7 @@
             this.billButton.TabIndex = 1;
             this.billButton.Text = "Bill for Service";
             this.billButton.UseVisualStyleBackColor = true;
+            this.billButton.Click += new System.EventHandler(this.billButton_Click);
             // 
             // nameLabel
             // 
@@ -103,7 +105,6 @@
             this.nameLabel.Size = new System.Drawing.Size(127, 18);
             this.nameLabel.TabIndex = 2;
             this.nameLabel.Text = "Member Name:";
-            this.nameLabel.Click += new System.EventHandler(this.nameLabel_Click);
             // 
             // numberLabel
             // 
@@ -161,26 +162,26 @@
             this.cityLabel.TabIndex = 9;
             this.cityLabel.Text = "City:";
             // 
-            // memstatusTextbox
+            // memstateTextbox
             // 
-            this.memstatusTextbox.Location = new System.Drawing.Point(577, 121);
-            this.memstatusTextbox.Name = "memstatusTextbox";
-            this.memstatusTextbox.ReadOnly = true;
-            this.memstatusTextbox.Size = new System.Drawing.Size(47, 20);
-            this.memstatusTextbox.TabIndex = 10;
+            this.memstateTextbox.Location = new System.Drawing.Point(577, 121);
+            this.memstateTextbox.Name = "memstateTextbox";
+            this.memstateTextbox.ReadOnly = true;
+            this.memstateTextbox.Size = new System.Drawing.Size(47, 20);
+            this.memstateTextbox.TabIndex = 10;
             // 
             // contextMenuStrip3
             // 
             this.contextMenuStrip3.Name = "contextMenuStrip3";
             this.contextMenuStrip3.Size = new System.Drawing.Size(61, 4);
             // 
-            // cityTextbox
+            // memcityTextbox
             // 
-            this.cityTextbox.Location = new System.Drawing.Point(373, 156);
-            this.cityTextbox.Name = "cityTextbox";
-            this.cityTextbox.ReadOnly = true;
-            this.cityTextbox.Size = new System.Drawing.Size(100, 20);
-            this.cityTextbox.TabIndex = 12;
+            this.memcityTextbox.Location = new System.Drawing.Point(373, 156);
+            this.memcityTextbox.Name = "memcityTextbox";
+            this.memcityTextbox.ReadOnly = true;
+            this.memcityTextbox.Size = new System.Drawing.Size(100, 20);
+            this.memcityTextbox.TabIndex = 12;
             // 
             // contextMenuStrip4
             // 
@@ -197,13 +198,13 @@
             this.stateLabel.TabIndex = 14;
             this.stateLabel.Text = "State:";
             // 
-            // stateTextBox
+            // memzipTextbox
             // 
-            this.stateTextBox.Location = new System.Drawing.Point(558, 156);
-            this.stateTextBox.Name = "stateTextBox";
-            this.stateTextBox.ReadOnly = true;
-            this.stateTextBox.Size = new System.Drawing.Size(62, 20);
-            this.stateTextBox.TabIndex = 15;
+            this.memzipTextbox.Location = new System.Drawing.Point(558, 156);
+            this.memzipTextbox.Name = "memzipTextbox";
+            this.memzipTextbox.ReadOnly = true;
+            this.memzipTextbox.Size = new System.Drawing.Size(62, 20);
+            this.memzipTextbox.TabIndex = 15;
             // 
             // contextMenuStrip5
             // 
@@ -230,21 +231,21 @@
             this.label3.TabIndex = 18;
             this.label3.Text = "Zip Code:";
             // 
-            // textBox1
+            // memaddressTextbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(406, 188);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(214, 20);
-            this.textBox1.TabIndex = 19;
+            this.memaddressTextbox.Location = new System.Drawing.Point(406, 188);
+            this.memaddressTextbox.Name = "memaddressTextbox";
+            this.memaddressTextbox.ReadOnly = true;
+            this.memaddressTextbox.Size = new System.Drawing.Size(214, 20);
+            this.memaddressTextbox.TabIndex = 19;
             // 
-            // textBox2
+            // memstatusTextbox
             // 
-            this.textBox2.Location = new System.Drawing.Point(459, 217);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(161, 20);
-            this.textBox2.TabIndex = 20;
+            this.memstatusTextbox.Location = new System.Drawing.Point(459, 217);
+            this.memstatusTextbox.Name = "memstatusTextbox";
+            this.memstatusTextbox.ReadOnly = true;
+            this.memstatusTextbox.Size = new System.Drawing.Size(161, 20);
+            this.memstatusTextbox.TabIndex = 20;
             // 
             // contextMenuStrip6
             // 
@@ -324,27 +325,28 @@
             this.textBox4.Size = new System.Drawing.Size(103, 20);
             this.textBox4.TabIndex = 31;
             // 
-            // button1
+            // lookupButton
             // 
-            this.button1.Location = new System.Drawing.Point(229, 118);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(79, 23);
-            this.button1.TabIndex = 32;
-            this.button1.Text = "Lookup";
-            this.button1.UseVisualStyleBackColor = true;
+            this.lookupButton.Location = new System.Drawing.Point(229, 118);
+            this.lookupButton.Name = "lookupButton";
+            this.lookupButton.Size = new System.Drawing.Size(79, 23);
+            this.lookupButton.TabIndex = 32;
+            this.lookupButton.Text = "Lookup";
+            this.lookupButton.UseVisualStyleBackColor = true;
+            this.lookupButton.Click += new System.EventHandler(this.lookupButton_Click);
             // 
             // contextMenuStrip8
             // 
             this.contextMenuStrip8.Name = "contextMenuStrip8";
             this.contextMenuStrip8.Size = new System.Drawing.Size(61, 4);
             // 
-            // richTextBox1
+            // commentsBox
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(4, 175);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(304, 80);
-            this.richTextBox1.TabIndex = 35;
-            this.richTextBox1.Text = "";
+            this.commentsBox.Location = new System.Drawing.Point(4, 175);
+            this.commentsBox.Name = "commentsBox";
+            this.commentsBox.Size = new System.Drawing.Size(304, 80);
+            this.commentsBox.TabIndex = 35;
+            this.commentsBox.Text = "";
             // 
             // pictureBox1
             // 
@@ -392,7 +394,11 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(206, 20);
             this.dateTimePicker1.TabIndex = 40;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // contextMenuStrip7
+            // 
+            this.contextMenuStrip7.Name = "contextMenuStrip7";
+            this.contextMenuStrip7.Size = new System.Drawing.Size(61, 4);
             // 
             // BillingPanel
             // 
@@ -403,8 +409,8 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.commentsBox);
+            this.Controls.Add(this.lookupButton);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.commentsLabel);
             this.Controls.Add(this.servicecodeLabel);
@@ -413,14 +419,14 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.memstatusTextbox);
+            this.Controls.Add(this.memaddressTextbox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.memaddressLabel);
-            this.Controls.Add(this.stateTextBox);
+            this.Controls.Add(this.memzipTextbox);
             this.Controls.Add(this.stateLabel);
-            this.Controls.Add(this.cityTextbox);
-            this.Controls.Add(this.memstatusTextbox);
+            this.Controls.Add(this.memcityTextbox);
+            this.Controls.Add(this.memstateTextbox);
             this.Controls.Add(this.cityLabel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.memnumberTextbox);
@@ -452,17 +458,17 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label cityLabel;
-        private System.Windows.Forms.TextBox memstatusTextbox;
+        private System.Windows.Forms.TextBox memstateTextbox;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip3;
-        private System.Windows.Forms.TextBox cityTextbox;
+        private System.Windows.Forms.TextBox memcityTextbox;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip4;
         private System.Windows.Forms.Label stateLabel;
-        private System.Windows.Forms.TextBox stateTextBox;
+        private System.Windows.Forms.TextBox memzipTextbox;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip5;
         private System.Windows.Forms.Label memaddressLabel;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox memaddressTextbox;
+        private System.Windows.Forms.TextBox memstatusTextbox;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip6;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
@@ -472,13 +478,14 @@
         private System.Windows.Forms.Label servicecodeLabel;
         private System.Windows.Forms.Label commentsLabel;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button lookupButton;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip8;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox commentsBox;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip7;
     }
 }

@@ -40,6 +40,7 @@ namespace ChocAnonGUI
                 State         = stateComboBox.Text,
                 Status        = statusComboBox.Text,
             };
+
             if (nameTextbox.Text == "" || cityTextbox.Text == "" || addressTextbox.Text == "" || zipTextbox.Text == "" || roleCombobox.Text == "" || stateComboBox.Text == "" || statusComboBox.Text == "")
             {
                 MissingEntryForm launchMissingEntry = new MissingEntryForm();

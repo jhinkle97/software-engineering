@@ -18,12 +18,6 @@ namespace ChocAnonGUI
         {
             InitializeComponent();
         }
-
-        private void chocolate1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void addMemberButton_Click(object sender, EventArgs e)
         {
             AddUserForm launchAddMem = new AddUserForm();
