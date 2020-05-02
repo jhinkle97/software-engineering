@@ -14,13 +14,18 @@ namespace ChocAnonGUI
 {
     public partial class ServiceLookupForm : Form
     {
-        private ServiceDirectoryModel service;
-        public ServiceLookupForm()
-        {
+        public ServiceLookupForm(string memberName)
+        { 
             InitializeComponent();
-           
-        }
+            ServiceDirectoryController serviceDirectoryController = new ServiceDirectoryController();
+            IEnumerable<ServiceDirectoryModel> services = serviceDirectoryController.GetServices();
 
-       
+            nameLabel.Text = memberName;
+
+            foreach(ServiceDirectoryModel service in services)
+            {
+                servicesListview.Items.Add(new ListViewItem(new[] { service.Code, service.Name, service.Fee.ToString() }));
+            }
+        }
     }
 }

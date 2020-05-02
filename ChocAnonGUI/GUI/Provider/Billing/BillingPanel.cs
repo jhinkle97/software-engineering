@@ -55,7 +55,7 @@ namespace ChocAnonGUI
 
         private void lookupButton_Click(object sender, EventArgs e)
         {
-            ServiceLookupForm launchServiceLookup = new ServiceLookupForm();
+            ServiceLookupForm launchServiceLookup = new ServiceLookupForm(activeMember.Name);
             launchServiceLookup.ShowDialog();
         }
     }
