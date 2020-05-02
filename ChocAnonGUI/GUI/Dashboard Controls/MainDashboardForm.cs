@@ -15,7 +15,7 @@ namespace ChocAnonGUI
     
     public partial class MainDashboard : Form
     {
-        public UserModel provider;
+        private UserModel provider;
         public MainDashboard(UserModel user) 
         {
             InitializeComponent();
