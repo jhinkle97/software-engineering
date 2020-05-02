@@ -17,7 +17,7 @@ namespace ChocAnonGUI.Backend.DataAccess
         {
             try
             {
-                string query = $"SELECT * FROM [service_directory] WHERE [serviceCode] = '{serviceCode}'";
+                string query = $"SELECT [serviceCode], cast([fee] as decimal(5, 2)), [name] FROM [service_directory] WHERE [serviceCode] = '{serviceCode}'";
 
                 connection.Open();
                 SqlCommand cmd = new SqlCommand(query, connection);
@@ -29,9 +29,9 @@ namespace ChocAnonGUI.Backend.DataAccess
 
                     ServiceDirectoryModel service = new ServiceDirectoryModel
                     {
-                        Code = (string)record[1],
-                        Fee = (string)record[2],
-                        Name = (string)record[3],
+                        Code = (string)record[0],
+                        Fee = (decimal)record[1],
+                        Name = (string)record[2],
                     };
                     connection.Close();
                     return service;
@@ -42,8 +42,9 @@ namespace ChocAnonGUI.Backend.DataAccess
                     return new ServiceDirectoryModel();
                 }
             }
-            catch (SqlException)
+            catch (SqlException e)
             {
+                Console.WriteLine(e.Message);
                 connection.Close();
                 return new ServiceDirectoryModel();
             }
@@ -71,7 +72,8 @@ namespace ChocAnonGUI.Backend.DataAccess
         {
             try
             {
-                string query = $"UPDATE [service_directory] SET [serviceCode] = '{service.Code}', [fee] = '{service.Fee}', [name] = '{service.Name}'";
+                string query = $"UPDATE [service_directory] SET [fee] = '{service.Fee}', [name] = '{service.Name}'" +
+                                $"WHERE [serviceCode] = '{service.Code}'";
 
                 connection.Open();
                 SqlCommand cmd = new SqlCommand(query, connection);

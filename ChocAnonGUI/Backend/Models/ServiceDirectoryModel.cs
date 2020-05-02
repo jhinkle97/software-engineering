@@ -10,6 +10,6 @@ namespace ChocAnonGUI.Backend.Models
     {
         public string Name { get; set; }
         public string Code { get; set; }
-        public string Fee { get; set; }
+        public decimal Fee { get; set; }
     }
 }

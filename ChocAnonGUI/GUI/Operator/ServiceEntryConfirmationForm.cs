@@ -17,7 +17,7 @@ namespace ChocAnonGUI.GUI.Operator
         {
             InitializeComponent();
             servicecodeTextbox.Text = service.Code;
-            servicecostTextbox.Text = service.Fee;
+            servicecostTextbox.Text = service.Fee.ToString();
             servicenameTextbox.Text = service.Name;
         }
     }
