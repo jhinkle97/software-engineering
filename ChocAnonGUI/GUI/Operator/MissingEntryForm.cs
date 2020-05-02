@@ -12,9 +12,13 @@ namespace ChocAnonGUI.GUI.Operator
 {
     public partial class MissingEntryForm : Form
     {
-        public MissingEntryForm()
+        public MissingEntryForm(string errorMessage="")
         {
             InitializeComponent();
+            if(errorMessage != "")
+            {
+                errorLabel.Text = errorMessage;
+            }
         }
     }
 }

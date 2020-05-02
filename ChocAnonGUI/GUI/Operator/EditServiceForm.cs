@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,20 +35,33 @@ namespace ChocAnonGUI.GUI.Operator
             service = serviceDirectoryController.GetService(serviceCode);
 
             servicenameTextbox.Text = service.Name;
-            servicefeeTextbox.Text  = service.Fee;
+            servicefeeTextbox.Text = service.Fee.ToString();
         }
 
         private void serviceeditButton_Click(object sender, EventArgs e)
         {
             ServiceDirectoryController serviceDirectoryController = new ServiceDirectoryController();
-
+            bool validFee = true;
             service.Name = servicenameTextbox.Text;
-            service.Fee  = servicefeeTextbox.Text;
+            try
+            {
+                service.Fee = Convert.ToDecimal(servicefeeTextbox.Text, new CultureInfo("en-US"));
+            }
+            catch
+            {
+                validFee = false;
+                service.Fee = 0;
+            }
 
             if (servicenameTextbox.Text == "" || servicefeeTextbox.Text == "")
             {
                 MissingEntryForm launchMissingEntry = new MissingEntryForm();
                 launchMissingEntry.ShowDialog();
+            }
+            else if (!validFee || service.Fee > (decimal)999.99)
+            {
+                MissingEntryForm missingEntryForm = new MissingEntryForm("Invalid fee format.\n\nPlease enter as a number or decimal\nwith a value less than 1000.00");
+                missingEntryForm.ShowDialog();
             }
             else
             {
