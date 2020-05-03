@@ -27,7 +27,7 @@ namespace ChocAnonGUI
 
             if (userNumber == "admin")
             {
-                MainDashboard launchDash = new MainDashboard(userNumber);
+                MainDashboard launchDash = new MainDashboard(new UserModel { UserNumber = userNumber});
                 this.Hide();
                 outputLabel.Text = "Login Successful, Logging in....";
                 launchDash.ShowDialog();
@@ -40,7 +40,7 @@ namespace ChocAnonGUI
 
                 if(user.Role == "Provider")
                 {
-                    MainDashboard launchDash = new MainDashboard(user.UserNumber);
+                    MainDashboard launchDash = new MainDashboard(user);
                     this.Hide();
                     outputLabel.Text = "Login Successful, Logging in....";
                     launchDash.ShowDialog();

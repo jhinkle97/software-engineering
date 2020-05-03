@@ -15,23 +15,17 @@ namespace ChocAnonGUI
     
     public partial class MainDashboard : Form
     {
-        private UserModel dashboardOperator;
-        public MainDashboard(string providerCode) 
+        public UserModel provider;
+        public MainDashboard(UserModel user) 
         {
             InitializeComponent();
-
-
-            //Active Provider Logged in Object
-            UserController userController = new UserController();
-            dashboardOperator = userController.GetUser(providerCode);
-
-
+            provider = user;
             //Hides all the panels.
             hidePanels();
 
 
             //If Else to Determine Operator or Provider
-            if (providerCode == "admin")
+            if (user.UserNumber == "admin")
             {
                 hidePanels();
                 usertitleLabel.Text = "Operator: Welcome to the Dashboard"; 
@@ -40,7 +34,7 @@ namespace ChocAnonGUI
             else
             {
                 hidePanels();
-                usertitleLabel.Text = "Provider: " + dashboardOperator.Name + "  # " + dashboardOperator.UserNumber;
+                usertitleLabel.Text = "Provider: " + user.Name + "  # " + user.UserNumber;
                 WelcomeControlPanel.Show();
             }
         }
@@ -68,6 +62,7 @@ namespace ChocAnonGUI
             PasswordConfirmForm launchConfirmation = new PasswordConfirmForm();
             launchConfirmation.ShowDialog();
             string memberCode = launchConfirmation.memberCode;
+
             //Logic to sort if it was null on return to the dashboard
             if (memberCode == "" || memberCode == "Enter member number")
             {
@@ -78,7 +73,7 @@ namespace ChocAnonGUI
             else 
             {   
                 //Send updated codes to panel for use
-                BillingControlPanel.BillingPanelRoot(memberCode, dashboardOperator.UserNumber);
+                BillingControlPanel.BillingPanelRoot(memberCode, provider);
                 hidePanels();
                 BillingControlPanel.Refresh();
                 BillingControlPanel.Show();

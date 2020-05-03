@@ -27,14 +27,12 @@ namespace ChocAnonGUI
 
         }
 
-        public void BillingPanelRoot(string membercode, string providercode)
+        public void BillingPanelRoot(string membercode, UserModel provider)
         {
             //Build the Member Object
-            UserController machine1 = new UserController();
-            activeMember = machine1.GetUser(membercode);
-            //Build the Proivder Object
-            UserController machine2 = new UserController();
-            activeProvider = machine2.GetUser(providercode);
+            UserController userController = new UserController();
+            activeMember   = userController.GetUser(membercode);
+            activeProvider = provider;
             fillQuickView();
         }
 
