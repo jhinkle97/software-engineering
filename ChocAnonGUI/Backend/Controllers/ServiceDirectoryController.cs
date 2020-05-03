@@ -29,10 +29,22 @@ namespace ChocAnonGUI.Backend.Controllers
             return serviceDirectoryRepository.GetService(serviceCode);
         }
 
+        public IEnumerable<ServiceDirectoryModel> GetServices()
+        {
+            ServiceDirectoryRepository serviceDirectoryRepository = new ServiceDirectoryRepository();
+            return serviceDirectoryRepository.GetServices();
+        }
+
         public ServiceDirectoryModel EditService(ServiceDirectoryModel service)
         {
             ServiceDirectoryRepository serviceDirectoryRepository = new ServiceDirectoryRepository();
             return serviceDirectoryRepository.EditService(service);
+        }
+
+        public bool DeleteService(string serviceCode)
+        {
+            ServiceDirectoryRepository serviceDirectoryRepository = new ServiceDirectoryRepository();
+            return serviceDirectoryRepository.DeleteService(serviceCode);
         }
     }
 }
