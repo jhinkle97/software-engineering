@@ -14,6 +14,5 @@ namespace ChocAnonGUI.Backend.Models
         public UserModel Provider { get; set; }
         public ServiceDirectoryModel ServiceDirectory { get; set; }
         public string Comments { get; set; }
-
     }
 }

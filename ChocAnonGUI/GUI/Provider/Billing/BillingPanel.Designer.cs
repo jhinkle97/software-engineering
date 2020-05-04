@@ -59,7 +59,7 @@
             this.dateLabel = new System.Windows.Forms.Label();
             this.servicecodeLabel = new System.Windows.Forms.Label();
             this.commentsLabel = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.serviceCodeTextBox = new System.Windows.Forms.TextBox();
             this.lookupButton = new System.Windows.Forms.Button();
             this.contextMenuStrip8 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.commentsBox = new System.Windows.Forms.RichTextBox();
@@ -90,7 +90,7 @@
             // 
             this.billButton.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.billButton.Location = new System.Drawing.Point(5, 321);
-            this.billButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.billButton.Margin = new System.Windows.Forms.Padding(4);
             this.billButton.Name = "billButton";
             this.billButton.Size = new System.Drawing.Size(405, 53);
             this.billButton.TabIndex = 1;
@@ -123,7 +123,7 @@
             // memnameTextbox
             // 
             this.memnameTextbox.Location = new System.Drawing.Point(609, 108);
-            this.memnameTextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.memnameTextbox.Margin = new System.Windows.Forms.Padding(4);
             this.memnameTextbox.Name = "memnameTextbox";
             this.memnameTextbox.ReadOnly = true;
             this.memnameTextbox.Size = new System.Drawing.Size(223, 22);
@@ -138,7 +138,7 @@
             // memnumberTextbox
             // 
             this.memnumberTextbox.Location = new System.Drawing.Point(563, 149);
-            this.memnumberTextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.memnumberTextbox.Margin = new System.Windows.Forms.Padding(4);
             this.memnumberTextbox.Name = "memnumberTextbox";
             this.memnumberTextbox.ReadOnly = true;
             this.memnumberTextbox.Size = new System.Drawing.Size(132, 22);
@@ -175,7 +175,7 @@
             // memstateTextbox
             // 
             this.memstateTextbox.Location = new System.Drawing.Point(769, 149);
-            this.memstateTextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.memstateTextbox.Margin = new System.Windows.Forms.Padding(4);
             this.memstateTextbox.Name = "memstateTextbox";
             this.memstateTextbox.ReadOnly = true;
             this.memstateTextbox.Size = new System.Drawing.Size(61, 22);
@@ -190,7 +190,7 @@
             // memcityTextbox
             // 
             this.memcityTextbox.Location = new System.Drawing.Point(497, 192);
-            this.memcityTextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.memcityTextbox.Margin = new System.Windows.Forms.Padding(4);
             this.memcityTextbox.Name = "memcityTextbox";
             this.memcityTextbox.ReadOnly = true;
             this.memcityTextbox.Size = new System.Drawing.Size(132, 22);
@@ -216,7 +216,7 @@
             // memzipTextbox
             // 
             this.memzipTextbox.Location = new System.Drawing.Point(744, 192);
-            this.memzipTextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.memzipTextbox.Margin = new System.Windows.Forms.Padding(4);
             this.memzipTextbox.Name = "memzipTextbox";
             this.memzipTextbox.ReadOnly = true;
             this.memzipTextbox.Size = new System.Drawing.Size(81, 22);
@@ -253,7 +253,7 @@
             // memaddressTextbox
             // 
             this.memaddressTextbox.Location = new System.Drawing.Point(541, 231);
-            this.memaddressTextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.memaddressTextbox.Margin = new System.Windows.Forms.Padding(4);
             this.memaddressTextbox.Name = "memaddressTextbox";
             this.memaddressTextbox.ReadOnly = true;
             this.memaddressTextbox.Size = new System.Drawing.Size(284, 22);
@@ -262,7 +262,7 @@
             // memstatusTextbox
             // 
             this.memstatusTextbox.Location = new System.Drawing.Point(612, 267);
-            this.memstatusTextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.memstatusTextbox.Margin = new System.Windows.Forms.Padding(4);
             this.memstatusTextbox.Name = "memstatusTextbox";
             this.memstatusTextbox.ReadOnly = true;
             this.memstatusTextbox.Size = new System.Drawing.Size(213, 22);
@@ -278,7 +278,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Silver;
             this.panel1.Location = new System.Drawing.Point(419, 53);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(13, 329);
             this.panel1.TabIndex = 22;
@@ -309,7 +309,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Silver;
             this.panel2.Location = new System.Drawing.Point(0, 42);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(852, 12);
             this.panel2.TabIndex = 25;
@@ -347,22 +347,24 @@
             this.commentsLabel.TabIndex = 28;
             this.commentsLabel.Text = "Comments";
             // 
-            // textBox4
+            // serviceCodeTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(147, 150);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(133, 22);
-            this.textBox4.TabIndex = 31;
+            this.serviceCodeTextBox.Location = new System.Drawing.Point(154, 150);
+            this.serviceCodeTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.serviceCodeTextBox.MaxLength = 6;
+            this.serviceCodeTextBox.Name = "serviceCodeTextBox";
+            this.serviceCodeTextBox.ReadOnly = true;
+            this.serviceCodeTextBox.Size = new System.Drawing.Size(87, 22);
+            this.serviceCodeTextBox.TabIndex = 31;
             // 
             // lookupButton
             // 
-            this.lookupButton.Location = new System.Drawing.Point(291, 146);
-            this.lookupButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lookupButton.Location = new System.Drawing.Point(255, 146);
+            this.lookupButton.Margin = new System.Windows.Forms.Padding(4);
             this.lookupButton.Name = "lookupButton";
-            this.lookupButton.Size = new System.Drawing.Size(118, 28);
+            this.lookupButton.Size = new System.Drawing.Size(154, 28);
             this.lookupButton.TabIndex = 32;
-            this.lookupButton.Text = "View Services";
+            this.lookupButton.Text = "Select a Service";
             this.lookupButton.UseVisualStyleBackColor = true;
             this.lookupButton.Click += new System.EventHandler(this.lookupButton_Click);
             // 
@@ -375,7 +377,8 @@
             // commentsBox
             // 
             this.commentsBox.Location = new System.Drawing.Point(5, 215);
-            this.commentsBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.commentsBox.Margin = new System.Windows.Forms.Padding(4);
+            this.commentsBox.MaxLength = 100;
             this.commentsBox.Name = "commentsBox";
             this.commentsBox.Size = new System.Drawing.Size(404, 98);
             this.commentsBox.TabIndex = 35;
@@ -386,7 +389,7 @@
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(441, 316);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(81, 58);
             this.pictureBox1.TabIndex = 36;
@@ -397,7 +400,7 @@
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Location = new System.Drawing.Point(547, 316);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(81, 58);
             this.pictureBox2.TabIndex = 37;
@@ -408,7 +411,7 @@
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Location = new System.Drawing.Point(656, 316);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(81, 58);
             this.pictureBox3.TabIndex = 38;
@@ -419,7 +422,7 @@
             this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox4.Location = new System.Drawing.Point(759, 316);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(81, 58);
             this.pictureBox4.TabIndex = 39;
@@ -429,7 +432,7 @@
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(174, 110);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(234, 22);
             this.dateTimePicker1.TabIndex = 40;
@@ -451,7 +454,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.commentsBox);
             this.Controls.Add(this.lookupButton);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.serviceCodeTextBox);
             this.Controls.Add(this.commentsLabel);
             this.Controls.Add(this.servicecodeLabel);
             this.Controls.Add(this.dateLabel);
@@ -475,7 +478,7 @@
             this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.billButton);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "BillingPanel";
             this.Size = new System.Drawing.Size(852, 382);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -518,7 +521,7 @@
         private System.Windows.Forms.Label dateLabel;
         private System.Windows.Forms.Label servicecodeLabel;
         private System.Windows.Forms.Label commentsLabel;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox serviceCodeTextBox;
         private System.Windows.Forms.Button lookupButton;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip8;
         private System.Windows.Forms.RichTextBox commentsBox;

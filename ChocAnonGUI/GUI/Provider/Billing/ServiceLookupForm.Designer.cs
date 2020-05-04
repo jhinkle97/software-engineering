@@ -39,12 +39,12 @@ namespace ChocAnonGUI
         private void InitializeComponent()
         {
             this.servicesListview = new System.Windows.Forms.ListView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.nameLabel = new System.Windows.Forms.Label();
-            this.titleLabel = new System.Windows.Forms.Label();
             this.serviceCode = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.serviceName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.serviceFee = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.titleLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,14 +55,29 @@ namespace ChocAnonGUI
             this.serviceName,
             this.serviceFee});
             this.servicesListview.HideSelection = false;
-            this.servicesListview.Items.AddRange(new System.Windows.Forms.ListViewItem[] { });
             this.servicesListview.Location = new System.Drawing.Point(16, 81);
-            this.servicesListview.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.servicesListview.Margin = new System.Windows.Forms.Padding(4);
             this.servicesListview.Name = "servicesListview";
             this.servicesListview.Size = new System.Drawing.Size(585, 437);
             this.servicesListview.TabIndex = 2;
             this.servicesListview.UseCompatibleStateImageBehavior = false;
             this.servicesListview.View = System.Windows.Forms.View.Details;
+            this.servicesListview.SelectedIndexChanged += new System.EventHandler(this.servicesListview_SelectedIndexChanged);
+            // 
+            // serviceCode
+            // 
+            this.serviceCode.Text = "Service Code";
+            this.serviceCode.Width = 120;
+            // 
+            // serviceName
+            // 
+            this.serviceName.Text = "Service Name";
+            this.serviceName.Width = 130;
+            // 
+            // serviceFee
+            // 
+            this.serviceFee.Text = "Service Fee";
+            this.serviceFee.Width = 105;
             // 
             // panel1
             // 
@@ -70,7 +85,7 @@ namespace ChocAnonGUI
             this.panel1.Controls.Add(this.nameLabel);
             this.panel1.Controls.Add(this.titleLabel);
             this.panel1.Location = new System.Drawing.Point(16, 15);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(587, 48);
             this.panel1.TabIndex = 3;
@@ -97,31 +112,17 @@ namespace ChocAnonGUI
             this.titleLabel.TabIndex = 0;
             this.titleLabel.Text = "Services Available For:";
             // 
-            // serviceCode
-            // 
-            this.serviceCode.Text = "Service Code";
-            this.serviceCode.Width = 120;
-            // 
-            // serviceName
-            // 
-            this.serviceName.Text = "Service Name";
-            this.serviceName.Width = 130;
-            // 
-            // serviceFee
-            // 
-            this.serviceFee.Text = "Service Fee";
-            this.serviceFee.Width = 105;
-            // 
             // ServiceLookupForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.MidnightBlue;
             this.ClientSize = new System.Drawing.Size(620, 532);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.servicesListview);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ServiceLookupForm";
             this.Text = "ServiceLookupForm";
             this.panel1.ResumeLayout(false);

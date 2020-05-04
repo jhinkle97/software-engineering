@@ -50,13 +50,33 @@ namespace ChocAnonGUI
 
         private void billButton_Click(object sender, EventArgs e)
         {
+            // I am not sure if we should submit here or from service confirmation form
+            ServiceController serviceController = new ServiceController();
 
+            ServiceModel service = new ServiceModel
+            {
+                ServiceDate = dateTimePicker1.Value,
+                Provider = activeProvider,
+                Member = activeMember,
+                ServiceDirectory = new ServiceDirectoryModel { Code=serviceCodeTextBox.Text },
+                Comments = commentsBox.Text
+            };
+
+            if (serviceController.AddService(service))
+            {
+                //successful add
+            }
         }
 
         private void lookupButton_Click(object sender, EventArgs e)
         {
-            ServiceLookupForm launchServiceLookup = new ServiceLookupForm(activeMember.Name);
-            launchServiceLookup.ShowDialog();
+            ServiceLookupForm launchServiceLookup = new ServiceLookupForm(activeMember.Name, this);
+            launchServiceLookup.Show();
+        }
+
+        public void setServiceCode(string serviceCode)
+        {
+            serviceCodeTextBox.Text = serviceCode;
         }
     }
 }
