@@ -56,7 +56,7 @@ namespace ChocAnonGUI.Backend.Reports
                         $"Total Fee:            {totalFee}\n" +
                         $"\n\n";
 
-            string fileName = $"{provider.Name}{DateTime.Today.Month}{DateTime.Today.Day}";
+            string fileName = $"{provider.Name} {DateTime.Now.ToString("MMMM dd yyyy")}";
             FileHandler.WriteProviderReport(report, fileName);
 
             return report;
