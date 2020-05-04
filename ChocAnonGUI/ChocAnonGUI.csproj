@@ -67,6 +67,13 @@
     <Compile Include="GUI\Dashboard Controls\SettingsForm.Designer.cs">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Popup\PopupControl.cs" />
+    <Compile Include="GUI\Popup\SuccessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Popup\SuccessForm.Designer.cs">
+      <DependentUpon>SuccessForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Operator\AddServiceForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,11 +98,11 @@
     <Compile Include="GUI\Operator\EditUserForm.Designer.cs">
       <DependentUpon>EditUserForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Operator\MissingEntryForm.cs">
+    <Compile Include="GUI\Popup\ErrorForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Operator\MissingEntryForm.Designer.cs">
-      <DependentUpon>MissingEntryForm.cs</DependentUpon>
+    <Compile Include="GUI\Popup\ErrorForm.Designer.cs">
+      <DependentUpon>ErrorForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Operator\UserEntryConfirmationForm.cs">
       <SubType>Form</SubType>
@@ -174,6 +181,9 @@
     <EmbeddedResource Include="GUI\Dashboard Controls\SettingsForm.resx">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Popup\SuccessForm.resx">
+      <DependentUpon>SuccessForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Operator\AddServiceForm.resx">
       <DependentUpon>AddServiceForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -186,8 +196,8 @@
     <EmbeddedResource Include="GUI\Operator\EditUserForm.resx">
       <DependentUpon>EditUserForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Operator\MissingEntryForm.resx">
-      <DependentUpon>MissingEntryForm.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Popup\ErrorForm.resx">
+      <DependentUpon>ErrorForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Operator\ServiceEntryConfirmationForm.resx">
       <DependentUpon>ServiceEntryConfirmationForm.cs</DependentUpon>

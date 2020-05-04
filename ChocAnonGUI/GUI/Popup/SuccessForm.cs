@@ -8,17 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ChocAnonGUI.GUI.Operator
+namespace ChocAnonGUI.GUI.Popup
 {
-    public partial class MissingEntryForm : Form
+    public partial class SuccessForm : Form
     {
-        public MissingEntryForm(string errorMessage="")
+        public SuccessForm(string message)
         {
             InitializeComponent();
-            if(errorMessage != "")
-            {
-                errorLabel.Text = errorMessage;
-            }
+            successLabel.Text = message;
         }
     }
 }
