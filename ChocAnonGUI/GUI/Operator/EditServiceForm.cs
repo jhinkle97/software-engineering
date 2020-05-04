@@ -16,15 +16,12 @@ namespace ChocAnonGUI.GUI.Operator
     public partial class EditServiceForm : Form
     {
         private ServiceDirectoryModel service;
-
+        private ErrorForm errorForm;
         public EditServiceForm()
         {
             InitializeComponent();
-        }
-
-        private void servicenameTextbox_TextChanged(object sender, EventArgs e)
-        {
-
+            disableFields(); 
+            
         }
 
         private void searchService(object sender, EventArgs e)
@@ -33,6 +30,12 @@ namespace ChocAnonGUI.GUI.Operator
           
             ServiceDirectoryController serviceDirectoryController = new ServiceDirectoryController();
             service = serviceDirectoryController.GetService(serviceCode);
+            if (service.Name == "" || service.Fee == "")
+            {
+                disableFields();
+                errorForm.message = "Not a valid Service ID";
+
+            }
 
             servicenameTextbox.Text = service.Name;
             servicefeeTextbox.Text = service.Fee.ToString();
@@ -55,7 +58,7 @@ namespace ChocAnonGUI.GUI.Operator
 
             if (servicenameTextbox.Text == "" || servicefeeTextbox.Text == "")
             {
-                MissingEntryForm launchMissingEntry = new MissingEntryForm();
+                ErrorForm launchMissingEntry = new ErrorForm();
                 launchMissingEntry.ShowDialog();
             }
             else if (!validFee || service.Fee > (decimal)999.99)
@@ -71,6 +74,16 @@ namespace ChocAnonGUI.GUI.Operator
                 launchConfirmation.ShowDialog();
                 this.Close();
             }
+        }
+        private void disableFields()
+        {
+            servicenameTextbox.ReadOnly = true;
+            servicefeeTextbox.ReadOnly  = true;
+        }
+        private void enableFields()
+        {
+            servicenameTextbox.ReadOnly = false;
+            servicefeeTextbox.ReadOnly  = false;
         }
     }
 }

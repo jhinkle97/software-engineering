@@ -38,7 +38,7 @@ namespace ChocAnonGUI.GUI.Operator
             }
             if (nameTextbox.Text == "" || feeTextbox.Text == "")
             {
-                MissingEntryForm launchMissingEntry = new MissingEntryForm();
+                ErrorForm launchMissingEntry = new ErrorForm();
                 launchMissingEntry.ShowDialog();
             }
             else if (!validFee || service.Fee > (decimal)999.99)

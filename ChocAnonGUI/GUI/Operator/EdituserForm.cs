@@ -76,7 +76,7 @@ namespace ChocAnonGUI.GUI.Operator
 
             if (nameTextbox.Text == "" || cityTextbox.Text == "" || addressTextbox.Text == "" || zipTextbox.Text == "" || roleCombobox.Text == "" || stateComboBox.Text == "" || statusComboBox.Text == "")
             {
-                MissingEntryForm launchMissingEntry = new MissingEntryForm();
+                ErrorForm launchMissingEntry = new ErrorForm();
                 launchMissingEntry.ShowDialog();
             }
             else
