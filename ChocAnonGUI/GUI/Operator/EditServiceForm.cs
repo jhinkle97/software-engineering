@@ -16,12 +16,14 @@ namespace ChocAnonGUI.GUI.Operator
     public partial class EditServiceForm : Form
     {
         private ServiceDirectoryModel service;
-        private ErrorForm errorForm;
+        private bool   validated = false;
+        private string procedure = "";
+     
+        
         public EditServiceForm()
         {
             InitializeComponent();
             disableFields(); 
-            
         }
 
         private void searchService(object sender, EventArgs e)
@@ -30,49 +32,73 @@ namespace ChocAnonGUI.GUI.Operator
           
             ServiceDirectoryController serviceDirectoryController = new ServiceDirectoryController();
             service = serviceDirectoryController.GetService(serviceCode);
-            if (service.Name == "" || service.Fee == "")
+            if (service.Name != "" && service.Fee != 0)
+            {
+                enableFields();
+                validated = true;
+                servicenameTextbox.Text = service.Name;
+                servicefeeTextbox.Text  = service.Fee.ToString();
+            }else
             {
                 disableFields();
-                errorForm.message = "Not a valid Service ID";
-
+                validated = false;
+                PopupControl.printError("Invalid Service Code");
             }
 
-            servicenameTextbox.Text = service.Name;
-            servicefeeTextbox.Text = service.Fee.ToString();
+           
         }
 
         private void serviceeditButton_Click(object sender, EventArgs e)
         {
-            ServiceDirectoryController serviceDirectoryController = new ServiceDirectoryController();
-            bool validFee = true;
-            service.Name = servicenameTextbox.Text;
-            try
+            //Delete Functionality
+            if (procedure == "DELETE" && procedure != "")
             {
-                service.Fee = Convert.ToDecimal(servicefeeTextbox.Text, new CultureInfo("en-US"));
+                if (servicenameTextbox.Text == "" || servicefeeTextbox.Text == "")
+                {
+                    PopupControl.printError("You haven't lookup up a valid account");
+                }
+                else
+                {
+                    ServiceDirectoryController deleteService = new ServiceDirectoryController();
+                    deleteService.DeleteService(service.Code);
+                    PopupControl.printSuccess("The Service with code" + searchTextbox.Text + "\n\n was removed");
+                    this.Close();
+                }
             }
-            catch
+            else if (procedure == "EDIT" && procedure != "")
             {
-                validFee = false;
-                service.Fee = 0;
-            }
+                if (servicefeeTextbox.Text == "" || servicefeeTextbox.Text == "")
+                {
+                    PopupControl.printError("You haven't lookup up a valid account");
+                }
+                else
+                {
+                    ServiceDirectoryController serviceDirectoryController = new ServiceDirectoryController();
+                    bool validFee = true;
+                    service.Name = servicenameTextbox.Text;
+                    //TRY CATCH
+                    try {
+                        service.Fee = Convert.ToDecimal(servicefeeTextbox.Text, new CultureInfo("en-US"));
+                    }
+                    catch {
+                        validFee = false;
+                        service.Fee = 0;
+                    }
+                    if (!validFee || service.Fee > (decimal)999.99)
+                    {
+                        PopupControl.printError("Invalid fee format.\n\nPlease enter as a number or decimal\nwith a value less than 1000.00");
+                    }
+                    else
+                    {
+                        service = serviceDirectoryController.EditService(service);
 
-            if (servicenameTextbox.Text == "" || servicefeeTextbox.Text == "")
-            {
-                ErrorForm launchMissingEntry = new ErrorForm();
-                launchMissingEntry.ShowDialog();
-            }
-            else if (!validFee || service.Fee > (decimal)999.99)
-            {
-                MissingEntryForm missingEntryForm = new MissingEntryForm("Invalid fee format.\n\nPlease enter as a number or decimal\nwith a value less than 1000.00");
-                missingEntryForm.ShowDialog();
-            }
-            else
-            {
-                service = serviceDirectoryController.EditService(service);
+                        ServiceEntryConfirmationForm launchConfirmation = new ServiceEntryConfirmationForm(service);
+                        launchConfirmation.ShowDialog();
+                        this.Close();
+                    }
 
-                ServiceEntryConfirmationForm launchConfirmation = new ServiceEntryConfirmationForm(service);
-                launchConfirmation.ShowDialog();
-                this.Close();
+                }
+              
             }
         }
         private void disableFields()
@@ -84,6 +110,29 @@ namespace ChocAnonGUI.GUI.Operator
         {
             servicenameTextbox.ReadOnly = false;
             servicefeeTextbox.ReadOnly  = false;
+        }
+
+        private void editRadio_CheckedChanged(object sender, EventArgs e)
+        {
+            if (validated == true)
+            {
+                enableFields();
+                serviceeditButton.Text = "Edit Service";
+                procedure = "EDIT";
+            }
+            else
+                PopupControl.printError("Can't use radios without a valid service entered");
+        }
+
+        private void deleteRadio_CheckedChanged(object sender, EventArgs e)
+        {
+            disableFields();
+            serviceeditButton.Text = "Delete Service";
+            if (validated == true)
+            {
+                procedure = "DELETE";
+            }
+            
         }
     }
 }

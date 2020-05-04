@@ -1,6 +1,7 @@
 ﻿using ChocAnonGUI.Backend.Controllers;
 using ChocAnonGUI.Backend.Models;
 using ChocAnonGUI.GUI.Operator;
+using ChocAnonGUI.GUI.Popup;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,13 +19,7 @@ namespace ChocAnonGUI
         public AddUserForm()
         {
             InitializeComponent();
-            populateComboBoxes();
-            
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
+            populateComboBoxes(); 
         }
 
         private void submitButton_Click(object sender, EventArgs e)
@@ -43,8 +38,7 @@ namespace ChocAnonGUI
 
             if (nameTextbox.Text == "" || cityTextbox.Text == "" || addressTextbox.Text == "" || zipTextbox.Text == "" || roleCombobox.Text == "" || stateComboBox.Text == "" || statusComboBox.Text == "")
             {
-                ErrorForm launchMissingEntry = new ErrorForm();
-                launchMissingEntry.ShowDialog();
+                PopupControl.printError("Sorry You left a field Blank");
             }
             else
             {

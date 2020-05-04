@@ -126,6 +126,7 @@
             this.editRadio.TabStop = true;
             this.editRadio.Text = "Edit Service";
             this.editRadio.UseVisualStyleBackColor = true;
+            this.editRadio.CheckedChanged += new System.EventHandler(this.editRadio_CheckedChanged);
             // 
             // deleteRadio
             // 
@@ -136,6 +137,7 @@
             this.deleteRadio.TabIndex = 40;
             this.deleteRadio.Text = "Delete Service";
             this.deleteRadio.UseVisualStyleBackColor = true;
+            this.deleteRadio.CheckedChanged += new System.EventHandler(this.deleteRadio_CheckedChanged);
             // 
             // EditServiceForm
             // 

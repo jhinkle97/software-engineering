@@ -11,8 +11,10 @@ using ChocAnonGUI.GUI.Operator;
 using ChocAnonGUI.Backend.Models;
 using ChocAnonGUI.Backend.Controllers;
 
+
 namespace ChocAnonGUI.GUI.Operator
 {
+    
     public partial class EditUserForm : Form
     {
         private UserModel user;
@@ -20,6 +22,7 @@ namespace ChocAnonGUI.GUI.Operator
         {
             InitializeComponent();
             populateComboBoxes ();
+
             
         }
 
@@ -46,6 +49,7 @@ namespace ChocAnonGUI.GUI.Operator
         {
             //Get UserNumber from the Top Box
             string userNumber = usernumberTextBox.Text;
+
             //Trigger a new object with given userNumber
             //Need to add something if the searched ID is invalid
             //Fields will be locked until a User Number is entered 
@@ -59,6 +63,12 @@ namespace ChocAnonGUI.GUI.Operator
             roleCombobox.Text = user.Role;
             addressTextbox.Text = user.StreetAddress;
             zipTextbox.Text = user.Zip;
+
+            if (nameTextbox.Text == "")
+            {
+                PopupControl.printError("Not a valid User Number");
+            }
+               
         }
 
         private void editButton_Click(object sender, EventArgs e)
@@ -76,8 +86,7 @@ namespace ChocAnonGUI.GUI.Operator
 
             if (nameTextbox.Text == "" || cityTextbox.Text == "" || addressTextbox.Text == "" || zipTextbox.Text == "" || roleCombobox.Text == "" || stateComboBox.Text == "" || statusComboBox.Text == "")
             {
-                ErrorForm launchMissingEntry = new ErrorForm();
-                launchMissingEntry.ShowDialog();
+                PopupControl.printError("You left one of the fields empty. Please fill them in to proceed");
             }
             else
             {
@@ -87,6 +96,20 @@ namespace ChocAnonGUI.GUI.Operator
                 launchConfirmation.ShowDialog();
                 this.Close();
             }
+        }
+        private void lockFields()
+        {
+            nameTextbox.ReadOnly    = true;
+            cityTextbox.ReadOnly    = true;
+            addressTextbox.ReadOnly = true;
+            zipTextbox.ReadOnly     = true;
+        }
+        private void unlockFields()
+        {
+            nameTextbox.ReadOnly    = false;
+            cityTextbox.ReadOnly    = false;
+            addressTextbox.ReadOnly = false;
+            zipTextbox.ReadOnly     = false;
         }
     }
 }
