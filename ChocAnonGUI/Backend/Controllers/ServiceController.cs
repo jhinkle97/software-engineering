@@ -34,5 +34,40 @@ namespace ChocAnonGUI.Backend.Controllers
             }
             return services;
         }
+
+        public IEnumerable<ServiceModel> GetServicesByProvider(string providerNumber)
+        {
+            ServiceRepository serviceRepository = new ServiceRepository();
+            UserRepository userRepository = new UserRepository();
+            ServiceDirectoryRepository serviceDirectoryRepository = new ServiceDirectoryRepository();
+
+            IEnumerable<ServiceModel> services = serviceRepository.GetServicesByProvider(providerNumber);
+            UserModel provider = userRepository.GetUser(providerNumber);
+
+            foreach (ServiceModel service in services)
+            {
+                service.Provider = provider;
+                service.Member = userRepository.GetUser(service.Member.UserNumber);
+                service.ServiceDirectory = serviceDirectoryRepository.GetService(service.ServiceDirectory.Code);
+            }
+            return services;
+        }
+
+        public IEnumerable<ServiceModel> GetServicesByEntryDate()
+        {
+            ServiceRepository serviceRepository = new ServiceRepository();
+            UserRepository userRepository = new UserRepository();
+            ServiceDirectoryRepository serviceDirectoryRepository = new ServiceDirectoryRepository();
+
+            IEnumerable<ServiceModel> services = serviceRepository.GetServicesByEntryDate();
+
+            foreach (ServiceModel service in services)
+            {
+                service.Provider = userRepository.GetUser(service.Provider.UserNumber);
+                service.Member = userRepository.GetUser(service.Member.UserNumber);
+                service.ServiceDirectory = serviceDirectoryRepository.GetService(service.ServiceDirectory.Code);
+            }
+            return services;
+        }
     }
 }

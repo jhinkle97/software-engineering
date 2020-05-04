@@ -72,5 +72,87 @@ namespace ChocAnonGUI.Backend.DataAccess
                 return new List<ServiceModel>();
             }
         }
+
+        public IEnumerable<ServiceModel> GetServicesByProvider(string providerNumber)
+        {
+            try
+            {
+                string query = $"SELECT * FROM [service] WHERE [providerNumber] = '{providerNumber}'";
+
+                connection.Open();
+                SqlCommand cmd = new SqlCommand(query, connection);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                List<ServiceModel> services = new List<ServiceModel>();
+
+                while (reader.Read())
+                {
+                    IDataRecord record = reader;
+
+                    ServiceModel service = new ServiceModel
+                    {
+                        EntryDate = (DateTime)record[1],
+                        ServiceDate = (DateTime)record[2],
+                        Provider = new UserModel { UserNumber = (string)record[3] },
+                        Member = new UserModel { UserNumber = (string)record[4] },
+                        ServiceDirectory = new ServiceDirectoryModel { Code = (string)record[5] },
+                        Comments = (string)record[6]
+                    };
+                    services.Add(service);
+                }
+                connection.Close();
+                return services;
+            }
+            catch (SqlException e)
+            {
+                Console.WriteLine(e.Message);
+                connection.Close();
+                return new List<ServiceModel>();
+            }
+        }
+
+        public IEnumerable<ServiceModel> GetServicesByEntryDate()
+        {
+            try
+            {
+                //code for getting date of last friday at midnight
+                //DateTime lastFriday = DateTime.Today.AddDays(-1);
+                //while (lastFriday.DayOfWeek != DayOfWeek.Friday)
+                //    lastFriday = lastFriday.AddDays(-1);
+
+                //currently searching for anything in the past 1 week
+                string query = $"SELECT * FROM [service] WHERE [entryDateTime] >= '{DateTime.Now.AddDays(-7)}'";
+
+                connection.Open();
+                SqlCommand cmd = new SqlCommand(query, connection);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                List<ServiceModel> services = new List<ServiceModel>();
+
+                while (reader.Read())
+                {
+                    IDataRecord record = reader;
+
+                    ServiceModel service = new ServiceModel
+                    {
+                        EntryDate = (DateTime)record[1],
+                        ServiceDate = (DateTime)record[2],
+                        Provider = new UserModel { UserNumber = (string)record[3] },
+                        Member = new UserModel { UserNumber = (string)record[4] },
+                        ServiceDirectory = new ServiceDirectoryModel { Code = (string)record[5] },
+                        Comments = (string)record[6]
+                    };
+                    services.Add(service);
+                }
+                connection.Close();
+                return services;
+            }
+            catch (SqlException e)
+            {
+                Console.WriteLine(e.Message);
+                connection.Close();
+                return new List<ServiceModel>();
+            }
+        }
     }
 }
