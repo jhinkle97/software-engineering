@@ -136,6 +136,7 @@
             this.Controls.Add(this.feeLabel);
             this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.topPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "EditServiceForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Edit or Delete Service";
