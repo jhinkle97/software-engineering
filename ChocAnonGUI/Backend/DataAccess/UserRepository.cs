@@ -96,5 +96,24 @@ namespace ChocAnonGUI.Backend.DataAccess
                 return new UserModel();
             }
         }
+
+        public bool DeleteUser(string userNumber)
+        {
+            try
+            {
+                string query = $"DELETE FROM [user] WHERE [userNumber] = '{userNumber}'";
+
+                connection.Open();
+                SqlCommand cmd = new SqlCommand(query, connection);
+                int rowsUpdated = cmd.ExecuteNonQuery();
+
+                return rowsUpdated == 1;
+            }
+            catch (SqlException)
+            {
+                connection.Close();
+                return false;
+            }
+        }
     }
 }

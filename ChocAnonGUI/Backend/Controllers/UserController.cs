@@ -34,5 +34,11 @@ namespace ChocAnonGUI.Backend.Controllers
             UserRepository userRepository = new UserRepository();
             return userRepository.EditUser(user);
         }
+
+        public bool DeleteUser(string userNumber)
+        {
+            UserRepository userRepository = new UserRepository();
+            return userRepository.DeleteUser(userNumber);
+        }
     }
 }
