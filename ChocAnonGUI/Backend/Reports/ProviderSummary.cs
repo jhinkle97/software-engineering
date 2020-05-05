@@ -9,7 +9,7 @@ namespace ChocAnonGUI.Backend.Reports
     class ProviderSummary
     {
         public string ProviderName { get; set; }
-        public int TotalFee { get; set; }
+        public decimal TotalFee { get; set; }
         public int TotalConsultations { get; set; }
     }
 }

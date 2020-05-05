@@ -32,9 +32,9 @@ namespace ChocAnonGUI
 
         }
 
-        private void managerButton_Click(object sender, EventArgs e)
+        private void summaryButton_Click(object sender, EventArgs e)
         {
-
+            reportRichTextBox.Text = reportGenerator.GenerateSummaryReport();
         }
 
         private void serviceButton_Click(object sender, EventArgs e)

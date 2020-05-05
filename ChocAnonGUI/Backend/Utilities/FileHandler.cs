@@ -12,13 +12,26 @@ namespace ChocAnonGUI.Backend.Utilities
         private static readonly string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
         private static readonly string providerPath = "ChocAn\\Reports\\Provider";
         private static readonly string memberPath = "ChocAn\\Reports\\Member";
-        private static readonly string managerPath = "ChocAn\\Reports\\Manager";
+        private static readonly string summaryPath = "ChocAn\\Reports\\Summary";
         private static readonly string serviceDirectoryPath = "ChocAn";
 
         public static void WriteProviderReport(string report, string fileName)
         {
             string path = $"{desktopPath}\\{providerPath}";
             
+            Directory.CreateDirectory(path);
+
+            StreamWriter file = new StreamWriter($"{path}\\{fileName}.txt");
+            {
+                file.WriteLine(report);
+            }
+            file.Close();
+        }
+
+        public static void WriteSummaryReport(string report, string fileName)
+        {
+            string path = $"{desktopPath}\\{summaryPath}";
+
             Directory.CreateDirectory(path);
 
             StreamWriter file = new StreamWriter($"{path}\\{fileName}.txt");

@@ -32,7 +32,7 @@
             this.memberButton = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
-            this.managerButton = new System.Windows.Forms.Button();
+            this.summaryButton = new System.Windows.Forms.Button();
             this.sendButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.reportRichTextBox = new System.Windows.Forms.RichTextBox();
@@ -66,18 +66,18 @@
             this.memberButton.UseVisualStyleBackColor = false;
             this.memberButton.Click += new System.EventHandler(this.memberButton_Click);
             // 
-            // managerButton
+            // summaryButton
             // 
-            this.managerButton.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.managerButton.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.managerButton.Location = new System.Drawing.Point(17, 178);
-            this.managerButton.Margin = new System.Windows.Forms.Padding(4);
-            this.managerButton.Name = "managerButton";
-            this.managerButton.Size = new System.Drawing.Size(169, 62);
-            this.managerButton.TabIndex = 4;
-            this.managerButton.Text = "Manager Report";
-            this.managerButton.UseVisualStyleBackColor = false;
-            this.managerButton.Click += new System.EventHandler(this.managerButton_Click);
+            this.summaryButton.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.summaryButton.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.summaryButton.Location = new System.Drawing.Point(17, 178);
+            this.summaryButton.Margin = new System.Windows.Forms.Padding(4);
+            this.summaryButton.Name = "summaryButton";
+            this.summaryButton.Size = new System.Drawing.Size(169, 62);
+            this.summaryButton.TabIndex = 4;
+            this.summaryButton.Text = "Summary Report";
+            this.summaryButton.UseVisualStyleBackColor = false;
+            this.summaryButton.Click += new System.EventHandler(this.summaryButton_Click);
             // 
             // sendButton
             // 
@@ -131,7 +131,7 @@
             this.Controls.Add(this.reportRichTextBox);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.sendButton);
-            this.Controls.Add(this.managerButton);
+            this.Controls.Add(this.summaryButton);
             this.Controls.Add(this.memberButton);
             this.Controls.Add(this.providerButton);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -148,7 +148,7 @@
         private System.Windows.Forms.Button memberButton;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
-        private System.Windows.Forms.Button managerButton;
+        private System.Windows.Forms.Button summaryButton;
         private System.Windows.Forms.Button sendButton;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RichTextBox reportRichTextBox;
