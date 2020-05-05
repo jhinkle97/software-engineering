@@ -18,6 +18,7 @@ namespace ChocAnonGUI.GUI.Operator
     public partial class EditUserForm : Form
     {
         private UserModel user;
+        private bool enableButtons = false;
         public EditUserForm()
         {
             InitializeComponent();
@@ -49,67 +50,90 @@ namespace ChocAnonGUI.GUI.Operator
         {
             //Get UserNumber from the Top Box
             string userNumber = usernumberTextBox.Text;
-
-            //Trigger a new object with given userNumber
-            //Need to add something if the searched ID is invalid
-            //Fields will be locked until a User Number is entered 
+            //Generate User Object for SQL database
             UserController userController = new UserController();
             user = userController.GetUser(userNumber);
 
-            nameTextbox.Text = user.Name;
-            statusComboBox.Text = user.Status;
-            cityTextbox.Text = user.City;
-            stateComboBox.Text = user.State;
-            roleCombobox.Text = user.Role;
-            addressTextbox.Text = user.StreetAddress;
-            zipTextbox.Text = user.Zip;
-
-            if (nameTextbox.Text == "")
+            if (user.UserNumber == "" || user.Name == "")
             {
                 PopupControl.printError("Not a valid User Number");
+                enableButtons = false;
             }
+            else
+            {
+                //Turn on Control Buttons
+                enableButtons = true;
+                //Insert the data of the user
+                nameTextbox.Text = user.Name;
+                statusComboBox.Text = user.Status;
+                cityTextbox.Text = user.City;
+                stateComboBox.Text = user.State;
+                roleCombobox.Text = user.Role;
+                addressTextbox.Text = user.StreetAddress;
+                zipTextbox.Text = user.Zip;
+            }
+        
+            
+
+            
                
         }
 
         private void editButton_Click(object sender, EventArgs e)
         {
-            UserController userController = new UserController();
-
-            user.Name = nameTextbox.Text;
-            user.Status = statusComboBox.Text;
-            user.City = cityTextbox.Text;
-            user.State = stateComboBox.Text;
-            user.Role = roleCombobox.Text;
-            user.StreetAddress = addressTextbox.Text;
-            user.Zip = zipTextbox.Text;
-
-
-            if (nameTextbox.Text == "" || cityTextbox.Text == "" || addressTextbox.Text == "" || zipTextbox.Text == "" || roleCombobox.Text == "" || stateComboBox.Text == "" || statusComboBox.Text == "")
+            if (nameTextbox.Text == "" || enableButtons == false)
             {
-                PopupControl.printError("You left one of the fields empty. Please fill them in to proceed");
+                PopupControl.printError("Sorry, you haven't input a \n\n correct user id in yet.");
             }
             else
             {
-                user = userController.EditUser(user);
 
-                UserEntryConfirmationForm launchConfirmation = new UserEntryConfirmationForm(user);
-                launchConfirmation.ShowDialog();
-                this.Close();
+                if (nameTextbox.Text != "" && statusComboBox.Text != "" && cityTextbox.Text != "" && stateComboBox.Text != ""
+                    && roleCombobox.Text != "" && addressTextbox.Text != "" && zipTextbox.Text != "")
+                {
+                    UserController userController = new UserController();
+
+                    user.Name = nameTextbox.Text;
+                    user.Status = statusComboBox.Text;
+                    user.City = cityTextbox.Text;
+                    user.State = stateComboBox.Text;
+                    user.Role = roleCombobox.Text;
+                    user.StreetAddress = addressTextbox.Text;
+                    user.Zip = zipTextbox.Text;
+
+                    UserEntryConfirmationForm launchConfirmationn = new UserEntryConfirmationForm(user);
+                    launchConfirmationn.ShowDialog();
+                    this.Close();
+                }
+                else
+                {
+                    PopupControl.printError("You left a field blank. \n\n Can't proceed until all filled in");
+                }
             }
+
         }
-        private void lockFields()
+
+        private void deleteButton_Click(object sender, EventArgs e)
         {
-            nameTextbox.ReadOnly    = true;
-            cityTextbox.ReadOnly    = true;
-            addressTextbox.ReadOnly = true;
-            zipTextbox.ReadOnly     = true;
-        }
-        private void unlockFields()
-        {
-            nameTextbox.ReadOnly    = false;
-            cityTextbox.ReadOnly    = false;
-            addressTextbox.ReadOnly = false;
-            zipTextbox.ReadOnly     = false;
+            if (nameTextbox.Text == "" || enableButtons == false || user.UserNumber == "")
+            {
+                PopupControl.printError("Sorry, you haven't input a \n\n correct user id in yet.");
+            }
+            else
+            {
+                if (nameTextbox.Text != "" && statusComboBox.Text != "" && cityTextbox.Text != "" && stateComboBox.Text != ""
+                    && roleCombobox.Text != "" && addressTextbox.Text != "" && zipTextbox.Text != "")
+                {
+                    UserController deleteUser = new UserController();
+                    PopupControl.printSuccess("You have deleted user: " + user.UserNumber + "\n\n Name: " + user.Name);
+                    deleteUser.DeleteUser(user.UserNumber);
+                    this.Close();
+                }
+                else
+                {
+                    PopupControl.printError("Sorry, fields need to be populated \n\n before deletion. ");
+                }
+            }
         }
     }
 }

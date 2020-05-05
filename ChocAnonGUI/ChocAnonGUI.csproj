@@ -67,6 +67,12 @@
     <Compile Include="GUI\Dashboard Controls\SettingsForm.Designer.cs">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Operator\EditServiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Operator\EditServiceForm.Designer.cs">
+      <DependentUpon>EditServiceForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Popup\PopupControl.cs" />
     <Compile Include="GUI\Popup\SuccessForm.cs">
       <SubType>Form</SubType>
@@ -85,12 +91,6 @@
     </Compile>
     <Compile Include="GUI\Operator\AddUserForm.Designer.cs">
       <DependentUpon>AddUserForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Operator\EditServiceForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Operator\EditServiceForm.Designer.cs">
-      <DependentUpon>EditServiceForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Operator\EditUserForm.cs">
       <SubType>Form</SubType>
@@ -181,6 +181,9 @@
     <EmbeddedResource Include="GUI\Dashboard Controls\SettingsForm.resx">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Operator\EditServiceForm.resx">
+      <DependentUpon>EditServiceForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Popup\SuccessForm.resx">
       <DependentUpon>SuccessForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -189,9 +192,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Operator\AddUserForm.resx">
       <DependentUpon>AddUserForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Operator\EditServiceForm.resx">
-      <DependentUpon>EditServiceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Operator\EditUserForm.resx">
       <DependentUpon>EditUserForm.cs</DependentUpon>
