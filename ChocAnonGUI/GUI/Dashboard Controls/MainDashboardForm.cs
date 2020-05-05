@@ -83,6 +83,7 @@ namespace ChocAnonGUI
         //Hides all the other panels except the Reports Panel.
         private void ReportButton_Click(object sender, EventArgs e) {
             hidePanels();
+            ReportControlPanel.SetProvider(provider);
             ReportControlPanel.Show();
         }
     }

@@ -20,7 +20,11 @@ namespace ChocAnonGUI.Backend.Controllers
             }
             while (serviceDirectoryRepository.GetService(service.Code).Code != null);
 
-            return serviceDirectoryRepository.AddService(service);
+            service = serviceDirectoryRepository.AddService(service);
+
+            FileHandler.WriteServiceDirectory();
+
+            return service;
         }
 
         public ServiceDirectoryModel GetService(string serviceCode)
@@ -38,13 +42,23 @@ namespace ChocAnonGUI.Backend.Controllers
         public ServiceDirectoryModel EditService(ServiceDirectoryModel service)
         {
             ServiceDirectoryRepository serviceDirectoryRepository = new ServiceDirectoryRepository();
-            return serviceDirectoryRepository.EditService(service);
+
+            service = serviceDirectoryRepository.EditService(service);
+
+            FileHandler.WriteServiceDirectory();
+
+            return service;
         }
 
         public bool DeleteService(string serviceCode)
         {
             ServiceDirectoryRepository serviceDirectoryRepository = new ServiceDirectoryRepository();
-            return serviceDirectoryRepository.DeleteService(serviceCode);
+            
+            var isDeleted = serviceDirectoryRepository.DeleteService(serviceCode);
+
+            FileHandler.WriteServiceDirectory();
+
+            return isDeleted;
         }
     }
 }

@@ -7,14 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ChocAnonGUI.Backend.Reports;
+using System.Configuration;
+using ChocAnonGUI.Backend.Models;
 
 namespace ChocAnonGUI
 {
     public partial class ReportsPanel : UserControl
     {
+        private ReportGenerator reportGenerator = new ReportGenerator();
+        private UserModel provider = new UserModel();
         public ReportsPanel()
         {
             InitializeComponent();
+        }
+
+        public void SetProvider(UserModel user)
+        {
+            provider = user;
         }
 
         private void sendButton_Click(object sender, EventArgs e)
@@ -22,9 +32,9 @@ namespace ChocAnonGUI
 
         }
 
-        private void managerButton_Click(object sender, EventArgs e)
+        private void summaryButton_Click(object sender, EventArgs e)
         {
-
+            reportRichTextBox.Text = reportGenerator.GenerateSummaryReport();
         }
 
         private void serviceButton_Click(object sender, EventArgs e)
@@ -39,12 +49,15 @@ namespace ChocAnonGUI
 
         private void memberButton_Click(object sender, EventArgs e)
         {
-
+            // launch member code entry
+            // get member
+            //pass in memberNumber
+            //reportRichTextBox.Text = reportGenerator.GenerateMemberReport(memberNumber);
         }
 
         private void providerButton_Click(object sender, EventArgs e)
         {
-
+            reportRichTextBox.Text = reportGenerator.GenerateProviderReport(provider.UserNumber);
         }
     }
 }
