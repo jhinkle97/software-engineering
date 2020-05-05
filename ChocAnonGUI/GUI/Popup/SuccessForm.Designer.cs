@@ -73,7 +73,9 @@
             this.ClientSize = new System.Drawing.Size(270, 234);
             this.Controls.Add(this.happyPicturebox);
             this.Controls.Add(this.topPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "SuccessForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SuccessForm";
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
