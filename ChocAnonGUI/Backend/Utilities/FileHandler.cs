@@ -29,6 +29,19 @@ namespace ChocAnonGUI.Backend.Utilities
             file.Close();
         }
 
+        public static void WriteMemberReport(string report, string fileName)
+        {
+            string path = $"{desktopPath}\\{memberPath}";
+
+            Directory.CreateDirectory(path);
+
+            StreamWriter file = new StreamWriter($"{path}\\{fileName}.txt");
+            {
+                file.WriteLine(report);
+            }
+            file.Close();
+        }
+
         public static void WriteSummaryReport(string report, string fileName)
         {
             string path = $"{desktopPath}\\{summaryPath}";

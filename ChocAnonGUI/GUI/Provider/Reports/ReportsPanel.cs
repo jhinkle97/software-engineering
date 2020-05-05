@@ -49,7 +49,10 @@ namespace ChocAnonGUI
 
         private void memberButton_Click(object sender, EventArgs e)
         {
-
+            // launch member code entry
+            // get member
+            //pass in memberNumber
+            //reportRichTextBox.Text = reportGenerator.GenerateMemberReport(memberNumber);
         }
 
         private void providerButton_Click(object sender, EventArgs e)

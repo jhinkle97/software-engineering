@@ -63,6 +63,41 @@ namespace ChocAnonGUI.Backend.Reports
             return report;
         }
 
+        public string GenerateMemberReport(string memberNumber)
+        {
+            IEnumerable<ServiceModel> services = serviceRepository.GetServicesByMember(memberNumber);
+
+            if (!services.Any())
+            {
+                return "No services to report in time range.";
+            }
+
+            UserModel member = services.First().Member;
+
+            string report = $"MEMBER INFORMATION\n\n" +
+                            $"Name:     {member.Name}\n" +
+                            $"Number:   {member.UserNumber}\n" +
+                            $"Address:  {member.StreetAddress}\n" +
+                            $"City:     {member.City}\n" +
+                            $"State:    {member.State}\n" +
+                            $"Zip:      {member.Zip}\n" +
+                            $"\n\n" +
+                            $"SERVICES PROVIDED\n\n";
+
+            foreach (ServiceModel service in services)
+            {
+                report +=   $"Date of Service:  {service.ServiceDate}\n" +
+                            $"Provider Name:    {service.Provider.Name}\n" +
+                            $"Service Name:     {service.ServiceDirectory.Name}\n" +
+                            $"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
+            }
+
+            string fileName = $"{member.Name} {DateTime.Now.ToString("MMMM dd yyyy")}";
+            FileHandler.WriteMemberReport(report, fileName);
+
+            return report;
+        }
+
         public string GenerateSummaryReport()
         {
             var services = serviceRepository.GetServicesByEntryDate();
