@@ -46,28 +46,38 @@ namespace ChocAnonGUI
               memcityTextbox.Text = activeMember.City;
               memstatusTextbox.Text = activeMember.Status;  
         }
-            
-            
-       
+
+
+
 
         private void billButton_Click(object sender, EventArgs e)
         {
-            // I am not sure if we should submit here or from service confirmation form
-            ServiceController serviceController = new ServiceController();
 
             ServiceModel service = new ServiceModel
             {
                 ServiceDate = dateTimePicker1.Value,
                 Provider = activeProvider,
                 Member = activeMember,
-                ServiceDirectory = new ServiceDirectoryModel { Code=serviceCodeTextBox.Text },
+                ServiceDirectory = new ServiceDirectoryModel { Code = serviceCodeTextBox.Text },
                 Comments = commentsBox.Text
             };
 
-            if (serviceController.AddService(service))
+            if (commentsBox.Text == "")
             {
-                //successful add
+                PopupControl.printError("Please enter something in the \n\n comments box before submission");
             }
+            else if (serviceCodeTextBox.Text == "")
+            {
+                PopupControl.printError("Please input a service code before \n\n continuing. Try the lookup button");
+            }
+            else
+            {
+                ConfirmServiceForm launchConfirmService = new ConfirmServiceForm(service);
+                launchConfirmService.ShowDialog();
+            }
+            
+            
+            
         }
 
         private void lookupButton_Click(object sender, EventArgs e)

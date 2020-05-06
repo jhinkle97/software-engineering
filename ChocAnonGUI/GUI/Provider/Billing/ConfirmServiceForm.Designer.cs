@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.prompt1Label = new System.Windows.Forms.Label();
             this.prompt2Label = new System.Windows.Forms.Label();
-            this.checkvalueTextbox = new System.Windows.Forms.TextBox();
+            this.codeTextbox = new System.Windows.Forms.TextBox();
             this.prompt3 = new System.Windows.Forms.Label();
             this.confirmButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
@@ -69,12 +69,12 @@
             this.prompt2Label.TabIndex = 2;
             this.prompt2Label.Text = "Service CODE:";
             // 
-            // checkvalueTextbox
+            // codeTextbox
             // 
-            this.checkvalueTextbox.Location = new System.Drawing.Point(86, 147);
-            this.checkvalueTextbox.Name = "checkvalueTextbox";
-            this.checkvalueTextbox.Size = new System.Drawing.Size(224, 20);
-            this.checkvalueTextbox.TabIndex = 3;
+            this.codeTextbox.Location = new System.Drawing.Point(86, 147);
+            this.codeTextbox.Name = "codeTextbox";
+            this.codeTextbox.Size = new System.Drawing.Size(224, 20);
+            this.codeTextbox.TabIndex = 3;
             // 
             // prompt3
             // 
@@ -138,12 +138,13 @@
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.confirmButton);
             this.Controls.Add(this.prompt3);
-            this.Controls.Add(this.checkvalueTextbox);
+            this.Controls.Add(this.codeTextbox);
             this.Controls.Add(this.prompt2Label);
             this.Controls.Add(this.prompt1Label);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ConfirmServiceForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Confirm Service";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -155,7 +156,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label prompt1Label;
         private System.Windows.Forms.Label prompt2Label;
-        private System.Windows.Forms.TextBox checkvalueTextbox;
+        private System.Windows.Forms.TextBox codeTextbox;
         private System.Windows.Forms.Label prompt3;
         private System.Windows.Forms.Button confirmButton;
         private System.Windows.Forms.Button cancelButton;
