@@ -54,7 +54,7 @@ namespace ChocAnonGUI.GUI.Operator
             UserController userController = new UserController();
             user = userController.GetUser(userNumber);
 
-            if (user.UserNumber == "" || user.Name == "")
+            if (user.UserNumber == "")
             {
                 PopupControl.printError("Not a valid User Number");
                 enableButtons = false;
@@ -115,7 +115,7 @@ namespace ChocAnonGUI.GUI.Operator
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
-            if (nameTextbox.Text == "" || enableButtons == false || user.UserNumber == "")
+            if (user.UserNumber == "")
             {
                 PopupControl.printError("Sorry, you haven't input a \n\n correct user id in yet.");
             }

@@ -95,7 +95,7 @@ namespace ChocAnonGUI
             ServiceDirectoryController serviceDirectoryController = new ServiceDirectoryController();
             service = serviceDirectoryController.GetService(serviceCode);
 
-            if (service.Code == "" || service.Name == "" || service.Fee == 0)
+            if (service.Code == "")
             {
                 lockFields();
                 enableButtons = false;
