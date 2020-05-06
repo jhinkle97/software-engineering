@@ -64,7 +64,7 @@ namespace ChocAnonGUI
             string memberCode = launchConfirmation.memberCode;
 
             //Logic to sort if it was null on return to the dashboard
-            if (memberCode == "" || memberCode == "Enter member number")
+            if (memberCode == null || memberCode == "Enter member number")
             {
                 //Hide panel and show error page.
                 hidePanels();
