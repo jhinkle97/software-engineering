@@ -86,5 +86,12 @@ namespace ChocAnonGUI
             ReportControlPanel.SetProvider(provider);
             ReportControlPanel.Show();
         }
+
+        private void logout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new LoginForm().ShowDialog();
+            this.Close();
+        }
     }
 }
