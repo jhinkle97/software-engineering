@@ -38,25 +38,17 @@ namespace ChocAnonGUI
 
         private void fillQuickView()
         {
-            memnameTextbox.Text    = activeMember.Name;
-            memstateTextbox.Text   = activeMember.State;
-            memnumberTextbox.Text  = activeMember.UserNumber;
-            memaddressTextbox.Text = activeMember.StreetAddress;
-            memzipTextbox.Text     = activeMember.Zip;
-            memcityTextbox.Text    = activeMember.City;
-            if (activeMember.Status == "Suspended")
-            {
-                memstatusTextbox.ForeColor = Color.Red;
-                memstatusTextbox.Text = activeMember.Status;
-            }
-            else
-            {
-                memstatusTextbox.ForeColor = Color.Black;
-                memstatusTextbox.Text = activeMember.Status;
-            }
-            
+              memnameTextbox.Text = activeMember.Name;
+              memstateTextbox.Text = activeMember.State;
+              memnumberTextbox.Text = activeMember.UserNumber;
+              memaddressTextbox.Text = activeMember.StreetAddress;
+              memzipTextbox.Text = activeMember.Zip;
+              memcityTextbox.Text = activeMember.City;
+              memstatusTextbox.Text = activeMember.Status;  
         }
-
+            
+            
+       
 
         private void billButton_Click(object sender, EventArgs e)
         {
