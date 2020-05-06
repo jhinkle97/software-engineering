@@ -68,7 +68,7 @@ namespace ChocAnonGUI
             {
                 //Hide panel and show error page.
                 hidePanels();
-                InvalidControlPanel.Show();
+                WelcomeControlPanel.Show();
             }
             else 
             {   
