@@ -10,13 +10,18 @@ using System.Windows.Forms;
 using ChocAnonGUI.Backend.Reports;
 using System.Configuration;
 using ChocAnonGUI.Backend.Models;
+using ChocAnonGUI.GUI.Provider.Reports;
 
 namespace ChocAnonGUI
 {
+   
     public partial class ReportsPanel : UserControl
+        
     {
+
         private ReportGenerator reportGenerator = new ReportGenerator();
         private UserModel provider = new UserModel();
+        private string userNumber;
         public ReportsPanel()
         {
             InitializeComponent();
@@ -41,23 +46,26 @@ namespace ChocAnonGUI
         {
 
         }
-
+        public void setReport(string code)
+        {
+            reportRichTextBox.Text = reportGenerator.GenerateMemberReport(code);
+        }
         private void changeButton_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void memberButton_Click(object sender, EventArgs e)
-        {
-            // launch member code entry
-            // get member
-            //pass in memberNumber
-            //reportRichTextBox.Text = reportGenerator.GenerateMemberReport(memberNumber);
-        }
-
         private void providerButton_Click(object sender, EventArgs e)
         {
             reportRichTextBox.Text = reportGenerator.GenerateProviderReport(provider.UserNumber);
+        }
+
+        private void memberButton_Click_1(object sender, EventArgs e)
+        {     
+                GetMemberForm launchForm = new GetMemberForm();
+                launchForm.ShowDialog();
+                
+
         }
     }
 }
