@@ -20,7 +20,7 @@ namespace ChocAnonGUI
 
         private bool enableButtons = false;
         private ServiceDirectoryModel service;
-        private string serviceCode;
+   
         public EditServiceForm()
         {
             InitializeComponent();
@@ -82,7 +82,7 @@ namespace ChocAnonGUI
             else if (enableButtons == true)
             {
                 ServiceDirectoryController deleteService = new ServiceDirectoryController();
-                deleteService.DeleteService(serviceCode);
+                deleteService.DeleteService(service.Code);
                 PopupControl.printSuccess("The Service with Code: " + service.Code + "\n\n was removed");
                 this.Close();
             }
@@ -90,7 +90,8 @@ namespace ChocAnonGUI
 
         private void searchButton_Click(object sender, EventArgs e)
         {
-            serviceCode = inputTextbox.Text;
+
+            string serviceCode = inputTextbox.Text;
 
             ServiceDirectoryController serviceDirectoryController = new ServiceDirectoryController();
             service = serviceDirectoryController.GetService(serviceCode);
