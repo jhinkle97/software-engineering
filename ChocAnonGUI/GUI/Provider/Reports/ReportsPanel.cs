@@ -21,7 +21,7 @@ namespace ChocAnonGUI
 
         private ReportGenerator reportGenerator = new ReportGenerator();
         private UserModel provider = new UserModel();
-        private string userNumber;
+      
         public ReportsPanel()
         {
             InitializeComponent();

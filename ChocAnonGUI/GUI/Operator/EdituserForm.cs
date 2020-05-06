@@ -18,7 +18,7 @@ namespace ChocAnonGUI.GUI.Operator
     public partial class EditUserForm : Form
     {
         private UserModel user;
-        private bool enableButtons = false;
+       
         public EditUserForm()
         {
             InitializeComponent();
@@ -108,17 +108,22 @@ namespace ChocAnonGUI.GUI.Operator
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
+            bool temp = false;
             if (nameTextbox.Text != "" && statusComboBox.Text != "" && cityTextbox.Text != "" && stateComboBox.Text != ""
                 && roleCombobox.Text != "" && addressTextbox.Text != "" && zipTextbox.Text != "")
             {
                 UserController deleteUser = new UserController();
-                if (deleteUser.DeleteUser(user.UserNumber))
+                ConfirmDeleteForm confirmation = new ConfirmDeleteForm(temp);
+                confirmation.ShowDialog();
+                temp = confirmation.check;
+                if (temp == true)
                 {
+                    deleteUser.DeleteUser(user.UserNumber);
                     PopupControl.printSuccess("You have deleted user: " + user.UserNumber + "\n\n Name: " + user.Name);
                 }
                 else
                 {
-                    PopupControl.printError("Something went wrong.");
+                    PopupControl.printError("Deletion Cancelled.");
                 }
                 this.Close();
             }

@@ -17,6 +17,7 @@ namespace ChocAnonGUI
     {
         private UserModel activeProvider;
         private UserModel activeMember;
+        private ServiceDirectoryModel serviceDirectory;
         public BillingPanel()
         {
             InitializeComponent();
@@ -58,7 +59,7 @@ namespace ChocAnonGUI
                 ServiceDate = dateTimePicker1.Value,
                 Provider = activeProvider,
                 Member = activeMember,
-                ServiceDirectory = new ServiceDirectoryModel { Code = serviceCodeTextBox.Text },
+                ServiceDirectory = serviceDirectory,
                 Comments = commentsBox.Text
             };
 
@@ -86,9 +87,10 @@ namespace ChocAnonGUI
             launchServiceLookup.Show();
         }
 
-        public void setServiceCode(string serviceCode)
+        public void SetService(ServiceDirectoryModel service)
         {
-            serviceCodeTextBox.Text = serviceCode;
+            serviceDirectory = service;
+            serviceCodeTextBox.Text = service.Code;
         }
     }
 }

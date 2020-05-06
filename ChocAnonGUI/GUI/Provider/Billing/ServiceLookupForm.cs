@@ -32,11 +32,16 @@ namespace ChocAnonGUI
 
         private void servicesListview_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (servicesListview.SelectedItems.Count == 0)return;
-
+            if (servicesListview.SelectedItems.Count == 0) return;
             ListViewItem item = servicesListview.SelectedItems[0];
-
-            billingPanel.setServiceCode(item.SubItems[0].Text);
+            ServiceDirectoryModel service = new ServiceDirectoryModel
+            {
+                Code = item.SubItems[0].Text,
+                Name = item.SubItems[1].Text,
+                Fee = Convert.ToDecimal(item.SubItems[2].Text)
+                
+            };
+            billingPanel.SetService(service);
         }
     }
 }

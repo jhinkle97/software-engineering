@@ -67,6 +67,12 @@
     <Compile Include="GUI\Dashboard Controls\SettingsForm.Designer.cs">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Operator\ConfirmDeleteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Operator\ConfirmDeleteForm.Designer.cs">
+      <DependentUpon>ConfirmDeleteForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Operator\EditServiceForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +192,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\Dashboard Controls\SettingsForm.resx">
       <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Operator\ConfirmDeleteForm.resx">
+      <DependentUpon>ConfirmDeleteForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Operator\EditServiceForm.resx">
       <DependentUpon>EditServiceForm.cs</DependentUpon>

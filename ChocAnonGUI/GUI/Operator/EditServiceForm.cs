@@ -17,8 +17,6 @@ namespace ChocAnonGUI
    
     public partial class EditServiceForm : Form
     {
-
-        private bool enableButtons = false;
         private ServiceDirectoryModel service;
    
         public EditServiceForm()
@@ -72,14 +70,19 @@ namespace ChocAnonGUI
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
+            bool temp = false;
             ServiceDirectoryController deleteService = new ServiceDirectoryController();
-            if (deleteService.DeleteService(service.Code))
+            ConfirmDeleteForm confirmation = new ConfirmDeleteForm(temp);
+            confirmation.ShowDialog();
+            temp = confirmation.check;
+            if (temp == true)
             {
+                deleteService.DeleteService(service.Code);
                 PopupControl.printSuccess("The Service with Code: " + service.Code + "\n\n was removed");
             }
             else
             {
-                PopupControl.printError("Something went wrong.");
+                PopupControl.printError("Deletion Cancelled.");
             }
             this.Close();
         }
