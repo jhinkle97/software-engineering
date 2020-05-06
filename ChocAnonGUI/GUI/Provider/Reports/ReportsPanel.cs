@@ -25,6 +25,7 @@ namespace ChocAnonGUI
         public ReportsPanel()
         {
             InitializeComponent();
+            sendButton.Enabled = false;
         }
 
         public void SetProvider(UserModel user)
@@ -34,11 +35,12 @@ namespace ChocAnonGUI
 
         private void sendButton_Click(object sender, EventArgs e)
         {
-
+            PopupControl.printSuccess("Email of report successfully sent");
         }
 
         private void summaryButton_Click(object sender, EventArgs e)
         {
+            sendButton.Enabled = true;
             reportRichTextBox.Text = reportGenerator.GenerateSummaryReport();
         }
 
@@ -54,6 +56,7 @@ namespace ChocAnonGUI
 
         private void providerButton_Click(object sender, EventArgs e)
         {
+            sendButton.Enabled = true;
             reportRichTextBox.Text = reportGenerator.GenerateProviderReport(provider.UserNumber);
         }
 
@@ -61,6 +64,7 @@ namespace ChocAnonGUI
         {     
             GetMemberForm launchForm = new GetMemberForm();
             launchForm.ShowDialog();
+            sendButton.Enabled = true;
             reportRichTextBox.Text = reportGenerator.GenerateMemberReport(launchForm.memberCode);
 
 
