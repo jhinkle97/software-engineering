@@ -40,7 +40,7 @@ namespace ChocAnonGUI.Backend.Reports
 
             foreach(ServiceModel service in services)
             {
-                report +=   $"Date of Service:  {service.ServiceDate}\n" +
+                report +=   $"Date of Service:  {service.ServiceDate.ToString("dd/MM/yyyy")}\n" +
                             $"Entry Date:       {service.EntryDate}\n" +
                             $"Member Name:      {service.Member.Name}\n" +
                             $"Member Number:    {service.Member.UserNumber}\n" +
@@ -86,7 +86,7 @@ namespace ChocAnonGUI.Backend.Reports
 
             foreach (ServiceModel service in services)
             {
-                report +=   $"Date of Service:  {service.ServiceDate}\n" +
+                report +=   $"Date of Service:  {service.ServiceDate.ToString("dd/MM/yyyy")}\n" +
                             $"Provider Name:    {service.Provider.Name}\n" +
                             $"Service Name:     {service.ServiceDirectory.Name}\n" +
                             $"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
