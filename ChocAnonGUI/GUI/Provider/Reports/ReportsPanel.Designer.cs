@@ -101,6 +101,7 @@
             this.reportRichTextBox.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reportRichTextBox.Location = new System.Drawing.Point(172, 50);
             this.reportRichTextBox.Name = "reportRichTextBox";
+            this.reportRichTextBox.ReadOnly = true;
             this.reportRichTextBox.Size = new System.Drawing.Size(452, 246);
             this.reportRichTextBox.TabIndex = 8;
             this.reportRichTextBox.Text = "";
