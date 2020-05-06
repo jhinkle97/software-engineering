@@ -18,7 +18,7 @@ namespace ChocAnonGUI
         public PasswordConfirmForm()
         {
             InitializeComponent();
-
+            memberCode = null;
         }
 
         private void confirmButton_Click(object sender, EventArgs e)
