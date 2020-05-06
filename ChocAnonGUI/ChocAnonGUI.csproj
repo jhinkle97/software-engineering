@@ -140,6 +140,12 @@
     <Compile Include="GUI\Provider\Billing\ConfirmServiceForm.Designer.cs">
       <DependentUpon>ConfirmServiceForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Provider\Reports\GetMemberForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Provider\Reports\GetMemberForm.Designer.cs">
+      <DependentUpon>GetMemberForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Provider\WelcomePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -216,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Provider\Billing\ConfirmServiceForm.resx">
       <DependentUpon>ConfirmServiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Provider\Reports\GetMemberForm.resx">
+      <DependentUpon>GetMemberForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Provider\WelcomePanel.resx">
       <DependentUpon>WelcomePanel.cs</DependentUpon>

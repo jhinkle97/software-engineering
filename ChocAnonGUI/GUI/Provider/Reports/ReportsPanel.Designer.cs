@@ -44,10 +44,9 @@
             this.providerButton.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.providerButton.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.providerButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.providerButton.Location = new System.Drawing.Point(17, 15);
-            this.providerButton.Margin = new System.Windows.Forms.Padding(4);
+            this.providerButton.Location = new System.Drawing.Point(13, 12);
             this.providerButton.Name = "providerButton";
-            this.providerButton.Size = new System.Drawing.Size(169, 62);
+            this.providerButton.Size = new System.Drawing.Size(127, 50);
             this.providerButton.TabIndex = 0;
             this.providerButton.Text = "Provider Report";
             this.providerButton.UseVisualStyleBackColor = false;
@@ -57,23 +56,21 @@
             // 
             this.memberButton.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.memberButton.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.memberButton.Location = new System.Drawing.Point(17, 95);
-            this.memberButton.Margin = new System.Windows.Forms.Padding(4);
+            this.memberButton.Location = new System.Drawing.Point(13, 77);
             this.memberButton.Name = "memberButton";
-            this.memberButton.Size = new System.Drawing.Size(169, 62);
+            this.memberButton.Size = new System.Drawing.Size(127, 50);
             this.memberButton.TabIndex = 1;
             this.memberButton.Text = "Member Report";
             this.memberButton.UseVisualStyleBackColor = false;
-            this.memberButton.Click += new System.EventHandler(this.memberButton_Click);
+            this.memberButton.Click += new System.EventHandler(this.memberButton_Click_1);
             // 
             // summaryButton
             // 
             this.summaryButton.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.summaryButton.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.summaryButton.Location = new System.Drawing.Point(17, 178);
-            this.summaryButton.Margin = new System.Windows.Forms.Padding(4);
+            this.summaryButton.Location = new System.Drawing.Point(13, 145);
             this.summaryButton.Name = "summaryButton";
-            this.summaryButton.Size = new System.Drawing.Size(169, 62);
+            this.summaryButton.Size = new System.Drawing.Size(127, 50);
             this.summaryButton.TabIndex = 4;
             this.summaryButton.Text = "Summary Report";
             this.summaryButton.UseVisualStyleBackColor = false;
@@ -83,10 +80,9 @@
             // 
             this.sendButton.BackColor = System.Drawing.Color.Wheat;
             this.sendButton.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sendButton.Location = new System.Drawing.Point(17, 260);
-            this.sendButton.Margin = new System.Windows.Forms.Padding(4);
+            this.sendButton.Location = new System.Drawing.Point(13, 211);
             this.sendButton.Name = "sendButton";
-            this.sendButton.Size = new System.Drawing.Size(169, 105);
+            this.sendButton.Size = new System.Drawing.Size(127, 85);
             this.sendButton.TabIndex = 6;
             this.sendButton.Text = "Email Generated Report\r\n";
             this.sendButton.UseVisualStyleBackColor = false;
@@ -95,19 +91,17 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel1.Location = new System.Drawing.Point(204, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(153, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(16, 399);
+            this.panel1.Size = new System.Drawing.Size(12, 324);
             this.panel1.TabIndex = 7;
             // 
             // reportRichTextBox
             // 
             this.reportRichTextBox.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reportRichTextBox.Location = new System.Drawing.Point(229, 62);
-            this.reportRichTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.reportRichTextBox.Location = new System.Drawing.Point(172, 50);
             this.reportRichTextBox.Name = "reportRichTextBox";
-            this.reportRichTextBox.Size = new System.Drawing.Size(601, 302);
+            this.reportRichTextBox.Size = new System.Drawing.Size(452, 246);
             this.reportRichTextBox.TabIndex = 8;
             this.reportRichTextBox.Text = "";
             // 
@@ -115,16 +109,15 @@
             // 
             this.titleLabel.AutoSize = true;
             this.titleLabel.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleLabel.Location = new System.Drawing.Point(375, 15);
-            this.titleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.titleLabel.Location = new System.Drawing.Point(281, 12);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(305, 29);
+            this.titleLabel.Size = new System.Drawing.Size(242, 23);
             this.titleLabel.TabIndex = 9;
             this.titleLabel.Text = "Report QuickView Panel";
             // 
             // ReportsPanel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Controls.Add(this.titleLabel);
@@ -134,9 +127,8 @@
             this.Controls.Add(this.summaryButton);
             this.Controls.Add(this.memberButton);
             this.Controls.Add(this.providerButton);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ReportsPanel";
-            this.Size = new System.Drawing.Size(852, 377);
+            this.Size = new System.Drawing.Size(639, 306);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,7 +143,7 @@
         private System.Windows.Forms.Button summaryButton;
         private System.Windows.Forms.Button sendButton;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.RichTextBox reportRichTextBox;
         private System.Windows.Forms.Label titleLabel;
+        public System.Windows.Forms.RichTextBox reportRichTextBox;
     }
 }
