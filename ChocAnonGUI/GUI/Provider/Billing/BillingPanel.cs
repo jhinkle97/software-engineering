@@ -44,7 +44,17 @@ namespace ChocAnonGUI
             memaddressTextbox.Text = activeMember.StreetAddress;
             memzipTextbox.Text     = activeMember.Zip;
             memcityTextbox.Text    = activeMember.City;
-            memstatusTextbox.Text  = activeMember.Status;
+            if (activeMember.Status == "Suspended")
+            {
+                memstatusTextbox.ForeColor = Color.Red;
+                memstatusTextbox.Text = activeMember.Status;
+            }
+            else
+            {
+                memstatusTextbox.ForeColor = Color.Black;
+                memstatusTextbox.Text = activeMember.Status;
+            }
+            
         }
 
 
