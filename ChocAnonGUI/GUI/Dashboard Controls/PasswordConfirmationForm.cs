@@ -53,7 +53,7 @@ namespace ChocAnonGUI
                     confirmationLabel.Text = "Invalid Login. NOT FOUND";
                 }
                 //set memberCode to null
-                memberCode = "";
+                memberCode = null;
             }
         }
         private void memcodeTextbox_Enter(object sender, EventArgs e)

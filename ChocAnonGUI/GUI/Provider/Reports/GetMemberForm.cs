@@ -18,7 +18,7 @@ namespace ChocAnonGUI.GUI.Provider.Reports
 {
     public partial class GetMemberForm : Form
     {
-       
+        public string memberCode { get; set; }
         public GetMemberForm()
         {
             InitializeComponent();
@@ -38,7 +38,7 @@ namespace ChocAnonGUI.GUI.Provider.Reports
                 PopupControl.printError("Sorry, not a valid member code");
             }else
             {
-                //Pass the string back to setReport
+                memberCode = member.UserNumber;
                 this.Close();
             }
             
