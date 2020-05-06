@@ -1,5 +1,6 @@
 ﻿using ChocAnonGUI.Backend.Controllers;
 using ChocAnonGUI.Backend.Models;
+using ChocAnonGUI.GUI.Operator;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,76 +12,47 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ChocAnonGUI.GUI.Operator
+namespace ChocAnonGUI
 {
+   
     public partial class EditServiceForm : Form
     {
+
+        private bool enableButtons = false;
         private ServiceDirectoryModel service;
-        private bool   validated = false;
-        private string procedure = "";
-     
-        
+   
         public EditServiceForm()
         {
             InitializeComponent();
-            disableFields(); 
+            lockFields();
         }
 
-        private void searchService(object sender, EventArgs e)
+        private void editButton_Click(object sender, EventArgs e)
         {
-            string serviceCode = searchTextbox.Text;
-          
-            ServiceDirectoryController serviceDirectoryController = new ServiceDirectoryController();
-            service = serviceDirectoryController.GetService(serviceCode);
-            if (service.Name != "" && service.Fee != 0)
+            if (enableButtons == false)
             {
-                enableFields();
-                validated = true;
-                servicenameTextbox.Text = service.Name;
-                servicefeeTextbox.Text  = service.Fee.ToString();
-            }else
-            {
-                disableFields();
-                validated = false;
-                PopupControl.printError("Invalid Service Code");
+                PopupControl.printError("Sorry, No valid \n\n service ID entered");
+                lockFields();
             }
-
-           
-        }
-
-        private void serviceeditButton_Click(object sender, EventArgs e)
-        {
-            //Delete Functionality
-            if (procedure == "DELETE" && procedure != "")
+            else if (enableButtons == true)
             {
-                if (servicenameTextbox.Text == "" || servicefeeTextbox.Text == "")
+              if (serviceTextbox.Text == "" || feeTextbox.Text == "")
                 {
-                    PopupControl.printError("You haven't lookup up a valid account");
+                    PopupControl.printError("Fill in the empty fields please");
                 }
                 else
                 {
-                    ServiceDirectoryController deleteService = new ServiceDirectoryController();
-                    deleteService.DeleteService(service.Code);
-                    PopupControl.printSuccess("The Service with code" + searchTextbox.Text + "\n\n was removed");
-                    this.Close();
-                }
-            }
-            else if (procedure == "EDIT" && procedure != "")
-            {
-                if (servicefeeTextbox.Text == "" || servicefeeTextbox.Text == "")
-                {
-                    PopupControl.printError("You haven't lookup up a valid account");
-                }
-                else
-                {
-                    ServiceDirectoryController serviceDirectoryController = new ServiceDirectoryController();
+                    ServiceDirectoryController editService = new ServiceDirectoryController();
+                    service.Name = serviceTextbox.Text;
                     bool validFee = true;
-                    service.Name = servicenameTextbox.Text;
+
                     //TRY CATCH
-                    try {
-                        service.Fee = Convert.ToDecimal(servicefeeTextbox.Text, new CultureInfo("en-US"));
+                    try
+                    {
+                        service.Fee = Convert.ToDecimal(feeTextbox.Text, new CultureInfo("en-US"));
                     }
-                    catch {
+                    catch
+                    {
                         validFee = false;
                         service.Fee = 0;
                     }
@@ -90,49 +62,64 @@ namespace ChocAnonGUI.GUI.Operator
                     }
                     else
                     {
-                        service = serviceDirectoryController.EditService(service);
-
+                        service = editService.EditService(service);
                         ServiceEntryConfirmationForm launchConfirmation = new ServiceEntryConfirmationForm(service);
                         launchConfirmation.ShowDialog();
                         this.Close();
                     }
-
                 }
-              
+
             }
         }
-        private void disableFields()
+
+        private void deleteButton_Click(object sender, EventArgs e)
         {
-            servicenameTextbox.ReadOnly = true;
-            servicefeeTextbox.ReadOnly  = true;
-        }
-        private void enableFields()
-        {
-            servicenameTextbox.ReadOnly = false;
-            servicefeeTextbox.ReadOnly  = false;
+            if (enableButtons == false)
+            {
+                PopupControl.printError("Sorry, No valid \n\n service ID entered");
+                lockFields();
+            }
+            else if (enableButtons == true)
+            {
+                ServiceDirectoryController deleteService = new ServiceDirectoryController();
+                deleteService.DeleteService(service.Code);
+                PopupControl.printSuccess("The Service with Code: " + service.Code + "\n\n was removed");
+                this.Close();
+            }
         }
 
-        private void editRadio_CheckedChanged(object sender, EventArgs e)
+        private void searchButton_Click(object sender, EventArgs e)
         {
-            if (validated == true)
+
+            string serviceCode = inputTextbox.Text;
+
+            ServiceDirectoryController serviceDirectoryController = new ServiceDirectoryController();
+            service = serviceDirectoryController.GetService(serviceCode);
+
+            if (service.Code == "")
             {
-                enableFields();
-                serviceeditButton.Text = "Edit Service";
-                procedure = "EDIT";
+                lockFields();
+                enableButtons = false;
+                PopupControl.printError("Not a valid \n\n service code...");
             }
             else
-                PopupControl.printError("Can't use radios without a valid service entered");
+            {
+                unlockFields();
+                enableButtons = true;
+                serviceTextbox.Text = service.Name;
+                feeTextbox.Text = service.Fee.ToString();
+            }
         }
 
-        private void deleteRadio_CheckedChanged(object sender, EventArgs e)
+        private void lockFields()
         {
-            disableFields();
-            serviceeditButton.Text = "Delete Service";
-            if (validated == true)
-            {
-                procedure = "DELETE";
-            }
-            
+            serviceTextbox.ReadOnly = true;
+            feeTextbox.ReadOnly = true;
+        }
+        private void unlockFields()
+        {
+            serviceTextbox.ReadOnly = false;
+            feeTextbox.ReadOnly = false;
         }
     }
 }

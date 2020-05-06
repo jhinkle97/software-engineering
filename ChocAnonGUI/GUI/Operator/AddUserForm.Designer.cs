@@ -1,4 +1,5 @@
 ﻿namespace ChocAnonGUI
+
 {
     partial class AddUserForm
     {

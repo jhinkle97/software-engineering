@@ -32,6 +32,11 @@ namespace ChocAnonGUI
             if (user.Role == "Member")
             {
                 memberCode = userNumber;
+                if (user.Status == "Suspended")
+                {
+                    PopupControl.printError("This member is currently suspended \n\n Bill at your own risk.");
+                }
+
                 this.Close();
             }
             else
