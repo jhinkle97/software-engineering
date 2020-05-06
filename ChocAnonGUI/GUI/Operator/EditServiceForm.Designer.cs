@@ -63,6 +63,7 @@
             // inputTextbox
             // 
             this.inputTextbox.Location = new System.Drawing.Point(11, 17);
+            this.inputTextbox.MaxLength = 6;
             this.inputTextbox.Name = "inputTextbox";
             this.inputTextbox.Size = new System.Drawing.Size(191, 20);
             this.inputTextbox.TabIndex = 1;
@@ -90,6 +91,7 @@
             // serviceTextbox
             // 
             this.serviceTextbox.Location = new System.Drawing.Point(132, 75);
+            this.serviceTextbox.MaxLength = 20;
             this.serviceTextbox.Name = "serviceTextbox";
             this.serviceTextbox.Size = new System.Drawing.Size(190, 20);
             this.serviceTextbox.TabIndex = 3;
@@ -97,6 +99,7 @@
             // feeTextbox
             // 
             this.feeTextbox.Location = new System.Drawing.Point(114, 107);
+            this.feeTextbox.MaxLength = 6;
             this.feeTextbox.Name = "feeTextbox";
             this.feeTextbox.Size = new System.Drawing.Size(208, 20);
             this.feeTextbox.TabIndex = 4;

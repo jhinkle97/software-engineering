@@ -213,6 +213,7 @@
             // usernumberTextBox
             // 
             this.usernumberTextBox.Location = new System.Drawing.Point(13, 15);
+            this.usernumberTextBox.MaxLength = 9;
             this.usernumberTextBox.Name = "usernumberTextBox";
             this.usernumberTextBox.Size = new System.Drawing.Size(153, 20);
             this.usernumberTextBox.TabIndex = 34;

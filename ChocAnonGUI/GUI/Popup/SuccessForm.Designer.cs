@@ -41,7 +41,7 @@
             this.successLabel.AutoSize = true;
             this.successLabel.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.successLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.successLabel.Location = new System.Drawing.Point(45, 8);
+            this.successLabel.Location = new System.Drawing.Point(7, 7);
             this.successLabel.Name = "successLabel";
             this.successLabel.Size = new System.Drawing.Size(191, 19);
             this.successLabel.TabIndex = 0;
