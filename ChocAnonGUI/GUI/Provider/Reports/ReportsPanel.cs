@@ -46,10 +46,7 @@ namespace ChocAnonGUI
         {
 
         }
-        public void setReport(string code)
-        {
-            reportRichTextBox.Text = reportGenerator.GenerateMemberReport(code);
-        }
+     
         private void changeButton_Click(object sender, EventArgs e)
         {
 
@@ -62,9 +59,10 @@ namespace ChocAnonGUI
 
         private void memberButton_Click_1(object sender, EventArgs e)
         {     
-                GetMemberForm launchForm = new GetMemberForm();
-                launchForm.ShowDialog();
-                
+            GetMemberForm launchForm = new GetMemberForm();
+            launchForm.ShowDialog();
+            reportRichTextBox.Text = reportGenerator.GenerateMemberReport(launchForm.memberCode);
+
 
         }
     }

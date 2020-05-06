@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.topPanel = new System.Windows.Forms.Panel();
-            this.codeTextbox = new System.Windows.Forms.TextBox();
             this.topLabel = new System.Windows.Forms.Label();
+            this.codeTextbox = new System.Windows.Forms.TextBox();
             this.enterButton = new System.Windows.Forms.Button();
             this.topPanel.SuspendLayout();
             this.SuspendLayout();
@@ -44,14 +44,6 @@
             this.topPanel.Size = new System.Drawing.Size(204, 46);
             this.topPanel.TabIndex = 0;
             // 
-            // codeTextbox
-            // 
-            this.codeTextbox.Location = new System.Drawing.Point(12, 52);
-            this.codeTextbox.MaxLength = 9;
-            this.codeTextbox.Name = "codeTextbox";
-            this.codeTextbox.Size = new System.Drawing.Size(155, 20);
-            this.codeTextbox.TabIndex = 0;
-            // 
             // topLabel
             // 
             this.topLabel.AutoSize = true;
@@ -62,6 +54,14 @@
             this.topLabel.Size = new System.Drawing.Size(160, 19);
             this.topLabel.TabIndex = 0;
             this.topLabel.Text = "Enter Member Code";
+            // 
+            // codeTextbox
+            // 
+            this.codeTextbox.Location = new System.Drawing.Point(12, 52);
+            this.codeTextbox.MaxLength = 9;
+            this.codeTextbox.Name = "codeTextbox";
+            this.codeTextbox.Size = new System.Drawing.Size(155, 20);
+            this.codeTextbox.TabIndex = 0;
             // 
             // enterButton
             // 
@@ -83,6 +83,7 @@
             this.Controls.Add(this.topPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "GetMemberForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Code Entry";
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
