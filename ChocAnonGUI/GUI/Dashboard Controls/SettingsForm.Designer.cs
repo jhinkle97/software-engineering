@@ -87,7 +87,7 @@ namespace ChocAnonGUI
             this.version.Name = "version";
             this.version.Size = new System.Drawing.Size(46, 16);
             this.version.TabIndex = 3;
-            this.version.Text = "V1.0.0";
+            this.version.Text = "V1.0.5";
             // 
             // dateLabel
             // 
@@ -103,11 +103,11 @@ namespace ChocAnonGUI
             // 
             this.date.AutoSize = true;
             this.date.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date.Location = new System.Drawing.Point(79, 115);
+            this.date.Location = new System.Drawing.Point(77, 115);
             this.date.Name = "date";
-            this.date.Size = new System.Drawing.Size(66, 14);
+            this.date.Size = new System.Drawing.Size(59, 14);
             this.date.TabIndex = 5;
-            this.date.Text = "4/28/2020";
+            this.date.Text = "5/6/2020";
             // 
             // devTitle
             // 

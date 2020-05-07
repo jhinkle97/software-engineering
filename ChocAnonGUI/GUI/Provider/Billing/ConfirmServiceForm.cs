@@ -21,8 +21,12 @@ namespace ChocAnonGUI
         {
             InitializeComponent();
             billedService = service;
-            providerLabel.Text = billedService.Provider.Name;
-            serviceLabel.Text = billedService.ServiceDirectory.Code;
+            providerLabel.Text     = billedService.Provider.Name;
+            serviceLabel.Text      = billedService.ServiceDirectory.Code;
+            printmemberLabel.Text  = billedService.Member.Name;
+            printfeeLabel.Text     = billedService.ServiceDirectory.Fee.ToString();
+            printserviceLabel.Text = billedService.ServiceDirectory.Name;
+            
         }
 
         private void confirmButton_Click(object sender, EventArgs e)

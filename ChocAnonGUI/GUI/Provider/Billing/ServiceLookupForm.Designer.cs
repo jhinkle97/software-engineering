@@ -119,7 +119,6 @@ namespace ChocAnonGUI
             this.Controls.Add(this.servicesListview);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ServiceLookupForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ServiceLookupForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
