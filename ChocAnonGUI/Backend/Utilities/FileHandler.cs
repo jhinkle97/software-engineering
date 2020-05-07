@@ -57,6 +57,7 @@ namespace ChocAnonGUI.Backend.Utilities
 
         public static void WriteServiceDirectory()
         {
+            //this file is written any time a service directory entry is add/edited/deleted
             string path = $"{desktopPath}\\{serviceDirectoryPath}";
 
             Directory.CreateDirectory(path);

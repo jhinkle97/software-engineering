@@ -56,9 +56,8 @@
     <Compile Include="Backend\Models\ServiceDirectoryModel.cs" />
     <Compile Include="Backend\Models\ServiceModel.cs" />
     <Compile Include="Backend\Models\UserModel.cs" />
-    <Compile Include="Backend\Reports\ManagerReport.cs" />
     <Compile Include="Backend\Reports\ProviderSummary.cs" />
-    <Compile Include="Backend\Utilities\ReportGenerator.cs" />
+    <Compile Include="Backend\Reports\ReportGenerator.cs" />
     <Compile Include="Backend\Utilities\FileHandler.cs" />
     <Compile Include="Backend\Utilities\NumberGenerator.cs" />
     <Compile Include="GUI\Dashboard Controls\SettingsForm.cs">

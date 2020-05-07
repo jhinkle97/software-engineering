@@ -48,8 +48,9 @@ namespace ChocAnonGUI.Backend.DataAccess
                     return new UserModel();
                 }
             }
-            catch (SqlException)
+            catch (SqlException e)
             {
+                Console.WriteLine(e.Message);
                 connection.Close();
                 return new UserModel();
             }
@@ -67,10 +68,11 @@ namespace ChocAnonGUI.Backend.DataAccess
 
                 connection.Close();
             }
-            catch (Exception)
+            catch (SqlException e)
             {
-
-                throw;
+                Console.WriteLine(e.Message);
+                connection.Close();
+                return new UserModel();
             }
             return user;
         }
@@ -90,8 +92,9 @@ namespace ChocAnonGUI.Backend.DataAccess
 
                 return user;
             }
-            catch (SqlException)
+            catch (SqlException e)
             {
+                Console.WriteLine(e.Message);
                 connection.Close();
                 return new UserModel();
             }
@@ -109,8 +112,9 @@ namespace ChocAnonGUI.Backend.DataAccess
 
                 return rowsUpdated == 1;
             }
-            catch (SqlException)
+            catch (SqlException e)
             {
+                Console.WriteLine(e.Message);
                 connection.Close();
                 return false;
             }

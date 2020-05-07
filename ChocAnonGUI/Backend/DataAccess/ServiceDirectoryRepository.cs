@@ -17,6 +17,7 @@ namespace ChocAnonGUI.Backend.DataAccess
         {
             try
             {
+                //format incomming decimal with 5 digits, 2 of which are decimal places (999.99 max)
                 string query = $"SELECT [serviceCode], cast([fee] as decimal(5, 2)), [name] FROM [service_directory] WHERE [serviceCode] = '{serviceCode}'";
 
                 connection.Open();
@@ -54,6 +55,7 @@ namespace ChocAnonGUI.Backend.DataAccess
         {
             try
             {
+                //format incomming decimal with 5 digits, 2 of which are decimal places (999.99 max)
                 string query = $"SELECT [serviceCode], cast([fee] as decimal(5, 2)), [name] FROM [service_directory]";
 
                 connection.Open();

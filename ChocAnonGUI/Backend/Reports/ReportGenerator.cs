@@ -38,7 +38,8 @@ namespace ChocAnonGUI.Backend.Reports
 
             decimal totalFee = 0;
             string deleted = "DELETED";
-            foreach(ServiceModel service in services)
+            //For any service where the referenced member has been deleted. Display "DELETED"
+            foreach (ServiceModel service in services)
             {
                 report +=   $"Date of Service:  {service.ServiceDate.ToString("dd/MM/yyyy")}\n" +
                             $"Entry Date:       {service.EntryDate}\n" +
@@ -85,6 +86,7 @@ namespace ChocAnonGUI.Backend.Reports
                             $"SERVICES PROVIDED\n\n";
 
             string deleted = "DELETED";
+            //For any service where the referenced provider has been deleted. Display "DELETED"
             foreach (ServiceModel service in services)
             {
                 report +=   $"Date of Service:  {service.ServiceDate.ToString("dd/MM/yyyy")}\n" +
@@ -141,6 +143,7 @@ namespace ChocAnonGUI.Backend.Reports
                 }
                 else if (!providers.ContainsKey(provider.UserNumber))
                 {
+                    //add new uniqye provider to map
                     providers[provider.UserNumber] = new ProviderSummary { ProviderName=provider.Name,
                                                                            TotalConsultations = 1,
                                                                            TotalFee = fee };
@@ -148,6 +151,7 @@ namespace ChocAnonGUI.Backend.Reports
                 }
                 else
                 {
+                    //update values of existing provider in map
                     providers[provider.UserNumber].TotalConsultations++;
                     providers[provider.UserNumber].TotalFee += fee;
                 }

@@ -10,6 +10,7 @@ namespace ChocAnonGUI.Backend.Utilities
     {
         public static string Generate(int numberOfDigits)
         {
+            //used for generating user numbers and service codes
             Random random = new Random();
             string number = "";
             int i;
