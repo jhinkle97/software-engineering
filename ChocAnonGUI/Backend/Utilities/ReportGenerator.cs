@@ -37,13 +37,13 @@ namespace ChocAnonGUI.Backend.Reports
                             $"SERVICES PROVIDED\n\n";
 
             decimal totalFee = 0;
-
+            string deleted = "DELETED";
             foreach(ServiceModel service in services)
             {
                 report +=   $"Date of Service:  {service.ServiceDate.ToString("dd/MM/yyyy")}\n" +
                             $"Entry Date:       {service.EntryDate}\n" +
-                            $"Member Name:      {service.Member.Name}\n" +
-                            $"Member Number:    {service.Member.UserNumber}\n" +
+                            $"Member Name:      {service.Member.Name ?? deleted}\n" +
+                            $"Member Number:    {service.Member.UserNumber ?? deleted}\n" +
                             $"Service Code:     {service.ServiceDirectory.Code}\n" +
                             $"Service Fee:      {service.ServiceDirectory.Fee}\n" +
                             $"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
@@ -84,10 +84,11 @@ namespace ChocAnonGUI.Backend.Reports
                             $"\n\n" +
                             $"SERVICES PROVIDED\n\n";
 
+            string deleted = "DELETED";
             foreach (ServiceModel service in services)
             {
                 report +=   $"Date of Service:  {service.ServiceDate.ToString("dd/MM/yyyy")}\n" +
-                            $"Provider Name:    {service.Provider.Name}\n" +
+                            $"Provider Name:    {service.Provider.Name ?? deleted}\n" +
                             $"Service Name:     {service.ServiceDirectory.Name}\n" +
                             $"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
             }
