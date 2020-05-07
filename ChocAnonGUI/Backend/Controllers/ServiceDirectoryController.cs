@@ -14,6 +14,8 @@ namespace ChocAnonGUI.Backend.Controllers
         public ServiceDirectoryModel AddService(ServiceDirectoryModel service)
         {
             ServiceDirectoryRepository serviceDirectoryRepository = new ServiceDirectoryRepository();
+
+            //Generate random 6 digit code and check that it does not already exist in DB
             do
             {
                 service.Code = NumberGenerator.Generate(6);
@@ -22,6 +24,7 @@ namespace ChocAnonGUI.Backend.Controllers
 
             service = serviceDirectoryRepository.AddService(service);
 
+            //Write service directory file every time a service is updated
             FileHandler.WriteServiceDirectory();
 
             return service;
@@ -45,6 +48,7 @@ namespace ChocAnonGUI.Backend.Controllers
 
             service = serviceDirectoryRepository.EditService(service);
 
+            //Write service directory file every time a service is updated
             FileHandler.WriteServiceDirectory();
 
             return service;
@@ -56,6 +60,7 @@ namespace ChocAnonGUI.Backend.Controllers
             
             var isDeleted = serviceDirectoryRepository.DeleteService(serviceCode);
 
+            //Write service directory file every time a service is updated
             FileHandler.WriteServiceDirectory();
 
             return isDeleted;

@@ -26,6 +26,8 @@ namespace ChocAnonGUI.Backend.Controllers
             IEnumerable<ServiceModel> services = serviceRepository.GetServicesByMember(memberNumber);
             UserModel member = userRepository.GetUser(memberNumber);
 
+            //Services in the database contain the number or code to reference, member, provider, service directory
+            //Here we bring back the corresponding model for each reference on every service
             foreach(ServiceModel service in services)
             {
                 service.Member = member;
@@ -44,6 +46,8 @@ namespace ChocAnonGUI.Backend.Controllers
             IEnumerable<ServiceModel> services = serviceRepository.GetServicesByProvider(providerNumber);
             UserModel provider = userRepository.GetUser(providerNumber);
 
+            //Services in the database contain the number or code to reference, member, provider, service directory
+            //Here we bring back the corresponding model for each reference on every service
             foreach (ServiceModel service in services)
             {
                 service.Provider = provider;
@@ -61,6 +65,8 @@ namespace ChocAnonGUI.Backend.Controllers
 
             IEnumerable<ServiceModel> services = serviceRepository.GetServicesByEntryDate();
 
+            //Services in the database contain the number or code to reference, member, provider, service directory
+            //Here we bring back the corresponding model for each reference on every service
             foreach (ServiceModel service in services)
             {
                 service.Provider = userRepository.GetUser(service.Provider.UserNumber);

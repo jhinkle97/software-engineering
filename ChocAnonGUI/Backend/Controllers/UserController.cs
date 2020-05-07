@@ -14,6 +14,8 @@ namespace ChocAnonGUI.Backend.Controllers
         public UserModel AddUser(UserModel user)
         {
             UserRepository userRepository = new UserRepository();
+
+            //Generate random 9 digit code and check that it does not already exist in DB
             do
             {
                 user.UserNumber = NumberGenerator.Generate(9);
