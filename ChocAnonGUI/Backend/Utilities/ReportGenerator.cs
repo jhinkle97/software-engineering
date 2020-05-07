@@ -116,7 +116,29 @@ namespace ChocAnonGUI.Backend.Reports
             {
                 var provider = service.Provider;
                 var fee = service.ServiceDirectory.Fee;
-                if (!providers.ContainsKey(provider.UserNumber))
+                string deletedProviders = "DELETED";
+
+                if(provider.UserNumber == null)
+                {
+                    //treat all deleted providers as a single unique provider
+                    if (!providers.ContainsKey(deletedProviders))
+                        {
+                            providers[deletedProviders] = new ProviderSummary
+                        {
+                            ProviderName = deletedProviders,
+                            TotalConsultations = 1,
+                            TotalFee = fee
+                        };
+                        uniqueProviders++;
+                    }
+                    else
+                    {
+                        providers[deletedProviders].TotalConsultations++;
+                        providers[deletedProviders].TotalFee += fee;
+                    }
+
+                }
+                else if (!providers.ContainsKey(provider.UserNumber))
                 {
                     providers[provider.UserNumber] = new ProviderSummary { ProviderName=provider.Name,
                                                                            TotalConsultations = 1,
