@@ -85,9 +85,8 @@
             this.confirmationLabel.Font = new System.Drawing.Font("Rockwell Extra Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confirmationLabel.Location = new System.Drawing.Point(30, 1);
             this.confirmationLabel.Name = "confirmationLabel";
-            this.confirmationLabel.Size = new System.Drawing.Size(316, 19);
+            this.confirmationLabel.Size = new System.Drawing.Size(0, 19);
             this.confirmationLabel.TabIndex = 0;
-            this.confirmationLabel.Text = "Here is where an error would go";
             // 
             // PasswordConfirmForm
             // 
