@@ -181,11 +181,11 @@
             // 
             this.usertitleLabel.AutoSize = true;
             this.usertitleLabel.BackColor = System.Drawing.Color.White;
-            this.usertitleLabel.Font = new System.Drawing.Font("Rockwell", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usertitleLabel.Location = new System.Drawing.Point(305, 36);
+            this.usertitleLabel.Font = new System.Drawing.Font("Rockwell", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usertitleLabel.Location = new System.Drawing.Point(304, 49);
             this.usertitleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.usertitleLabel.Name = "usertitleLabel";
-            this.usertitleLabel.Size = new System.Drawing.Size(738, 42);
+            this.usertitleLabel.Size = new System.Drawing.Size(487, 27);
             this.usertitleLabel.TabIndex = 3;
             this.usertitleLabel.Text = "This is where the name of the person goes.";
             // 

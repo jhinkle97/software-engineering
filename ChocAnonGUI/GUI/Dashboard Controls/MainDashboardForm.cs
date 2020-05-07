@@ -34,7 +34,7 @@ namespace ChocAnonGUI
             else
             {
                 hidePanels();
-                usertitleLabel.Text = "Provider: " + user.Name + "  # " + user.UserNumber;
+                usertitleLabel.Text = "Provider: " + user.Name + "\nNumber: " + user.UserNumber;
                 WelcomeControlPanel.Show();
             }
         }
